@@ -190,28 +190,6 @@
     </div>
   </section>
 
-  <!-- VITRINA 360 — cada plato girando, por concepto -->
-  <section class="vitrina360" id="vitrina360" aria-label="Platos en 360 grados">
-    <div class="wrap">
-      <header class="v360-head">
-        <span class="eyebrow">Míralo antes de pedirlo</span>
-        <h2 class="section-title">Cada plato, en <span class="h1-accent">360°</span></h2>
-        <p class="section-sub">Gíralos, míralos por todos lados. Sin filtros, sin trucos — así llegan a tu mesa.</p>
-      </header>
-      <div class="v360-tabs" role="tablist" id="v360-tabs" aria-label="Conceptos"></div>
-      <div class="v360-stage" id="v360-stage" style="--fc:var(--c-wagmi)">
-        <figure class="v360-hero">
-          <div class="v360-media"><video id="v360-hero-vid" class="cinemagraph" muted loop playsinline preload="none" aria-label="Plato en 360 grados"></video></div>
-          <figcaption class="v360-cap">
-            <span class="v360-cap-text"><span class="v360-name" id="v360-name"></span><span class="v360-price" id="v360-price"></span></span>
-            <a class="v360-link" id="v360-link" href="menus/">Ver en el menú →</a>
-          </figcaption>
-        </figure>
-        <ul class="v360-thumbs" id="v360-thumbs" role="list"></ul>
-      </div>
-    </div>
-  </section>
-
   <!-- CONCEPTOS -->
   <section class="section concepts" id="conceptos">
     <div class="wrap">
@@ -330,48 +308,26 @@
     </div>
   </section>
 
-  <!-- RECORRIDO DEL LOCAL — mapa + viaje entre zonas -->
-  <section class="section recorrido" id="recorrido">
+  <!-- EL LOCAL — layout arquitectónico real + entrada al POV 360 -->
+  <section class="section local" id="local">
     <div class="wrap">
-      <span class="eyebrow">El recorrido</span>
-      <h2 class="section-title">Camina el local sin moverte</h2>
-      <p class="section-sub">Toca una zona del mapa y te transportamos ahí. Pasea por el pasillo, asómate a cada cocina y siéntate en el comedor — como si ya estuvieras aquí.</p>
-    </div>
-    <div class="rl-stage" id="rl-stage" role="region" aria-label="Recorrido interactivo del local">
-      <div class="rl-map" id="rl-map">
-        <svg class="rl-plano" viewBox="0 0 1000 620" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-          <rect x="0" y="0" width="1000" height="620" fill="var(--verde-noche)"/>
-          <rect x="56" y="48" width="888" height="524" rx="22" fill="#0c4a2c" stroke="var(--c-pecora-deep)" stroke-width="2.5"/>
-          <rect x="300" y="48" width="74" height="524" rx="10" fill="var(--crema)" opacity=".10"/>
-          <rect x="84"  y="80"  width="190" height="210" rx="12" fill="var(--c-wagmi)"    opacity=".5"/>
-          <rect x="84"  y="330" width="190" height="210" rx="12" fill="var(--c-pecora)"   opacity=".5"/>
-          <rect x="400" y="80"  width="240" height="190" rx="12" fill="var(--c-cantina)"  opacity=".4"/>
-          <rect x="400" y="320" width="240" height="220" rx="12" fill="var(--crema)"      opacity=".10"/>
-          <rect x="720" y="80"  width="190" height="460" rx="12" fill="var(--c-bar)"      opacity=".5"/>
-          <rect x="300" y="560" width="74" height="40" rx="8" fill="var(--amarillo)" opacity=".7"/>
-        </svg>
-        <button class="rl-hotspot" data-zone="entrada"  style="left:33.7%;top:90%;--hc:var(--amarillo);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Entrada</button>
-        <button class="rl-hotspot" data-zone="wagmi"    style="left:18%;top:30%;--hc:var(--c-wagmi)"><span class="rl-hs-dot"></span>WAGMI</button>
-        <button class="rl-hotspot" data-zone="pecora"   style="left:18%;top:70%;--hc:var(--c-pecora)"><span class="rl-hs-dot"></span>La Pécora</button>
-        <button class="rl-hotspot" data-zone="hokkaido" style="left:52%;top:29%;--hc:var(--c-hokkaido)"><span class="rl-hs-dot"></span>Hokkaidō</button>
-        <button class="rl-hotspot" data-zone="bar"      style="left:81.5%;top:50%;--hc:var(--c-bar)"><span class="rl-hs-dot"></span>El Bar</button>
-        <button class="rl-hotspot" data-zone="comedor"  style="left:52%;top:70%;--hc:var(--crema);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Comedor</button>
-        <span class="rl-hint" aria-hidden="true">Toca una zona para entrar</span>
-      </div>
-      <div class="rl-zone" id="rl-zone" aria-hidden="true">
-        <div class="rl-zone-img" id="rl-zone-img-a"></div>
-        <div class="rl-zone-img" id="rl-zone-img-b"></div>
-        <div class="rl-zone-scrim"></div>
-        <div class="rl-zone-cap">
-          <span class="rl-zone-label" id="rl-zone-label"></span>
-          <h3 class="rl-zone-title" id="rl-zone-title"></h3>
-          <div class="rl-zone-nav" id="rl-zone-nav" aria-label="Fotos de la zona"></div>
-        </div>
-        <button class="rl-back" id="rl-back" type="button"><span aria-hidden="true">←</span> Volver al mapa</button>
-        <button class="rl-arrow rl-prev" id="rl-prev" type="button" aria-label="Foto anterior">‹</button>
-        <button class="rl-arrow rl-next" id="rl-next" type="button" aria-label="Foto siguiente">›</button>
-      </div>
-      <div class="rl-flash" id="rl-flash" aria-hidden="true"></div>
+      <span class="eyebrow">El local</span>
+      <h2 class="section-title">Mira dónde te vas a sentar</h2>
+      <p class="section-sub">Esta es la planta real de Casaducho. Explórala, asómate a cada zona en 360&deg; y elige tu mesa antes de venir.</p>
+      <a class="local-card" href="viewfinder.html" aria-label="Explorar el local: elige dónde sentarte y ve el POV en 360 grados">
+        <div class="local-map"><svg viewBox="0 0 1208 1000" preserveAspectRatio="xMidYMid meet" class="local-svg" aria-hidden="true">
+  <defs>
+    <pattern id="lv-terr" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="11" stroke="#006838" stroke-width="1" stroke-opacity="0.07"/></pattern>
+    <marker id="lv-ar" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#006838"/></marker>
+  </defs>
+  <path d="M 869.8 400.0 L 1002.6 510.0 L 918.1 640.0 L 845.6 520.0 Z" fill="url(#lv-terr)" stroke="#006838" stroke-width="3" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" fill="#fffaf0" stroke="#006838" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <g><circle cx="423" cy="230" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="423" cy="230" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="423" cy="230" r="2.6" fill="#006838"/><text x="423" y="254" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">WAGMI</text></g><g><circle cx="302" cy="430" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="302" cy="430" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="302" cy="430" r="2.6" fill="#006838"/><text x="302" y="454" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">La Pécora</text></g><g><circle cx="411" cy="500" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="411" cy="500" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="411" cy="500" r="2.6" fill="#006838"/><text x="411" y="524" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">WAGMI2</text></g><g><circle cx="568" cy="450" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="568" cy="450" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="568" cy="450" r="2.6" fill="#006838"/><text x="568" y="474" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">Cantina</text></g><g><circle cx="701" cy="400" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="701" cy="400" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="701" cy="400" r="2.6" fill="#006838"/><text x="701" y="424" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">Panadería</text></g><g><circle cx="471" cy="570" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="471" cy="570" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="471" cy="570" r="2.6" fill="#006838"/><text x="471" y="594" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">Hokkaidō</text></g><g><circle cx="556" cy="700" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="556" cy="700" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="556" cy="700" r="2.6" fill="#006838"/><text x="556" y="724" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">El Bar</text></g><g><circle cx="773" cy="550" r="40" fill="#006838" fill-opacity="0.045"/><circle cx="773" cy="550" r="8" fill="#fffaf0" stroke="#006838" stroke-width="2.5"/><circle cx="773" cy="550" r="2.6" fill="#006838"/><text x="773" y="574" font-family="Druk Wide,sans-serif" font-weight="500" font-size="13" letter-spacing="1" fill="#006838" text-anchor="middle">Terraza</text></g>
+  <line x1="48" y1="380" x2="163" y2="380" stroke="#006838" stroke-width="2.4" marker-end="url(#lv-ar)"/><text x="106" y="354" font-family="Druk Wide,sans-serif" font-weight="500" font-size="10" letter-spacing="1.5" fill="#006838" fill-opacity=".7" text-anchor="middle">PLAZA</text>
+  <line x1="1015" y1="460" x2="900" y2="460" stroke="#006838" stroke-width="2.4" marker-end="url(#lv-ar)"/><text x="957" y="434" font-family="Druk Wide,sans-serif" font-weight="500" font-size="10" letter-spacing="1.5" fill="#006838" fill-opacity=".7" text-anchor="middle">CALLE</text>
+</svg></div>
+        <span class="local-go"><span class="local-go-txt">Explorar el local &middot; elige tu asiento</span><span class="local-arrow" aria-hidden="true">&#8594;</span></span>
+      </a>
     </div>
   </section>
 
