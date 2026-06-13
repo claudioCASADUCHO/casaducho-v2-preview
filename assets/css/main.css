@@ -343,11 +343,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.02; l
 #contacto .eyebrow { color: var(--verde); }
 .contact-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 @media (min-width: 900px) { .contact-grid { grid-template-columns: repeat(4, 1fr); } }
-.contact-card { background: var(--papel); border-radius: var(--r-card); padding: 18px; box-shadow: var(--sh-1); text-decoration: none; display: flex; flex-direction: column; gap: 6px; transition: transform .15s; }
-.contact-card:hover { transform: translateY(-3px); }
+.contact-card { position: relative; background: var(--papel); border: 1px solid rgba(0,104,56,.10); border-radius: var(--r-card); padding: 22px 20px 18px; box-shadow: var(--sh-1); text-decoration: none; display: flex; flex-direction: column; gap: 10px; min-height: 132px; transition: transform .18s, box-shadow .18s, border-color .18s; }
+.contact-card:hover { transform: translateY(-4px); box-shadow: var(--sh-2); border-color: color-mix(in srgb, var(--cc) 45%, transparent); }
 .contact-card .ico { display: none; }
-.contact-card strong { font-family: var(--druk); font-weight: 500; font-size: .58rem; letter-spacing: .06em; text-transform: uppercase; }
-.contact-card span { font-family: var(--sans); font-size: .96rem; color: var(--tinta-suave); }
+.contact-card .cc-top { display: inline-flex; align-items: center; gap: 9px; }
+.contact-card .cc-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--cc); flex: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--cc) 16%, transparent); }
+.contact-card strong { font-family: var(--druk); font-weight: 500; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta); }
+.contact-card .cc-value { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--tinta); letter-spacing: -.01em; }
+.contact-card .cc-channel { margin-top: auto; font-family: var(--druk); font-weight: 500; font-size: .5rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); display: inline-flex; align-items: center; gap: 6px; }
+.contact-card .cc-channel em { font-style: normal; font-size: .8rem; transition: transform .18s, color .18s; }
+.contact-card:hover .cc-channel em { transform: translateX(4px); color: var(--cc); }
 
 /* ============ FOOTER — verde noche ============ */
 .footer { background: var(--verde-noche); color: rgba(255,243,222,.78); padding: var(--space-6) 0 calc(var(--space-5) + var(--bottombar-h)); }
