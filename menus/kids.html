@@ -18,12 +18,11 @@
   <meta name="theme-color" content="#fff3de">
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/bricolage.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/druk-medium.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/migra-regular.woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/menu.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Menu", "name": "Menú Kids Menu — CASADUCHO", "inLanguage": "es", "hasMenuSection": [{"@type": "MenuSection", "name": "Hokkaidō", "hasMenuItem": [{"@type": "MenuItem", "name": "Antonella Roll", "offers": {"@type": "Offer", "price": "595", "priceCurrency": "DOP"}}]}, {"@type": "MenuSection", "name": "Cantina la Cuadra", "hasMenuItem": [{"@type": "MenuItem", "name": "Quesadilla de Queso", "offers": {"@type": "Offer", "price": "445", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Taquitos de Pollo con Queso (2 uds.)", "offers": {"@type": "Offer", "price": "495", "priceCurrency": "DOP"}}]}, {"@type": "MenuSection", "name": "La Pécora", "hasMenuItem": [{"@type": "MenuItem", "name": "Macarrones con Queso", "offers": {"@type": "Offer", "price": "345", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Pizza de Queso", "description": "Tamaño niño", "offers": {"@type": "Offer", "price": "600", "priceCurrency": "DOP"}}]}, {"@type": "MenuSection", "name": "WAGMI", "hasMenuItem": [{"@type": "MenuItem", "name": "Mini Cheeseburger", "offers": {"@type": "Offer", "price": "445", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Mini Cheeseburger + Bacon", "offers": {"@type": "Offer", "price": "495", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Popcorn Chicken", "offers": {"@type": "Offer", "price": "445", "priceCurrency": "DOP"}}]}]}</script>
 </head>
-<body data-concept="kids" style="padding-bottom:0">
+<body data-concept="kids">
 
 <header class="menu-topbar">
   <div class="menu-topbar-inner">
@@ -112,6 +111,15 @@
   <p style="margin-top:8px">CASADUCHO · Acrópolis Business Mall, Primer Nivel, Santo Domingo · <a href="../">casaducho.com</a></p>
 </footer>
 
+<nav class="bottombar" aria-label="Acciones rápidas">
+  <span class="bb-status" aria-hidden="true"><span class="bb-dot"></span><span class="bb-status-label">Abierto</span></span>
+  <a class="bb-item" href="../menus/">Menús</a>
+  <a class="bb-item" href="../#visitanos">Llegar</a>
+  <a class="bb-fab" href="#" data-order="kids" aria-label="Pedir">Pedir</a>
+  <a class="bb-item" href="../">Inicio</a>
+</nav>
+
+
 <dialog class="sheet" id="order-sheet">
   <div class="sheet-inner">
     <div class="sheet-handle"></div>
@@ -132,6 +140,13 @@
       <h3 class="sheet-concept-name"></h3>
       <p class="sheet-sub">¿Por dónde quieres pedir?</p>
       <div class="sheet-channels"></div>
+    </div>
+    <div class="sheet-step" data-step="mesa">
+      <h3>Ordenar en mesa</h3>
+      <p class="sheet-sub">Cuando estés en Casaducho, escanea el <strong>QR de tu mesa</strong> para ver el menú, pedir y pagar desde tu teléfono.</p>
+      <div class="sheet-mesa-art" aria-hidden="true">⌗</div>
+      <a class="btn btn-pink" id="mesa-cta" href="../mesa.html" style="width:100%;justify-content:center">Ver cómo funciona</a>
+      <button class="sheet-back" data-back="mesa" style="margin-top:12px">← Volver</button>
     </div>
   </div>
 </dialog>

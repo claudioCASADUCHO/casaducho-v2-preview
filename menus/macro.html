@@ -18,12 +18,11 @@
   <meta name="theme-color" content="#fff3de">
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/bricolage.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/druk-medium.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/migra-regular.woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/menu.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Menu", "name": "Menú Macro Menú — CASADUCHO", "inLanguage": "es", "hasMenuSection": [{"@type": "MenuSection", "name": "Macro Menú", "hasMenuItem": [{"@type": "MenuItem", "name": "Churrasco", "description": "Churrasco de 10 oz, acompañado de la guarnición de tu elección.", "offers": {"@type": "Offer", "price": "1385", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Flap Meat (Vacío)", "description": "Corte de vacío de 8 oz, servido con la guarnición de tu elección.", "offers": {"@type": "Offer", "price": "1150", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Buffalo Chicken Wrap", "description": "Wrap con lechuga fresca, tomate jugoso y pollo buffalo o grilled, acompañado de salsa tártara. Opciones: Buffalo · Grilled.", "offers": {"@type": "Offer", "price": "550", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Pechuga de Pollo", "description": "Pechuga de pollo a la plancha de 8 onzas, acompañada de la guarnición de tu elección.", "offers": {"@type": "Offer", "price": "500", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Flying Dutchman", "description": "Dos tapas de cebolla hacen de pan. Carne Angus de 5 oz, cubierta con salsa de la casa y doble queso americano. Para los protein lovers.", "offers": {"@type": "Offer", "price": "595", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Protein Quesadilla", "description": "Mix de quesos, alta en proteína con extra pollo.", "offers": {"@type": "Offer", "price": "695", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Philly Bowl (El Pepe)", "description": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.", "offers": {"@type": "Offer", "price": "725", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Tekkadon", "description": "Bowl de arroz de sushi coronado con 5 oz de atún fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.", "offers": {"@type": "Offer", "price": "720", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Sakedon", "description": "Bowl de arroz de sushi coronado con 5 oz de salmón fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.", "offers": {"@type": "Offer", "price": "720", "priceCurrency": "DOP"}}, {"@type": "MenuItem", "name": "Mexican Bowl", "description": "Elección de proteína, arroz con cilantro y limón, habichuelas refritas, ensalada de maíz, cilantro, pico de gallo, queso pepper jack, sour cream y guacamole.", "offers": {"@type": "Offer", "price": "895", "priceCurrency": "DOP"}}]}]}</script>
 </head>
-<body data-concept="macro" style="padding-bottom:0">
+<body data-concept="macro">
 
 <header class="menu-topbar">
   <div class="menu-topbar-inner">
@@ -126,6 +125,15 @@
   <p style="margin-top:8px">CASADUCHO · Acrópolis Business Mall, Primer Nivel, Santo Domingo · <a href="../">casaducho.com</a></p>
 </footer>
 
+<nav class="bottombar" aria-label="Acciones rápidas">
+  <span class="bb-status" aria-hidden="true"><span class="bb-dot"></span><span class="bb-status-label">Abierto</span></span>
+  <a class="bb-item" href="../menus/">Menús</a>
+  <a class="bb-item" href="../#visitanos">Llegar</a>
+  <a class="bb-fab" href="#" data-order="macro" aria-label="Pedir">Pedir</a>
+  <a class="bb-item" href="../">Inicio</a>
+</nav>
+
+
 <dialog class="sheet" id="order-sheet">
   <div class="sheet-inner">
     <div class="sheet-handle"></div>
@@ -146,6 +154,13 @@
       <h3 class="sheet-concept-name"></h3>
       <p class="sheet-sub">¿Por dónde quieres pedir?</p>
       <div class="sheet-channels"></div>
+    </div>
+    <div class="sheet-step" data-step="mesa">
+      <h3>Ordenar en mesa</h3>
+      <p class="sheet-sub">Cuando estés en Casaducho, escanea el <strong>QR de tu mesa</strong> para ver el menú, pedir y pagar desde tu teléfono.</p>
+      <div class="sheet-mesa-art" aria-hidden="true">⌗</div>
+      <a class="btn btn-pink" id="mesa-cta" href="../mesa.html" style="width:100%;justify-content:center">Ver cómo funciona</a>
+      <button class="sheet-back" data-back="mesa" style="margin-top:12px">← Volver</button>
     </div>
   </div>
 </dialog>

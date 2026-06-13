@@ -402,3 +402,105 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease-out, transform .6s ease-out; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; } .ticker-track { animation: none; } html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   MOBILE-FIRST OVERHAUL (13 jun) — panel multi-lente + Codex
+   Vertical nativo: comida primero, 1 CTA, densidad real, sin huecos.
+   ============================================================ */
+
+/* ---- EL ESPACIO como scroll-cinematic (render del espacio real) ---- */
+.espacio.cine-space { display: block; align-items: stretch; background: var(--verde-noche); padding: 0; }
+.espacio.cine-space::after { content: none; }
+.cine-sticky { position: relative; height: 74vh; min-height: 480px; overflow: hidden; display: flex; align-items: flex-end; background: #06371f url('../video/espacio-cine-poster.jpg') center/cover no-repeat; }
+.cine-sticky > canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
+.cine-sticky > .cine-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 38%; z-index: 0; }
+.cine-sticky::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(6,55,31,.93) 0%, rgba(6,55,31,.42) 55%, rgba(6,55,31,.12) 100%); }
+.cine-space .espacio-overlay { position: relative; z-index: 2; width: 100%; }
+.cine-line { will-change: opacity, transform; }
+.espacio-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-cream-solid { background: var(--crema); color: var(--verde); border: 2px solid var(--crema); }
+.btn-cream-solid:hover { filter: brightness(.96); }
+@media (min-width: 1100px) {
+  .espacio.cine-space { height: 320vh; }
+  .cine-sticky { position: sticky; top: 0; height: 100vh; }
+  .cine-sticky > canvas { display: block; }
+  .cine-sticky > .cine-video { display: none; }
+}
+
+/* ===================== <= 1099px (tablet/mobile) ===================== */
+@media (max-width: 1099px) {
+  /* P0-3 — hero media-first: el video sube, el texto va debajo */
+  .hero { display: flex; flex-direction: column; }
+  .hero-band { order: -1; margin: 14px 14px 0; height: min(52vh, 440px); border-radius: var(--r-hero); }
+  .hero-band video, .hero-band img { object-position: center 45%; }
+  .hero-content { padding-block: 20px 18px; }
+  .hero-logo { width: min(320px, 64vw); margin-bottom: 14px; }
+  /* P0-5 — la action-row duplica la bottombar: fuera en mobile */
+  .action-row { display: none; }
+}
+
+/* ===================== <= 640px (mobile) ===================== */
+@media (max-width: 640px) {
+  /* P0-7 — recortar el aire muerto vertical (causa #1 de los 8981px) */
+  .section { padding: 34px 0; }
+  .section-sub { margin-bottom: 18px; font-size: 1rem; line-height: 1.5; }
+  .section-title { margin-bottom: 10px; }
+  .footer { padding-top: 36px; }
+  .espacio-overlay { padding: 30px 0; }
+  .espacio-overlay h2 { margin: 6px 0 10px; }
+  .espacio-overlay p { font-size: 1.04rem; margin-bottom: 18px; }
+  /* P2-23 — ticker/nav más compactos */
+  .ticker { padding: 7px 0; } .ticker-item { font-size: .58rem; }
+  /* P1-16 — carruseles obviamente swipeables (peek + edge-fade) */
+  .dish-card { flex: 0 0 74vw; max-width: 260px; }
+  .concept-card { flex: 0 0 80vw; max-width: 300px; }
+  #platos, .concepts { position: relative; }
+  #platos::after, .concepts::after { content: ''; position: absolute; top: 56px; right: 0; bottom: 16px; width: 26px; pointer-events: none; z-index: 4; }
+  #platos::after { background: linear-gradient(to left, var(--crema), transparent); }
+  .concepts::after { background: linear-gradient(to left, var(--crema-2), transparent); }
+  .dishes-strip { scroll-padding-left: 16px; }
+  /* P2-24 — más sazón de marca (sin tocar rosa=CTA) */
+  .hero::before { opacity: .7; top: -80px; right: -90px; width: 320px; }
+  .dish-card { border-top: 3px solid var(--dc, var(--rosa)); }
+  /* P2-22 — footer en 2 columnas */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .footer-grid > :first-child { grid-column: 1 / -1; }
+}
+
+/* ===================== <= 600px (hero copy + CTA única) ===================== */
+@media (max-width: 600px) {
+  /* P0-4 — copy comprimido, open-chip arriba, UNA sola CTA primaria */
+  .hero h1 { font-size: clamp(1.9rem, 7.5vw, 2.7rem); max-width: 15ch; line-height: 1.05; }
+  .hero-tag { display: none; }
+  .hero-logo { order: 1; }
+  .hero .eyebrow { order: 2; }
+  .open-chip { order: 3; margin-bottom: 12px; }
+  .hero h1 { order: 4; }
+  .hero-ctas { order: 6; }
+  .hero-ctas .btn-outline-cream { display: none; }
+  .hero-ctas .btn-pink { width: 100%; }
+}
+
+/* ===================== <= 560px (delivery a cards apiladas) ===================== */
+@media (max-width: 560px) {
+  /* P0-11 — el sobre verde de delivery dejaba un void enorme; concepto full-width + 3 celdas en fila */
+  .matrix-row.head { display: none; }
+  .matrix-row { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 14px 16px; }
+  .matrix-concept { grid-column: 1 / -1; margin-bottom: 2px; font-size: .66rem; }
+  .matrix-cell a { width: 100%; min-height: 44px; }
+}
+
+/* ===================== <= 899px (visítanos: mapa con alto real, primero) ===================== */
+@media (max-width: 899px) {
+  /* P1-17 — el mapa no rendía su alto y dejaba hueco crema */
+  .visit-grid { display: flex; flex-direction: column; }
+  .visit-map { order: -1; aspect-ratio: 4 / 3; min-height: 300px; }
+  .visit-map iframe { height: 100%; }
+}
+
+/* ---- P0-6 — bottombar = barra de conversión persistente de 4 slots ---- */
+.bottombar { grid-template-columns: 1fr 1fr 1.5fr 1fr; }
+.bb-status { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 6px; background: var(--papel); border: 1px solid rgba(32,20,15,.12); border-radius: var(--r-pill); padding: 3px 11px; font-family: var(--druk); font-weight: 500; font-size: .44rem; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta); box-shadow: var(--sh-1); white-space: nowrap; }
+.bb-status .bb-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--c-napa, #00913d); }
+.bb-status.closed .bb-dot { background: var(--naranja); }
+@media (min-width: 1100px) { .bb-status { display: none; } }

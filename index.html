@@ -144,7 +144,7 @@
       </div>
     </div>
     <div class="hero-band">
-      <video class="cinemagraph" autoplay muted loop playsinline preload="auto"
+      <video class="cinemagraph" autoplay muted loop playsinline preload="metadata"
              poster="assets/video/hero-poster.webp" aria-label="Alitas WAGMI glaseadas en BBQ">
         <source src="assets/video/hero.mp4" type="video/mp4">
       </video>
@@ -175,7 +175,7 @@
     <div class="wrap">
       <span class="eyebrow">El antojo</span>
       <h2 class="section-title">¿Qué se te antoja hoy?</h2>
-      <p class="section-sub">110 platos, 6 cocinas. Desliza y elige — luego pides de las que quieras.</p>
+      <p class="section-sub">Todos los platos, 6 cocinas. Desliza y elige — luego pides de las que quieras.</p>
     </div>
     <div class="dishes-strip" id="dishes-strip">
       <!-- llenado por carousel-data.js + main.js -->
@@ -300,19 +300,25 @@
     </div>
   </section>
 
-  <!-- INTERLUDIO: EL ESPACIO -->
-  <section class="espacio" id="espacio">
-    <video class="espacio-video cinemagraph" autoplay muted loop playsinline preload="none"
-           poster="assets/video/bar-poster.webp" aria-label="El bar de Casaducho en Acrópolis">
-      <source src="assets/video/bar.mp4" type="video/mp4">
-    </video>
-    <img class="cinemagraph-fallback espacio-video" src="assets/video/bar-poster.webp" alt="El bar de Casaducho en Acrópolis">
-    <div class="espacio-overlay">
-      <div class="wrap">
-        <span class="eyebrow" style="color:var(--amarillo)">El lugar</span>
-        <h2>No es delivery.<br>Es <span style="color:var(--amarillo)">venir.</span></h2>
-        <p>Primer nivel de Acrópolis Business Mall. Seis cocinas, un bar, y la mesa que quieras.</p>
-        <a href="#visitanos" class="btn btn-outline-cream">Cómo llegar</a>
+  <!-- INTERLUDIO: EL ESPACIO — scroll-cinematic (render del espacio real) -->
+  <section class="espacio cine-space" id="espacio" data-frames="121" data-path="assets/scroll/space/f_" data-bg="#06371f">
+    <div class="cine-sticky">
+      <canvas aria-hidden="true"></canvas>
+      <video class="cine-video" muted loop playsinline preload="none"
+             poster="assets/video/espacio-cine-poster.jpg" aria-label="El espacio de Casaducho en Acrópolis">
+        <source src="assets/video/espacio-cine.webm" type="video/webm">
+        <source src="assets/video/espacio-cine.mp4" type="video/mp4">
+      </video>
+      <div class="espacio-overlay cine-overlay">
+        <div class="wrap">
+          <span class="eyebrow" style="color:var(--amarillo)">El lugar</span>
+          <h2 class="cine-line" data-in="0" data-out="0.7">No es delivery.<br>Es <span style="color:var(--amarillo)">venir.</span></h2>
+          <p class="cine-line" data-in="0.15" data-out="0.95">Primer nivel de Acrópolis Business Mall. Seis cocinas, un bar, y la mesa que quieras.</p>
+          <div class="espacio-ctas">
+            <a href="#visitanos" class="btn btn-outline-cream">Cómo llegar</a>
+            <a href="#" class="btn btn-cream-solid" data-order data-order-mode="mesa">Ordenar en mesa</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -546,7 +552,9 @@
 
   <!-- BOTTOM ACTION BAR -->
   <nav class="bottombar" aria-label="Acciones rápidas">
+    <span class="bb-status" aria-hidden="true"><span class="bb-dot"></span><span class="bb-status-label">Abierto</span></span>
     <a class="bb-item" href="menus/">Menús</a>
+    <a class="bb-item" href="#visitanos">Llegar</a>
     <a class="bb-fab" href="#" data-order aria-label="Ordenar ahora">Ordenar</a>
     <a class="bb-item" href="#reservar">Reservar</a>
   </nav>
@@ -573,11 +581,19 @@
         <p class="sheet-sub">¿Por dónde quieres pedir?</p>
         <div class="sheet-channels"></div>
       </div>
+      <div class="sheet-step" data-step="mesa">
+        <h3>Ordenar en mesa</h3>
+        <p class="sheet-sub">Cuando estés en Casaducho, escanea el <strong>QR de tu mesa</strong> para ver el menú, pedir y pagar desde tu teléfono — sin filas, sin esperar.</p>
+        <div class="sheet-mesa-art" aria-hidden="true">⌗</div>
+        <a class="btn btn-pink" id="mesa-cta" href="mesa.html" style="width:100%;justify-content:center">Ver cómo funciona</a>
+        <button class="sheet-back" data-back="mesa" style="margin-top:12px">← Volver</button>
+      </div>
     </div>
   </dialog>
 
   <script src="assets/js/delivery-links.js"></script>
   <script src="assets/js/carousel-data.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/space-scrub.js" defer></script>
 </body>
 </html>

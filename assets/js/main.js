@@ -31,36 +31,49 @@
   /* ---------- Bottom bar: esconder al bajar, mostrar al subir ---------- */
   var bar = document.querySelector('.bottombar');
   if (bar) {
-    var lastY = scrollY;
+    var lastY = scrollY, barHidden = false;
     addEventListener('scroll', function () {
       var y = scrollY;
-      if (y > lastY + 12 && y > 300) { bar.classList.add('hidden'); lastY = y; }
-      else if (y < lastY - 12) { bar.classList.remove('hidden'); lastY = y; }
+      if (y > lastY + 24 && y > 320 && !barHidden) { bar.classList.add('hidden'); barHidden = true; lastY = y; }
+      else if (y < lastY - 16 && barHidden) { bar.classList.remove('hidden'); barHidden = false; lastY = y; }
+      else if ((y > lastY) !== (y > lastY - 1)) { lastY = y; }
+      if (Math.abs(y - lastY) > 80) lastY = y;
     }, { passive: true });
   }
 
-  /* ---------- Estado abierto/cerrado (Dom–Jue 11:30–23:00, Vie–Sáb 11:30–24:00) ---------- */
-  var chip = document.querySelector('.open-chip');
-  if (chip) {
+  /* ---------- Estado abierto/cerrado — fuente única compartida (Dom–Jue 11:30–23:00, Vie–Sáb 11:30–24:00) ---------- */
+  function computeOpen() {
     var now = new Date();
     var day = now.getDay(); // 0=Dom ... 6=Sáb
     var mins = now.getHours() * 60 + now.getMinutes();
     var open = 11 * 60 + 30;
     var close = (day === 5 || day === 6) ? 24 * 60 : 23 * 60;
     var isOpen = mins >= open && mins < close;
-    var label = chip.querySelector('.open-label');
     var fmt = function (m) {
       var h = Math.floor(m / 60) % 24, mm = m % 60;
       var ap = h >= 12 ? 'PM' : 'AM';
       var h12 = h % 12 === 0 ? 12 : h % 12;
       return h12 + (mm ? ':' + String(mm).padStart(2, '0') : ':00') + ' ' + ap;
     };
-    if (isOpen) {
-      label.textContent = 'Abierto ahora · cierra ' + fmt(close);
-    } else {
-      chip.classList.add('closed');
-      label.textContent = 'Cerrado ahora · abre ' + (mins >= close ? 'mañana ' : '') + fmt(open);
-    }
+    return {
+      isOpen: isOpen,
+      full: isOpen ? 'Abierto ahora · cierra ' + fmt(close)
+                   : 'Cerrado ahora · abre ' + (mins >= close ? 'mañana ' : '') + fmt(open),
+      short: isOpen ? 'Abierto' : 'Cerrado'
+    };
+  }
+  var st = computeOpen();
+  var chip = document.querySelector('.open-chip');
+  if (chip) {
+    var label = chip.querySelector('.open-label');
+    if (label) label.textContent = st.full;
+    if (!st.isOpen) chip.classList.add('closed');
+  }
+  var bbStatus = document.querySelector('.bb-status');
+  if (bbStatus) {
+    var bl = bbStatus.querySelector('.bb-status-label');
+    if (bl) bl.textContent = st.short;
+    if (!st.isOpen) bbStatus.classList.add('closed');
   }
 
   /* ---------- Promo de HOY ---------- */
@@ -97,11 +110,16 @@
   if (reduceMotion) {
     cines.forEach(function (v) { v.removeAttribute('autoplay'); try { v.pause(); } catch (e) {} });
   } else if (cines.length && 'IntersectionObserver' in window) {
+    var conn = navigator.connection || {};
+    var lowData = conn.saveData || /(^|-)2g/.test(conn.effectiveType || '');
     var vio = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         var v = e.target;
-        if (e.isIntersecting) { if (v.preload === 'none') v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
-        else { try { v.pause(); } catch (err) {} }
+        if (e.isIntersecting) {
+          if (lowData) return; // en ahorro de datos: queda el poster, no se baja el video
+          if (v.preload === 'none') v.preload = 'auto';
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else { try { v.pause(); } catch (err) {} }
       });
     }, { threshold: 0.25 });
     cines.forEach(function (v) { vio.observe(v); });
@@ -133,14 +151,20 @@
       hokkaido: 'Hokkaido', bar: 'EL BAR', general: 'Casaducho (todo el mercado)'
     };
 
-    var openSheet = function (conceptId) {
-      if (conceptId) { showChannels(conceptId); } else { showStep1(); }
-      if (typeof sheet.showModal === 'function') sheet.showModal();
+    var stepMesa = sheet.querySelector('[data-step="mesa"]');
+    var openSheet = function (conceptId, mode) {
+      if (mode === 'mesa') { showMesa(); }
+      else if (conceptId) { showChannels(conceptId); }
+      else { showStep1(); }
+      if (typeof sheet.showModal === 'function') { if (!sheet.open) sheet.showModal(); }
       else sheet.setAttribute('open', '');
     };
-    var showStep1 = function () {
-      step1.classList.add('active'); step2.classList.remove('active');
+    var clearSteps = function () {
+      step1.classList.remove('active'); step2.classList.remove('active');
+      if (stepMesa) stepMesa.classList.remove('active');
     };
+    var showStep1 = function () { clearSteps(); step1.classList.add('active'); };
+    var showMesa = function () { clearSteps(); if (stepMesa) stepMesa.classList.add('active'); };
     var showChannels = function (id) {
       var c = DELIVERY.conceptos[id];
       if (!c) return;
@@ -160,22 +184,28 @@
         chWrap.insertAdjacentHTML('beforeend',
           '<a class="sheet-channel wa" href="https://wa.me/' + DELIVERY.whatsapp.pidebot + '?text=' + txt + '" target="_blank" rel="noopener noreferrer"><span>WhatsApp · PideBot</span><span>→</span></a>');
       }
-      step1.classList.remove('active'); step2.classList.add('active');
+      clearSteps(); step2.classList.add('active');
       /* GA4: gtag('event','order_sheet_open',{concept:id}) — activar cuando haya GA */
     };
 
     document.querySelectorAll('[data-order]').forEach(function (el) {
       el.addEventListener('click', function (ev) {
         ev.preventDefault();
-        openSheet(el.getAttribute('data-order') || null);
+        openSheet(el.getAttribute('data-order') || null, el.getAttribute('data-order-mode') || null);
       });
     });
     step1.querySelectorAll('.sheet-concept').forEach(function (b) {
       b.addEventListener('click', function () { showChannels(b.getAttribute('data-concept')); });
     });
-    step2.querySelector('.sheet-back').addEventListener('click', showStep1);
+    sheet.querySelectorAll('.sheet-back').forEach(function (b) {
+      b.addEventListener('click', showStep1);
+    });
     sheet.addEventListener('click', function (e) {
       if (e.target === sheet) sheet.close ? sheet.close() : sheet.removeAttribute('open');
     });
+    /* QR físico: casaducho.com/?mesa=N → abre modo mesa directo */
+    try {
+      if (new URLSearchParams(location.search).get('mesa')) openSheet(null, 'mesa');
+    } catch (e) {}
   }
 })();

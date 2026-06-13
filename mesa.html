@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120b08">
+<title>Casaducho · Ordenar en mesa</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon-64.png">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/druk-medium.woff2" crossorigin>
+<style>
+  @font-face { font-family:'Bricolage'; src:url('assets/fonts/bricolage.woff2') format('woff2'); font-weight:400 800; font-display:swap; }
+  @font-face { font-family:'Druk Wide'; src:url('assets/fonts/druk-heavy.woff2') format('woff2'); font-weight:900; font-display:swap; }
+  @font-face { font-family:'Druk Wide'; src:url('assets/fonts/druk-medium.woff2') format('woff2'); font-weight:500; font-display:swap; }
+  :root{
+    --crema:#fff3de; --papel:#fffaf0; --verde:#006838; --rosa:#ec008c;
+    --amarillo:#ffde17; --naranja:#f15a29; --tinta:#20140f; --tinta-suave:#6b5d50;
+    --display:'Bricolage',-apple-system,system-ui,sans-serif;
+    --druk:'Druk Wide','Bricolage',sans-serif;
+    --sans:-apple-system,'Helvetica Neue',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);background:var(--crema);color:var(--tinta);min-height:100svh;display:flex;flex-direction:column}
+  a{text-decoration:none;color:inherit}
+  /* hero del espacio */
+  .m-hero{position:relative;min-height:46svh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:calc(env(safe-area-inset-top,0) + 22px) 22px 26px;color:#fff3de;overflow:hidden;background:#120b08}
+  .m-hero video,.m-hero .m-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .m-hero::after{content:'';position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to top,rgba(12,8,6,.92),rgba(12,8,6,.35) 55%,rgba(12,8,6,.25))}
+  .m-hero>*{position:relative;z-index:2}
+  .m-logo{height:30px;width:auto;margin-bottom:auto;align-self:flex-start;
+    filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+  .m-eyebrow{font-family:var(--druk);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--amarillo);font-weight:500;margin-bottom:8px}
+  .m-mesa{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,12vw,3.4rem);line-height:.98;letter-spacing:-.02em}
+  .m-welcome{font-size:1rem;opacity:.92;margin-top:8px;max-width:30ch}
+  /* cuerpo */
+  .m-body{flex:1;padding:22px 18px calc(env(safe-area-inset-bottom,0) + 26px);display:flex;flex-direction:column;gap:13px;max-width:560px;width:100%;margin:0 auto}
+  .m-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:var(--rosa);color:#fff;border-radius:18px;padding:20px 22px;
+    font-family:var(--display);font-weight:800;font-size:1.18rem;box-shadow:0 8px 24px rgba(236,0,140,.28);
+    transition:transform .15s,box-shadow .15s}
+  .m-cta:active{transform:scale(.985)}
+  .m-cta .arw{font-size:1.3rem}
+  .m-sub{font-size:.82rem;color:var(--tinta-suave);text-align:center;margin-top:-4px}
+  .m-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .m-tile{background:var(--papel);border:1px solid rgba(0,104,56,.12);border-radius:16px;padding:17px 16px;
+    display:flex;flex-direction:column;gap:5px;min-height:84px;justify-content:center;transition:transform .15s}
+  .m-tile:active{transform:scale(.98)}
+  .m-tile .tl{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:var(--verde)}
+  .m-tile .tv{font-family:var(--display);font-weight:800;font-size:1.02rem;line-height:1.1}
+  .m-tile.wa .tl{color:var(--naranja)}
+  .m-chip{display:inline-flex;align-items:center;gap:8px;align-self:center;background:var(--papel);
+    border-radius:999px;padding:9px 16px;font-size:.82rem;color:var(--tinta-suave);border:1px solid rgba(0,104,56,.12)}
+  .m-dot{width:8px;height:8px;border-radius:50%;background:var(--verde)}
+  .m-chip.closed .m-dot{background:#c0392b}
+  .m-foot{text-align:center;font-size:.72rem;color:var(--tinta-suave);margin-top:6px;line-height:1.5}
+  .m-foot a{color:var(--verde);font-weight:600}
+</style>
+</head>
+<body>
+  <header class="m-hero">
+    <video class="m-cine" muted loop playsinline autoplay preload="metadata" poster="assets/video/espacio-cine-poster.jpg" aria-hidden="true">
+      <source src="assets/video/espacio-cine.webm" type="video/webm">
+      <source src="assets/video/espacio-cine.mp4" type="video/mp4">
+    </video>
+    <img class="m-logo" src="assets/img/logos/casaducho-blanco.webp" alt="Casaducho" onerror="this.src='assets/img/logos/casaducho.webp'">
+    <span class="m-eyebrow" id="eyebrow">Bienvenido al mercado</span>
+    <h1 class="m-mesa" id="mesa">Casaducho</h1>
+    <p class="m-welcome">Escanea, ojea las seis cocinas y ordena desde tu mesa. Sin filas, sin esperar.</p>
+  </header>
+
+  <main class="m-body">
+    <a class="m-cta" id="orderCta" href="menus/">
+      <span>Ver menú y ordenar</span><span class="arw">→</span>
+    </a>
+    <p class="m-sub" id="ctaSub">Pide y paga directo desde tu teléfono.</p>
+
+    <div class="m-grid">
+      <a class="m-tile wa" id="waiterBtn" href="#">
+        <span class="tl">Mesero</span><span class="tv">Llamar al mesero</span>
+      </a>
+      <a class="m-tile" href="menus/">
+        <span class="tl">Carta</span><span class="tv">Ver los menús</span>
+      </a>
+    </div>
+
+    <span class="m-chip" id="openChip"><span class="m-dot"></span><span id="openLabel">Casaducho</span></span>
+
+    <p class="m-foot">
+      Mercado gastronómico · Acrópolis Business Mall, Primer Nivel<br>
+      <a href="index.html">casaducho.com</a> · IG @casaducho
+    </p>
+  </main>
+
+  <script src="assets/js/toi-config.js"></script>
+  <script>
+  (function(){
+    var cfg = window.CASADUCHO_TOI || {};
+    var qs = new URLSearchParams(location.search);
+    var mesa = (qs.get('mesa') || qs.get('m') || qs.get('table') || '').replace(/[^0-9A-Za-z]/g,'').slice(0,4);
+
+    // título de mesa
+    if (mesa) {
+      document.getElementById('eyebrow').textContent = 'Tu mesa';
+      document.getElementById('mesa').textContent = 'Mesa ' + mesa;
+      document.title = 'Casaducho · Mesa ' + mesa;
+    }
+
+    // CTA de orden → SnowEats si está configurado
+    var cta = document.getElementById('orderCta');
+    var sub = document.getElementById('ctaSub');
+    var url = '';
+    if (mesa && cfg.perTableUrls && cfg.perTableUrls[mesa]) {
+      url = cfg.perTableUrls[mesa];
+    } else if (cfg.menuUrl) {
+      url = cfg.menuUrl;
+      if (mesa && cfg.tableParam) url += (url.indexOf('?')>-1?'&':'?') + cfg.tableParam + '=' + encodeURIComponent(mesa);
+    }
+    if (url) {
+      cta.href = url; cta.target = '_blank'; cta.rel = 'noopener';
+    } else {
+      // sin URL de TOI todavía: lleva a los menús del sitio
+      cta.href = 'menus/';
+      cta.querySelector('span').textContent = 'Ver los menús';
+      sub.textContent = 'El pedido en mesa se activa pronto. Por ahora, ojea la carta o llama al mesero.';
+    }
+
+    // llamar al mesero por WhatsApp
+    var wa = document.getElementById('waiterBtn');
+    var num = cfg.whatsappWaiter || '18495915955';
+    var txt = encodeURIComponent('¡Hola! Estoy ' + (mesa ? 'en la mesa ' + mesa : 'en Casaducho') + ' y necesito ayuda.');
+    wa.href = 'https://wa.me/' + num + '?text=' + txt; wa.target='_blank'; wa.rel='noopener';
+
+    // abierto / cerrado
+    var now = new Date(), day = now.getDay(), mins = now.getHours()*60 + now.getMinutes();
+    var open = 11*60+30, close = (day===5||day===6) ? 24*60 : 23*60;
+    var isOpen = mins>=open && mins<close;
+    var chip = document.getElementById('openChip'), label = document.getElementById('openLabel');
+    function fmt(m){var h=Math.floor(m/60)%24,mm=m%60,ap=h>=12?'PM':'AM',h12=h%12===0?12:h%12;return h12+(mm?':'+String(mm).padStart(2,'0'):'')+' '+ap;}
+    if (isOpen){ label.textContent='Abierto ahora · cierra '+fmt(close); }
+    else { chip.classList.add('closed'); label.textContent='Cerrado ahora · abre '+(mins>=close?'mañana ':'')+fmt(open); }
+  })();
+  </script>
+</body>
+</html>
