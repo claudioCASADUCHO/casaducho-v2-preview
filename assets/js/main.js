@@ -298,7 +298,16 @@
   (function heroRotator() {
     var vids = [].slice.call(document.querySelectorAll('.hero-rot .hero-rot-v'));
     if (vids.length < 2 || prefersReduced) return;
-    var i = 0;
+    /* arranque aleatorio: un video distinto cada vez que se abre la página */
+    var i = Math.floor(Math.random() * vids.length);
+    if (i !== 0) {
+      vids.forEach(function (v) { v.classList.remove('active'); try { v.pause(); } catch (e) {} });
+      var first = vids[i];
+      if (first.preload === 'none') first.preload = 'auto';
+      first.classList.add('active');
+      try { first.currentTime = 0; } catch (e) {}
+      var fp = first.play(); if (fp && fp.catch) fp.catch(function () {});
+    }
     setInterval(function () {
       if (document.hidden) return;
       var prev = vids[i];
