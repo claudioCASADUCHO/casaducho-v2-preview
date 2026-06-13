@@ -1,0 +1,35 @@
+# CASADUCHO v2 — redirects + cache + canonicalización
+# Plesk/Apache. Si el hosting sirve solo nginx, replicar estas reglas en Plesk > Apache & nginx Settings.
+
+RewriteEngine On
+
+# www → apex (canonicalización: un solo dominio para Google)
+RewriteCond %{HTTP_HOST} ^www\.casaducho\.com$ [NC]
+RewriteRule ^(.*)$ https://casaducho.com/$1 [R=301,L]
+
+# Redirects 301 de los menús viejos (QRs impresos en mesas siguen funcionando)
+Redirect 301 /assets/menus/wagmi-menu.html /menus/wagmi.html
+Redirect 301 /assets/menus/cantina-menu.html /menus/cantina.html
+Redirect 301 /assets/menus/pecora-menu.html /menus/pecora.html
+Redirect 301 /assets/menus/hokkaido-menu.html /menus/hokkaido.html
+Redirect 301 /assets/menus/bar-menu.html /menus/bar.html
+Redirect 301 /assets/menus/macro-menu.html /menus/macro.html
+Redirect 301 /assets/menus/kids-menu.html /menus/kids.html
+Redirect 301 /assets/menus/postres-menu.html /menus/postres.html
+Redirect 301 /assets/menus/napa-menu.html /menus/
+Redirect 301 /index_mini.html /
+
+# Cache de estáticos (imágenes 30 días, CSS/JS 7 días)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+
+# HSTS (todo ya redirige a https)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>

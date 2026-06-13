@@ -1,0 +1,2821 @@
+{
+ "menus": [
+  {
+   "conceptId": "wagmi",
+   "conceptName": "WAGMI",
+   "tagline": "Classic Street Food",
+   "taglineEn": "Classic Street Food",
+   "brandColor": "#D4A5A5",
+   "displayFont": "Playfair Display",
+   "notes": [
+    "Todos los platos incluyen papas fritas de la casa. (EN: All dishes include house fries.) — nota colocada justo después de The Underground Club",
+    "Footer: Acrópolis Business Mall · Santo Domingo · Precios en RD$ · ITBIS no incluido · @wagmi.sdq",
+    "Menú con toggle de idioma ES/EN/IT (italiano también disponible en el archivo)"
+   ],
+   "sections": [
+    {
+     "id": "entradas",
+     "nameEs": "Entradas",
+     "nameEn": "Starters",
+     "items": [
+      {
+       "nameEs": "Alitas WAGMI",
+       "price": 495,
+       "priceVariants": "6: 495 | 12: 695 | 18: 915",
+       "descEs": "Marinadas 48 horas en sazón especial de la casa. Elige tu salsa: Buffalo Azafrán · BBQ · Korean · Mango Habanero",
+       "descEn": "Marinated 48 hours in our special house seasoning. Choose your sauce: Buffalo Saffron · BBQ · Korean · Mango Habanero",
+       "photo": "assets/img/dishes/wagmi/alitas-wagmi.webp"
+      },
+      {
+       "nameEs": "Pepi Pops",
+       "price": 450,
+       "descEs": "Popcorn de pollo crujiente. Elige tu salsa: Buffalo Azafrán · BBQ · Korean · Mango Habanero",
+       "descEn": "Crispy chicken popcorn. Choose your sauce: Buffalo Saffron · BBQ · Korean · Mango Habanero",
+       "photo": "assets/img/dishes/wagmi/pepi-pops.webp"
+      },
+      {
+       "nameEs": "Chicken Tenders",
+       "price": 475,
+       "descEs": "4 tiras de pollo empanizadas, crujientes por fuera, jugosas por dentro. Servidas con papas fritas",
+       "descEn": "4 breaded chicken strips, crispy outside, juicy inside. Served with fries",
+       "photo": "assets/img/dishes/wagmi/chicken-tenders.webp"
+      },
+      {
+       "nameEs": "G.O.A.T. Croquettes (3 uds.)",
+       "price": 450,
+       "descEs": "Queso de cabra con mermelada de durazno, miel y romero",
+       "descEn": "Goat cheese with peach jam, honey and rosemary",
+       "photo": "assets/img/dishes/wagmi/g-o-a-t-croquettes-3-uds.webp"
+      },
+      {
+       "nameEs": "Philly Croquettes (3 uds.)",
+       "price": 435,
+       "descEs": "Rellenas de nuestro famoso relleno del Philly Cheesesteak: carne Angus, cebollas salteadas y queso americano fundido",
+       "descEn": "Filled with our famous Philly Cheesesteak filling: Angus beef, sautéed onions and melted American cheese",
+       "photo": "assets/img/dishes/wagmi/philly-croquettes-3-uds.webp"
+      },
+      {
+       "nameEs": "Croquetas de Chorizo Don Pedro",
+       "price": 435,
+       "descEs": "3 uds. Chorizo, provolone y parmesano, bañadas en mermelada de pimientos rojos",
+       "descEn": "3 pcs. Chorizo, provolone and parmesan, drizzled in red pepper jam",
+       "photo": "assets/img/dishes/wagmi/croquetas-de-chorizo-don-pedro.webp"
+      },
+      {
+       "nameEs": "BBQ Pork Cativias (3 uds.)",
+       "price": 375,
+       "descEs": "Empanadillas de yuca rellenas de cerdo al BBQ",
+       "descEn": "Yuca empanadas filled with BBQ pork",
+       "photo": "assets/img/dishes/wagmi/bbq-pork-cativias-3-uds.webp"
+      },
+      {
+       "nameEs": "Papas Cubanas",
+       "price": 675,
+       "descEs": "Papas sazonadas en especias, rellenas de cerdo, dijonnaise y pepinillos dulces, fritas hasta dorar",
+       "descEn": "Spice-seasoned potatoes stuffed with pork, dijonnaise and sweet pickles, fried until golden",
+       "photo": "assets/img/dishes/wagmi/papas-cubanas.webp"
+      },
+      {
+       "nameEs": "Empanada de Philly Cheesesteak",
+       "price": 325,
+       "badges": [
+        "nuevo"
+       ],
+       "descEs": "Masa artesanal, carne Angus, queso americano y cebollas salteadas",
+       "descEn": "Artisan dough, Angus beef, American cheese and sautéed onions",
+       "photo": "assets/img/dishes/wagmi/empanada-de-philly-cheesesteak.webp"
+      }
+     ]
+    },
+    {
+     "id": "philly-series",
+     "nameEs": "Philly Series",
+     "nameEn": "Philly Series",
+     "noteEs": "Cliente elige queso: Americano o Provolone",
+     "items": [
+      {
+       "nameEs": "Emil's Philly Cheesesteak",
+       "price": 795,
+       "descEs": "Pan hoagie, carne Angus y cebollas salteadas con queso a elección (americano o provolone)",
+       "descEn": "Hoagie bread, Angus beef and sautéed onions with cheese of choice (American or Provolone)",
+       "photo": "assets/img/dishes/wagmi/emil-s-philly-cheesesteak.webp"
+      },
+      {
+       "nameEs": "Philly Wrap",
+       "price": 895,
+       "descEs": "Wrap de carne Angus, cebollas salteadas y queso a elección (americano o provolone)",
+       "descEn": "Angus beef wrap, sautéed onions and cheese of choice (American or Provolone)",
+       "photo": "assets/img/dishes/wagmi/philly-wrap.webp"
+      },
+      {
+       "nameEs": "Philly en Pan Cubano",
+       "price": 895,
+       "descEs": "Pan cubano artesanal, carne Angus, cebolla salteada y queso a elección (americano o provolone)",
+       "descEn": "Artisan Cuban bread, Angus beef, sautéed onions and cheese of choice (American or Provolone)",
+       "photo": "assets/img/dishes/wagmi/philly-en-pan-cubano.webp"
+      },
+      {
+       "nameEs": "Philly en Pan Masa Madre",
+       "price": 795,
+       "badges": [
+        "nuevo"
+       ],
+       "descEs": "Pan de masa madre, carne Angus, cebollas salteadas y queso a elección (americano o provolone)",
+       "descEn": "Masa madre bread, Angus beef, sautéed onions and cheese of choice (American or Provolone)",
+       "photo": "assets/img/dishes/wagmi/philly-en-pan-masa-madre.webp"
+      },
+      {
+       "nameEs": "Philly Burger",
+       "price": 845,
+       "descEs": "Carne Angus, queso americano, carne de Philly, provolone y crema de hongos en pan brioche",
+       "descEn": "Angus beef, American cheese, Philly meat, provolone and mushroom cream on brioche bun",
+       "photo": "assets/img/dishes/wagmi/philly-burger.webp"
+      },
+      {
+       "nameEs": "Philly Bowl (El Pepe)",
+       "price": 725,
+       "badges": [
+        "nuevo"
+       ],
+       "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
+       "descEn": "6 oz Philly meat, sautéed peppers and sour cream, over rice. High in protein.",
+       "photo": "assets/img/dishes/wagmi/philly-bowl-el-pepe.webp"
+      },
+      {
+       "nameEs": "Mike & Dek's Philly Cheesesteak",
+       "nameEn": "Mike & Dek's Philly Cheesesteak",
+       "descEs": "Pan hoagie, carne Angus, cebollas salteadas y queso fundido. La Philly de la casa.",
+       "descEn": "Hoagie bread, Angus beef, sautéed onions and melted cheese. The house Philly.",
+       "price": 800,
+       "priceVariants": "Pequeño: 800 | Entero: 1,400",
+       "badges": [
+        "nuevo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "burgers-tradicionales",
+     "nameEs": "Burgers Tradicionales",
+     "nameEn": "Traditional Burgers",
+     "noteEs": "8oz de carne Angus",
+     "items": [
+      {
+       "nameEs": "Miguel's Burger",
+       "price": 795,
+       "descEs": "Pan brioche, 8oz de carne Angus, queso americano, bacon y sazón especial de la casa",
+       "descEn": "Brioche bun, 8oz Angus beef, American cheese, bacon and special house seasoning",
+       "photo": "assets/img/dishes/wagmi/miguel-s-burger.webp"
+      },
+      {
+       "nameEs": "Jungle Burger",
+       "price": 895,
+       "descEs": "Pan con semillas de amapola, 8oz de carne Angus, queso provolone, cebolla caramelizada y crema de hongos",
+       "descEn": "Poppy seed bun, 8oz Angus beef, provolone, caramelized onion and mushroom cream",
+       "photo": "assets/img/dishes/wagmi/jungle-burger.webp"
+      }
+     ]
+    },
+    {
+     "id": "smash-burgers",
+     "nameEs": "Smash Burgers",
+     "nameEn": "Smash Burgers",
+     "noteEs": "Doble carne Angus aplastada",
+     "items": [
+      {
+       "nameEs": "Classic Smash",
+       "price": 695,
+       "descEs": "Pan brioche, doble carne Angus smash, queso americano, tocineta y salsa secreta de la casa",
+       "descEn": "Brioche bun, double smashed Angus beef, American cheese, bacon and house secret sauce",
+       "photo": "assets/img/dishes/wagmi/classic-smash.webp"
+      },
+      {
+       "nameEs": "Kevin Bacon",
+       "price": 795,
+       "descEs": "Pan brioche artesanal, doble carne Angus smash, queso Colby Jack, bacon jam, rúcula y aioli de trufa",
+       "descEn": "Artisan brioche, double smashed Angus beef, Colby Jack, bacon jam, arugula and truffle aioli",
+       "photo": "assets/img/dishes/wagmi/kevin-bacon.webp"
+      },
+      {
+       "nameEs": "Eli's Burger",
+       "price": 795,
+       "descEs": "Pan brioche, doble carne Angus smash, dos lonjas de queso americano, cebolla caramelizada en Jack Daniel's Honey, bacon, queso crema con puerro",
+       "descEn": "Brioche bun, double smashed Angus beef, two American cheese slices, caramelized onion in Jack Daniel's Honey, bacon, cream cheese with leek",
+       "photo": "assets/img/dishes/wagmi/eli-s-burger.webp"
+      },
+      {
+       "nameEs": "Cheesus Christ",
+       "price": 795,
+       "descEs": "Pan brioche con semillas de sésamo, doble carne Angus smash, queso Colby Jack, pepinillos caseros y secret sauce",
+       "descEn": "Sesame brioche bun, double smashed Angus beef, Colby Jack, house-made pickles and secret sauce",
+       "photo": "assets/img/dishes/wagmi/cheesus-christ.webp"
+      },
+      {
+       "nameEs": "Oklahoma Smashed Burger",
+       "price": 745,
+       "descEs": "Pan de leche japonés (Shokupan), doble carne Angus smash, dos lonjas de queso americano, cebolla aplastada junto a la carne, cebolla crispy y house sauce",
+       "descEn": "Japanese milk bread (Shokupan), double smashed Angus beef, two American cheese slices, onion smashed into the patty, crispy onion and house sauce",
+       "photo": "assets/img/dishes/wagmi/oklahoma-smashed-burger.webp"
+      }
+     ]
+    },
+    {
+     "id": "chicken-sandwiches",
+     "nameEs": "Chicken Sandwiches",
+     "nameEn": "Chicken Sandwiches",
+     "noteEs": "Pan de Leche Japonés · Hokkaido Milk Bread",
+     "items": [
+      {
+       "nameEs": "Chicken Club",
+       "price": 645,
+       "descEs": "Pan de leche japonés. Pollo empanizado, salsa tártara, lechuga, provolone, bacon y tomate",
+       "descEn": "Hokkaido milk bread. Breaded chicken, tartar sauce, lettuce, provolone, bacon and tomato",
+       "photo": "assets/img/dishes/wagmi/chicken-club.webp"
+      },
+      {
+       "nameEs": "Louisiana Style",
+       "price": 645,
+       "descEs": "Pan de leche japonés. Pollo frito estilo Louisiana con mayo picante y pepinillos dulces",
+       "descEn": "Hokkaido milk bread. Louisiana-style fried chicken with spicy mayo and sweet pickles",
+       "photo": "assets/img/dishes/wagmi/louisiana-style.webp"
+      },
+      {
+       "nameEs": "Gus' Korean",
+       "price": 785,
+       "descEs": "Pan de leche japonés. Pollo frito, salsa gochujang, coleslaw con kimchi y pepinillos",
+       "descEn": "Hokkaido milk bread. Fried chicken, gochujang sauce, kimchi coleslaw and pickles",
+       "photo": "assets/img/dishes/wagmi/gus-korean.webp"
+      },
+      {
+       "nameEs": "Chicken Parm",
+       "price": 785,
+       "descEs": "Pan de leche japonés. Pollo frito, pesto, provolone, pomodoro y galleta de parmesano",
+       "descEn": "Hokkaido milk bread. Fried chicken, pesto, provolone, pomodoro and parmesan crisp",
+       "photo": "assets/img/dishes/wagmi/chicken-parm.webp"
+      },
+      {
+       "nameEs": "Chicken Alla Vodka",
+       "nameEn": "Chicken Alla Vodka",
+       "descEs": "Pollo crujiente en pan de leche japonés con salsa alla vodka cremosa.",
+       "descEn": "Crispy chicken on Japanese milk bread with creamy alla vodka sauce.",
+       "price": 795,
+       "priceVariants": "Pequeño: 795 | Grande: 1,395",
+       "badges": [
+        "nuevo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "underground-club",
+     "nameEs": "The Underground Club",
+     "nameEn": "The Underground Club",
+     "items": [
+      {
+       "nameEs": "Tommy's Cubano",
+       "price": 745,
+       "descEs": "Pan artesanal, pierna de cerdo, jamón, mozzarella, pepinillos y dijonnaise",
+       "descEn": "Artisan bread, pork leg, ham, mozzarella, pickles and dijonnaise",
+       "photo": "assets/img/dishes/wagmi/tommy-s-cubano.webp"
+      },
+      {
+       "nameEs": "Flying Dutchman",
+       "price": 595,
+       "descEs": "Dos tapas de cebolla hacen de pan. Doble carne Angus smash con doble queso americano. Para los protein lovers.",
+       "descEn": "Two onion caps serve as the bun. Double Angus smash with double American cheese. For the protein lovers.",
+       "photo": "assets/img/dishes/wagmi/flying-dutchman.webp"
+      }
+     ]
+    },
+    {
+     "id": "guarniciones",
+     "nameEs": "Guarniciones",
+     "nameEn": "Sides",
+     "items": [
+      {
+       "nameEs": "Papas Fritas (House Fries)",
+       "price": 145
+      },
+      {
+       "nameEs": "Batatas Fritas",
+       "price": 175
+      },
+      {
+       "nameEs": "Yuquita Frita",
+       "price": 175
+      },
+      {
+       "nameEs": "Aros de Cebolla",
+       "price": 225
+      },
+      {
+       "nameEs": "Papas Trufadas",
+       "price": 325
+      },
+      {
+       "nameEs": "Carne Extra 7.5oz (Miguel's)",
+       "price": 395
+      }
+     ]
+    },
+    {
+     "id": "salsas",
+     "nameEs": "Salsas",
+     "nameEn": "Sauces",
+     "noteEs": "$125 cada una",
+     "items": [
+      {
+       "nameEs": "House Sauce",
+       "price": 125
+      },
+      {
+       "nameEs": "Dijonnaise",
+       "price": 125
+      },
+      {
+       "nameEs": "BBQ",
+       "price": 125
+      },
+      {
+       "nameEs": "Secret Sauce",
+       "price": 125
+      },
+      {
+       "nameEs": "Crema de Hongos",
+       "price": 125
+      },
+      {
+       "nameEs": "Spicy Mayo",
+       "price": 125
+      },
+      {
+       "nameEs": "Louisiana Hot Sauce",
+       "price": 125
+      },
+      {
+       "nameEs": "Mango Habanero",
+       "price": 125
+      },
+      {
+       "nameEs": "Korean BBQ",
+       "price": 125
+      },
+      {
+       "nameEs": "Buffalo Azafrán",
+       "price": 125
+      }
+     ]
+    },
+    {
+     "id": "macro-menu",
+     "nameEs": "Macro Menu",
+     "noteEs": "ALTO EN PROTEÍNA",
+     "duplicatedFrom": "macro",
+     "items": [
+      {
+       "nameEs": "Churrasco",
+       "price": 1385,
+       "descEs": "Churrasco de 10 oz, acompañado de la guarnición de tu elección.",
+       "macros": "630 cal · 73.8g prot · 33.8g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Flap Meat (Vacío)",
+       "price": 1150,
+       "descEs": "Corte de vacío de 8 oz, servido con la guarnición de tu elección.",
+       "macros": "383 cal · 58.4g prot · 16.8g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Pechuga de Pollo",
+       "price": 500,
+       "descEs": "Pechuga de pollo a la plancha de 8 onzas, acompañada de la guarnición de tu elección.",
+       "macros": "319 cal · 64g prot · 7g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Buffalo Chicken Wrap",
+       "price": 550,
+       "descEs": "Wrap con lechuga fresca, tomate jugoso y pollo buffalo o grilled, acompañado de salsa tártara.",
+       "macros": "450 cal · 35g prot · 20g grasa · 35g carb"
+      },
+      {
+       "nameEs": "Flying Dutchman",
+       "price": 595,
+       "descEs": "Dos tapas de cebolla hacen de pan. Carne Angus de 5 oz, cubierta con salsa de la casa y doble queso americano.",
+       "macros": "620 cal · 29g prot · 51.1g grasa · 11.7g carb"
+      },
+      {
+       "nameEs": "Philly Bowl (El Pepe)",
+       "price": 725,
+       "badges": [
+        "nuevo"
+       ],
+       "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
+       "macros": "891 cal · 62g prot · 29.2g grasa · 87.4g carb"
+      }
+     ]
+    },
+    {
+     "id": "ensaladas-wraps",
+     "nameEs": "Ensaladas & Wraps",
+     "noteEs": "FRESCAS Y SALUDABLES",
+     "duplicatedFrom": "napa",
+     "items": [
+      {
+       "nameEs": "Honey Mustard Salad",
+       "price": 595,
+       "priceVariants": "ensalada: 595 | en wrap: +75",
+       "descEs": "Lechuga romana, pollo a la parrilla, tocineta crocante, queso cheddar, cebolla roja, croutones de la casa, aguacate, maíz, tomate cherry, limón y aderezo Honey Mustard."
+      },
+      {
+       "nameEs": "Chicken Caesar Salad",
+       "price": 595,
+       "priceVariants": "ensalada: 595 | en wrap: +75",
+       "descEs": "Lechuga romana, queso parmesano, pollo a la parrilla, tomates cherry, croutones de la casa, crisp de parmesano y aderezo Caesar."
+      },
+      {
+       "nameEs": "Salmón al Grill con Vegetales Salteados",
+       "price": 1145,
+       "descEs": "5 oz de salmón fresco a la parrilla, piel crocante, acompañado de vegetales salteados."
+      },
+      {
+       "nameEs": "Salmon Bowl",
+       "price": 725,
+       "descEs": "Quinoa, lechuga romana, salmón horneado, salsa ponzu, limón Meyer grillado, edamame, encurtido de nabo y zanahoria, wakame, aderezo ranch."
+      }
+     ]
+    },
+    {
+     "id": "kids-menu",
+     "nameEs": "Kids Menu",
+     "noteEs": "PARA LOS PEQUEÑOS",
+     "duplicatedFrom": "kids",
+     "items": [
+      {
+       "nameEs": "Mini Cheeseburger",
+       "price": 445,
+       "descEs": "Incluye papas fritas o acompañamiento"
+      },
+      {
+       "nameEs": "Mini Cheeseburger + Bacon",
+       "price": 495,
+       "descEs": "Incluye papas fritas o acompañamiento"
+      },
+      {
+       "nameEs": "Popcorn Chicken",
+       "price": 445,
+       "descEs": "Incluye papas fritas o acompañamiento"
+      }
+     ]
+    }
+   ],
+   "issues": [
+    "Flying Dutchman aparece 2 veces con el mismo precio ($595) pero descripciones contradictorias: en The Underground Club dice 'Doble carne Angus smash', en Macro Menu dice 'Carne Angus de 5 oz' (single). Inconsistencia en la spec de carne.",
+    "Philly Bowl (El Pepe) está duplicado dentro del propio menú (Philly Series y Macro Menu), mismo precio $725 y misma descripción; solo la versión Macro tiene datos de macros.",
+    "Las salsas no tienen precio individual en los chips; el precio 125 se aplicó desde el subtítulo de sección '$125 cada una'.",
+    "Las secciones embebidas (Macro Menu, Ensaladas & Wraps, Kids Menu) NO tienen atributos data-i18n: al cambiar a EN/IT quedan en español. Sin traducción EN disponible para esos ítems.",
+    "Los nombres de ítems no tienen data-i18n-name en ningún caso (el script soporta el grupo 'names' pero T.en/T.it no lo definen) — nameEn omitido en todos los ítems.",
+    "La nota 'Todos los platos incluyen papas fritas de la casa' está colocada después de The Underground Club; alcance ambiguo (¿todo el menú o solo sandwiches/burgers?). Contradice además que Chicken Tenders menciona 'servidas con papas fritas' como si fuera excepción y que las papas se venden aparte a $145.",
+    "Ítems de Guarniciones y Salsas sin descripción (esperado, no es error).",
+    "'Cativias' (BBQ Pork Cativias) podría ser variante/typo de 'catibias' — verificar ortografía deseada.",
+    "El claim 'Alto en proteína' del Flying Dutchman en Macro Menu no cuadra con sus macros (29g prot vs 51.1g grasa), pero se extrajo tal cual."
+   ]
+  },
+  {
+   "conceptId": "pecora",
+   "conceptName": "LA PÉCORA",
+   "tagline": "Pizza & Pasta Artesanal",
+   "taglineEn": "Artisan Pizza & Pasta",
+   "brandColor": "#3D5A5B",
+   "displayFont": "Playfair Display",
+   "sections": [
+    {
+     "id": "pastas",
+     "nameEs": "Pastas",
+     "nameEn": "Pastas",
+     "noteEs": "Hechas al momento · Elige tu pasta: Spaghetti · Penne · Conchiglie · Fusilli",
+     "items": [
+      {
+       "nameEs": "Cacio e Pepe",
+       "price": 545,
+       "descEs": "Pecorino romano y pimienta negra recién molida",
+       "descEn": "Pecorino romano and freshly ground black pepper",
+       "photo": "assets/img/dishes/pecora/cacio-e-pepe.webp"
+      },
+      {
+       "nameEs": "Chicken Alfredo",
+       "price": 545,
+       "descEs": "Salsa cremosa de parmesano y mantequilla con pollo a la parrilla",
+       "descEn": "Creamy parmesan and butter sauce with grilled chicken",
+       "photo": "assets/img/dishes/pecora/chicken-alfredo.webp"
+      },
+      {
+       "nameEs": "Spicy Vodka",
+       "price": 625,
+       "descEs": "Salsa vodka picante con un toque de crema y parmesano",
+       "descEn": "Spicy vodka sauce with a touch of cream and parmesan",
+       "photo": "assets/img/dishes/pecora/spicy-vodka.webp"
+      },
+      {
+       "nameEs": "Carbonara",
+       "price": 675,
+       "descEs": "Guanciale, huevo, pecorino y pimienta negra",
+       "descEn": "Guanciale, egg, pecorino and black pepper",
+       "photo": "assets/img/dishes/pecora/carbonara.webp"
+      },
+      {
+       "nameEs": "All'Amatriciana",
+       "price": 595,
+       "descEs": "Guanciale, tomate San Marzano, pecorino y chile rojo",
+       "descEn": "Guanciale, San Marzano tomato, pecorino and red chile",
+       "photo": "assets/img/dishes/pecora/all-amatriciana.webp"
+      },
+      {
+       "nameEs": "Creamy Pesto",
+       "price": 545,
+       "descEs": "Pesto de albahaca fresca con crema y parmesano",
+       "descEn": "Fresh basil pesto with cream and parmesan",
+       "photo": "assets/img/dishes/pecora/creamy-pesto.webp"
+      },
+      {
+       "nameEs": "Lasagna Boloñesa",
+       "price": 600,
+       "descEs": "Capas de pasta, ragú de carne, bechamel y parmesano",
+       "descEn": "Layers of pasta, meat ragù, béchamel and parmesan",
+       "photo": "assets/img/dishes/pecora/lasagna-bolonesa.webp"
+      },
+      {
+       "nameEs": "4 Quesos",
+       "price": 525,
+       "descEs": "Mezcla cremosa de cuatro quesos italianos",
+       "descEn": "Creamy blend of four Italian cheeses",
+       "photo": "assets/img/dishes/pecora/4-quesos.webp"
+      },
+      {
+       "nameEs": "Pepi's Mac and Cheese",
+       "price": 495,
+       "descEs": "Macarrones con mezcla de quesos cremosos, servidos con Pepi Pops",
+       "descEn": "Macaroni with creamy cheese blend, served with Pepi Pops",
+       "photo": "assets/img/dishes/pecora/pepi-s-mac-and-cheese.webp"
+      }
+     ]
+    },
+    {
+     "id": "pizza-rosso",
+     "nameEs": "Pizza Rosso",
+     "nameEn": "Pizza Rosso",
+     "noteEs": "Base de salsa pomodoro · Masa madre artesanal",
+     "items": [
+      {
+       "nameEs": "Margarita",
+       "price": 495,
+       "descEs": "Salsa pomodoro, mozzarella y albahaca fresca",
+       "descEn": "Pomodoro sauce, mozzarella and fresh basil",
+       "photo": "assets/img/dishes/pecora/margarita.webp"
+      },
+      {
+       "nameEs": "Pepperoni",
+       "price": 545,
+       "descEs": "Salsa pomodoro, mozzarella y pepperoni",
+       "descEn": "Pomodoro sauce, mozzarella and pepperoni",
+       "photo": "assets/img/dishes/pecora/pepperoni.webp"
+      },
+      {
+       "nameEs": "Hot Honey Pepperoni",
+       "price": 595,
+       "descEs": "Pepperoni, mozzarella, miel picante y albahaca",
+       "descEn": "Pepperoni, mozzarella, hot honey and basil",
+       "photo": "assets/img/dishes/pecora/hot-honey-pepperoni.webp"
+      },
+      {
+       "nameEs": "Prosciutto di Parma",
+       "price": 645,
+       "descEs": "Mozzarella, rúcula, parmesano y prosciutto",
+       "descEn": "Mozzarella, arugula, parmesan and prosciutto",
+       "photo": "assets/img/dishes/pecora/prosciutto-di-parma.webp"
+      },
+      {
+       "nameEs": "Ajo y Perejil",
+       "price": 495,
+       "descEs": "Salsa pomodoro con ajo confitado y perejil fresco",
+       "descEn": "Pomodoro sauce with garlic confit and fresh parsley",
+       "photo": "assets/img/dishes/pecora/ajo-y-perejil.webp"
+      },
+      {
+       "nameEs": "Spicy Vodka",
+       "price": 625,
+       "descEs": "Salsa vodka, salchicha italiana, parmesano gratinado y pesto",
+       "descEn": "Vodka sauce, Italian sausage, gratinéed parmesan and pesto",
+       "photo": "assets/img/dishes/pecora/spicy-vodka.webp"
+      },
+      {
+       "nameEs": "Plátano di Lusso",
+       "price": 545,
+       "descEs": "Plátano maduro, mozzarella y un toque dominicano",
+       "descEn": "Sweet plantain, mozzarella and a Dominican touch",
+       "photo": "assets/img/dishes/pecora/platano-di-lusso.webp"
+      },
+      {
+       "nameEs": "Carnívora",
+       "price": 695,
+       "descEs": "Pepperoni, salchicha italiana, tocineta y hongos",
+       "descEn": "Pepperoni, Italian sausage, bacon and mushrooms",
+       "photo": "assets/img/dishes/pecora/carnivora.webp"
+      },
+      {
+       "nameEs": "Amatriciana Moderna",
+       "price": 665,
+       "descEs": "Mermelada de guanciale, pecorino rallado, pimienta negra y aceite de oliva",
+       "descEn": "Guanciale jam, grated pecorino, black pepper and olive oil",
+       "photo": "assets/img/dishes/pecora/amatriciana-moderna.webp"
+      },
+      {
+       "nameEs": "Diavola Moderna",
+       "price": 685,
+       "descEs": "Salami calabrés, cebolla, hojuelas de chile, albahaca y aceite de ajo confitado",
+       "descEn": "Calabrese salami, onion, chile flakes, basil and garlic confit oil",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/pecora/diavola-moderna.webp"
+      },
+      {
+       "nameEs": "Straccia-Nduja",
+       "price": 645,
+       "descEs": "Tomate cherry rostizado, 'nduja con pomodoro, stracciatella, ralladura de limón y aceite de oliva",
+       "descEn": "Roasted cherry tomato, 'nduja with pomodoro, stracciatella, lemon zest and olive oil",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/pecora/straccia-nduja.webp"
+      },
+      {
+       "nameEs": "La Caprina",
+       "price": 655,
+       "descEs": "Soppressata picante, queso de cabra, orégano fresco y aceite de oliva extra virgen. Hot honey aparte.",
+       "descEn": "Spicy soppressata, goat cheese, fresh oregano and extra virgin olive oil. Hot honey on the side.",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/pecora/la-caprina.webp"
+      },
+      {
+       "nameEs": "Fenway Pizza",
+       "price": 675,
+       "descEs": "Salchicha italiana, cebolla, pimientos rojos, albahaca y aioli de cerveza con harissa",
+       "descEn": "Italian sausage, onion, red peppers, basil and harissa beer aioli",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/pecora/fenway-pizza.webp"
+      }
+     ]
+    },
+    {
+     "id": "pizza-bianca",
+     "nameEs": "Pizza Bianca",
+     "nameEn": "Pizza Bianca",
+     "noteEs": "Sin salsa de tomate · Base cremosa",
+     "items": [
+      {
+       "nameEs": "Cacio e Pepe",
+       "price": 545,
+       "descEs": "Base cremosa de parmesano con pimienta negra, terminada con queso al salir del horno",
+       "descEn": "Creamy parmesan base with black pepper, finished with cheese out of the oven",
+       "photo": "assets/img/dishes/pecora/cacio-e-pepe.webp"
+      },
+      {
+       "nameEs": "Nutty Truffled",
+       "price": 695,
+       "descEs": "Stracciatella de burrata, nueces tostadas y miel trufada",
+       "descEn": "Burrata stracciatella, toasted walnuts and truffle honey",
+       "photo": "assets/img/dishes/pecora/nutty-truffled.webp"
+      },
+      {
+       "nameEs": "Carbonara",
+       "price": 675,
+       "descEs": "Salsa blanca, guanciale, parmesano y huevos de codorniz",
+       "descEn": "White sauce, guanciale, parmesan and quail eggs",
+       "photo": "assets/img/dishes/pecora/carbonara.webp"
+      },
+      {
+       "nameEs": "Paulina",
+       "price": 745,
+       "descEs": "Salsa blanca, mozzarella, mortadella de pistacho, stracciatella de burrata y miel trufada",
+       "descEn": "White sauce, mozzarella, pistachio mortadella, burrata stracciatella and truffle honey",
+       "photo": "assets/img/dishes/pecora/paulina.webp"
+      },
+      {
+       "nameEs": "Quattro Fromaggi",
+       "price": 695,
+       "descEs": "Mozzarella, queso de cabra, stracciatella, parmesano y aceite de oliva",
+       "descEn": "Mozzarella, goat cheese, stracciatella, parmesan and olive oil",
+       "photo": "assets/img/dishes/pecora/quattro-fromaggi.webp"
+      }
+     ]
+    },
+    {
+     "id": "extras",
+     "nameEs": "Extras",
+     "nameEn": "Extras",
+     "items": [
+      {
+       "nameEs": "Hot Honey",
+       "price": 75
+      },
+      {
+       "nameEs": "Miel Trufada",
+       "price": 100
+      },
+      {
+       "nameEs": "Parmesan Crisp",
+       "price": 150
+      },
+      {
+       "nameEs": "Pan Sourdough",
+       "price": 75
+      },
+      {
+       "nameEs": "Parmesano",
+       "price": 75
+      },
+      {
+       "nameEs": "Extra Pesto",
+       "price": 125
+      },
+      {
+       "nameEs": "Extra Stracciatella",
+       "price": 395
+      },
+      {
+       "nameEs": "Extra Bacon",
+       "price": 145
+      },
+      {
+       "nameEs": "Extra Guanciale",
+       "price": 175
+      }
+     ]
+    },
+    {
+     "id": "kids",
+     "nameEs": "Kids Menu",
+     "noteEs": "Para los pequeños",
+     "duplicatedFrom": "kids",
+     "items": [
+      {
+       "nameEs": "Macarrones con Queso",
+       "price": 345,
+       "descEs": "Porción para niños"
+      },
+      {
+       "nameEs": "Pizza de Queso",
+       "price": 600,
+       "descEs": "Tamaño niño"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Pastas: elige tu pasta — Spaghetti · Penne · Conchiglie · Fusilli",
+    "Extras de Pasta: Proteína (Pollo o Camarones) +$225 · Extra Parmesano +$95",
+    "Precios en RD$ · ITBIS no incluido · @lapecora.sdq · Acrópolis Business Mall, Santo Domingo",
+    "Menú trilingüe: ES / EN / IT (incluye traducciones al italiano además del inglés)"
+   ],
+   "issues": [
+    "Typo evidente: 'Quattro Fromaggi' (Pizza Bianca) debería ser 'Quattro Formaggi'",
+    "Precio inconsistente de parmesano extra: la nota de Extras de Pasta dice 'Extra Parmesano +$95' pero la sección Extras lista 'Parmesano' a $75",
+    "La sección Kids Menu no tiene claves i18n (data-i18n): queda en español fijo al cambiar a EN/IT, a diferencia del resto del menú",
+    "Los nombres de ítems no tienen data-i18n-name en ningún caso (nombres idénticos en los 3 idiomas); por eso se omite nameEn en todos los ítems",
+    "Los 9 ítems de la sección Extras no tienen descripción ni claves i18n ('Miel Trufada' y 'Parmesano' quedan en español en EN/IT)",
+    "Ítems con mismo nombre en secciones distintas (intencional, pasta vs pizza): Cacio e Pepe ($545 ambas), Carbonara ($675 ambas), Spicy Vodka ($625 ambas)",
+    "CSS define la clase .nuevo-badge dos veces con estilos casi duplicados (cosmético, no afecta extracción)"
+   ]
+  },
+  {
+   "conceptId": "hokkaido",
+   "conceptName": "HOKKAIDŌ",
+   "tagline": "Japanese Cuisine",
+   "taglineEn": "Japanese Cuisine",
+   "brandColor": "#FF5722",
+   "displayFont": "Noto Serif JP",
+   "sections": [
+    {
+     "id": "entradas",
+     "nameEs": "Entradas",
+     "nameEn": "Starters",
+     "items": [
+      {
+       "nameEs": "Crispy Rice",
+       "price": 445,
+       "descEs": "Nigiri de arroz crujiente, aguacate cremoso y semillas de sésamo · Tuna o Salmón",
+       "descEn": "Crispy rice nigiri, creamy avocado and sesame seeds · Tuna or Salmon",
+       "photo": "assets/img/dishes/hokkaido/crispy-rice.webp"
+      },
+      {
+       "nameEs": "Tuna Tartare",
+       "price": 815,
+       "descEs": "Atún fresco con mayonesa, guayaba, puerro crujiente, ajonjolí tostado, guilin chilin y aguacate. Con chips de plátano.",
+       "descEn": "Fresh tuna with mayo, guava, crispy leek, toasted sesame, guilin chili and avocado. With plantain chips.",
+       "photo": "assets/img/dishes/hokkaido/tuna-tartare.webp"
+      },
+      {
+       "nameEs": "Gyozas de Cerdo",
+       "price": 435,
+       "descEs": "5 unidades, servidas con salsa teriyaki casera, puerro y ajonjolí",
+       "descEn": "5 pieces, served with homemade teriyaki sauce, leek and sesame",
+       "photo": "assets/img/dishes/hokkaido/gyozas-de-cerdo.webp"
+      },
+      {
+       "nameEs": "Gyozas de Pollo",
+       "price": 425,
+       "descEs": "5 unidades, con salsa teriyaki casera y crocante coral de parmesano",
+       "descEn": "5 pieces, with homemade teriyaki sauce and crispy parmesan coral",
+       "photo": "assets/img/dishes/hokkaido/gyozas-de-pollo.webp"
+      }
+     ]
+    },
+    {
+     "id": "poke-bowls",
+     "nameEs": "Poke Bowls",
+     "nameEn": "Poke Bowls",
+     "items": [
+      {
+       "nameEs": "Terichicken Bowl",
+       "price": 585,
+       "descEs": "Pollo teriyaki, pepino, aguacate, tomate cherry, plátano maduro, sésamo y chips de eggroll",
+       "descEn": "Teriyaki chicken, cucumber, avocado, cherry tomato, sweet plantain, sesame and eggroll chips",
+       "photo": "assets/img/dishes/hokkaido/terichicken-bowl.webp"
+      },
+      {
+       "nameEs": "Duo Poke Bowl",
+       "price": 645,
+       "descEs": "Ensalada de cangrejo, algas, atún y salmón con spicy mayo, anguila, zanahoria, pepino, aguacate y edamame",
+       "descEn": "Crab salad, seaweed, tuna and salmon with spicy mayo, eel sauce, carrot, cucumber, avocado and edamame",
+       "photo": "assets/img/dishes/hokkaido/duo-poke-bowl.webp"
+      },
+      {
+       "nameEs": "Ikimai Bowl",
+       "price": 645,
+       "descEs": "Atún con salsa ponzu, cebolla blanca, puerro, nabo, jengibre de sushi, aguacate y mango",
+       "descEn": "Tuna with ponzu sauce, white onion, leek, turnip, sushi ginger, avocado and mango",
+       "photo": "assets/img/dishes/hokkaido/ikimai-bowl.webp"
+      },
+      {
+       "nameEs": "Ducho Bowl",
+       "price": 645,
+       "descEs": "Camarón, cebolla roja, edamame picante, repollo morado, aguacate, zanahoria, plátano maduro y cebolla frita",
+       "descEn": "Shrimp, red onion, spicy edamame, purple cabbage, avocado, carrot, sweet plantain and fried onion",
+       "photo": "assets/img/dishes/hokkaido/ducho-bowl.webp"
+      },
+      {
+       "nameEs": "Salmon Bowl",
+       "price": 695,
+       "descEs": "Salmón con spicy mayo, pepino, aguacate, jengibre de sushi, edamame y sésamo",
+       "descEn": "Salmon with spicy mayo, cucumber, avocado, sushi ginger, edamame and sesame",
+       "photo": "assets/img/dishes/hokkaido/salmon-bowl.webp"
+      },
+      {
+       "nameEs": "Nazar Bowl",
+       "price": 645,
+       "descEs": "Medio cup arroz, doble wakame, doble tuna, king crab, edamame, ajonjolí, spicy mayo y salsa de anguila",
+       "descEn": "Half cup rice, double wakame, double tuna, king crab, edamame, sesame, spicy mayo and eel sauce",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/nazar-bowl.webp"
+      },
+      {
+       "nameEs": "Poke Tartare",
+       "price": 815,
+       "descEs": "Edamame, arroz, aguacate, cebolla frita, tuna tartare con guayaba, spicy mayo y puerro",
+       "descEn": "Edamame, rice, avocado, fried onion, tuna tartare with guava, spicy mayo and leek",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/poke-tartare.webp"
+      },
+      {
+       "nameEs": "Tekkadon",
+       "price": 720,
+       "descEs": "Bowl de arroz de sushi coronado con cortes de atún fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya",
+       "descEn": "Sushi rice bowl crowned with fresh-cut tuna, toasted sesame, crispy fine leek and soy sauce",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/tekkadon.webp"
+      },
+      {
+       "nameEs": "Sakedon",
+       "price": 720,
+       "descEs": "Bowl de arroz de sushi coronado con cortes de salmón fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya",
+       "descEn": "Sushi rice bowl crowned with fresh-cut salmon, toasted sesame, crispy fine leek and soy sauce",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/sakedon.webp"
+      }
+     ]
+    },
+    {
+     "id": "uramaki-rolls",
+     "nameEs": "Uramaki Rolls",
+     "nameEn": "Uramaki Rolls",
+     "noteEs": "Arroz por fuera",
+     "items": [
+      {
+       "nameEs": "Ebi Panko Roll",
+       "price": 615,
+       "descEs": "Camarón panko, cream cheese; por fuera camarón panko y sweet mayo",
+       "descEn": "Panko shrimp, cream cheese; topped with panko shrimp and sweet mayo",
+       "photo": "assets/img/dishes/hokkaido/ebi-panko-roll.webp"
+      },
+      {
+       "nameEs": "Spicy Tuna Roll",
+       "price": 645,
+       "descEs": "Picadillo de tuna y mayo spicy, puerro, aguacate, cream cheese; por fuera spicy tuna",
+       "descEn": "Spicy tuna and mayo mix, leek, avocado, cream cheese; topped with spicy tuna",
+       "photo": "assets/img/dishes/hokkaido/spicy-tuna-roll.webp"
+      },
+      {
+       "nameEs": "Crispy Chicken Roll",
+       "price": 595,
+       "descEs": "Pollo tempura, bacon, aguacate y cream cheese; por fuera plátano maduro, teriyaki y sweet mayo",
+       "descEn": "Chicken tempura, bacon, avocado and cream cheese; topped with sweet plantain, teriyaki and sweet mayo",
+       "photo": "assets/img/dishes/hokkaido/crispy-chicken-roll.webp"
+      },
+      {
+       "nameEs": "Salmon Duo Roll",
+       "price": 645,
+       "descEs": "Salmón, cream cheese, furikake, shichimi; por fuera salmón, salsa de anguila, aguacate y puerro",
+       "descEn": "Salmon, cream cheese, furikake, shichimi; topped with salmon, eel sauce, avocado and leek",
+       "photo": "assets/img/dishes/hokkaido/salmon-duo-roll.webp"
+      },
+      {
+       "nameEs": "Ducho Roll",
+       "price": 635,
+       "descEs": "Camarón panko, cream cheese, aguacate; tope de ensaladilla de kamikama, salsa de anguila y sweet mayo",
+       "descEn": "Panko shrimp, cream cheese, avocado; topped with kamikama salad, eel sauce and sweet mayo",
+       "photo": "assets/img/dishes/hokkaido/ducho-roll.webp"
+      },
+      {
+       "nameEs": "Unagi Roll",
+       "price": 750,
+       "descEs": "Relleno de aguacate y cebollitas crocantes; por fuera anguila y ajonjolí",
+       "descEn": "Avocado and crispy scallion filling; topped with roasted eel and sesame",
+       "photo": "assets/img/dishes/hokkaido/unagi-roll.webp"
+      },
+      {
+       "nameEs": "Kike Roll",
+       "price": 675,
+       "descEs": "Camarón tempura, king crab, aguacate, spicy mayo, salsa de anguila y crunchy de tempura",
+       "descEn": "Shrimp tempura, king crab, avocado, spicy mayo, eel sauce and tempura crunch",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/kike-roll.webp"
+      }
+     ]
+    },
+    {
+     "id": "sushi-rolls",
+     "nameEs": "Sushi Rolls",
+     "nameEn": "Sushi Rolls",
+     "noteEs": "Nori por fuera",
+     "items": [
+      {
+       "nameEs": "Royal Sushi Roll",
+       "price": 645,
+       "descEs": "Salmón, tuna y aguacate; por fuera salmón y tuna con puerro fino y ajonjolí",
+       "descEn": "Salmon, tuna and avocado; topped with salmon and tuna with fine leek and sesame",
+       "photo": "assets/img/dishes/hokkaido/royal-sushi-roll.webp"
+      },
+      {
+       "nameEs": "Alaska Roll",
+       "price": 625,
+       "descEs": "Ensaladilla de kamikama, pepino, aguacate y semillas de sésamo",
+       "descEn": "Kamikama salad, cucumber, avocado and sesame seeds",
+       "photo": "assets/img/dishes/hokkaido/alaska-roll.webp"
+      },
+      {
+       "nameEs": "Crispy Salmon Skin Roll",
+       "price": 600,
+       "descEs": "Piel de salmón crujiente, aguacate, puerro, salsa de anguila y furikake",
+       "descEn": "Crispy salmon skin, avocado, leek, eel sauce and furikake",
+       "photo": "assets/img/dishes/hokkaido/crispy-salmon-skin-roll.webp"
+      },
+      {
+       "nameEs": "Aplatanado Roll",
+       "price": 600,
+       "descEs": "Camarón panko, cream cheese, plátano maduro; por fuera aguacate, sweet mayo y salsa de anguila",
+       "descEn": "Panko shrimp, cream cheese, sweet plantain; topped with avocado, sweet mayo and eel sauce",
+       "photo": "assets/img/dishes/hokkaido/aplatanado-roll.webp"
+      },
+      {
+       "nameEs": "Riceless Tuna Roll",
+       "price": 795,
+       "descEs": "Relleno de ensaladilla de kamikama, aguacate, puerro fino, salsa ponzu y anguila",
+       "descEn": "Kamikama salad filling, avocado, fine leek, ponzu and eel sauce",
+       "photo": "assets/img/dishes/hokkaido/riceless-tuna-roll.webp"
+      },
+      {
+       "nameEs": "Salmon Riceless Roll",
+       "price": 795,
+       "descEs": "Salmón, queso crema, lechuga risada, mango maduro, kamikama, salsa spicy y anguila",
+       "descEn": "Salmon, cream cheese, curly lettuce, ripe mango, kamikama, spicy sauce and eel",
+       "photo": "assets/img/dishes/hokkaido/salmon-riceless-roll.webp"
+      }
+     ]
+    },
+    {
+     "id": "new-style-nigiri",
+     "nameEs": "New Style Nigiri",
+     "nameEn": "New Style Nigiri",
+     "items": [
+      {
+       "nameEs": "Tuna Ponzu Nigiri",
+       "price": 325,
+       "descEs": "Tuna, salsa ponzu, ajonjolí e hilos de puerro fino",
+       "descEn": "Tuna, ponzu sauce, sesame and fine leek threads",
+       "photo": "assets/img/dishes/hokkaido/tuna-ponzu-nigiri.webp"
+      },
+      {
+       "nameEs": "Salmon Charred Nigiri",
+       "price": 325,
+       "descEs": "Salmón flameado, salsa de ají amarillo y ralladura de lima",
+       "descEn": "Flame-seared salmon, aji amarillo sauce and lime zest",
+       "photo": "assets/img/dishes/hokkaido/salmon-charred-nigiri.webp"
+      }
+     ]
+    },
+    {
+     "id": "nigiri-sashimi",
+     "nameEs": "Nigiri & Sashimi",
+     "nameEn": "Nigiri & Sashimi",
+     "items": [
+      {
+       "nameEs": "Unagi Nigiri",
+       "price": 225,
+       "descEs": "Anguila rostizada, salsa de anguila, sésamo blanco y negro",
+       "descEn": "Roasted eel, eel sauce, white and black sesame",
+       "photo": "assets/img/dishes/hokkaido/unagi-nigiri.webp"
+      },
+      {
+       "nameEs": "Nigiri",
+       "price": 225,
+       "descEs": "Salmón o Tuna",
+       "descEn": "Salmon or Tuna",
+       "photo": "assets/img/dishes/hokkaido/nigiri.webp"
+      },
+      {
+       "nameEs": "Sashimi",
+       "price": 795,
+       "descEs": "Salmón o Tuna",
+       "descEn": "Salmon or Tuna",
+       "photo": "assets/img/dishes/hokkaido/sashimi.webp"
+      }
+     ]
+    },
+    {
+     "id": "extras",
+     "nameEs": "Extras",
+     "noteEs": "Ingredientes adicionales para tu poke",
+     "items": [
+      {
+       "nameEs": "Extra Proteína (Salmón o Tuna)",
+       "price": 225
+      },
+      {
+       "nameEs": "Aguacate",
+       "price": 95
+      },
+      {
+       "nameEs": "Edamame",
+       "price": 95
+      },
+      {
+       "nameEs": "Wakame",
+       "price": 125
+      },
+      {
+       "nameEs": "Cream Cheese",
+       "price": 75
+      },
+      {
+       "nameEs": "Spicy Mayo",
+       "price": 125
+      }
+     ]
+    },
+    {
+     "id": "macro-menu",
+     "nameEs": "Macro Menu",
+     "noteEs": "ALTO EN PROTEÍNA",
+     "duplicatedFrom": "macro",
+     "items": [
+      {
+       "nameEs": "Tekkadon",
+       "price": 720,
+       "descEs": "Bowl de arroz de sushi coronado con 5 oz de atún fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.",
+       "macros": "480 cal · 44g prot · 4g grasa · 62g carb",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/tekkadon.webp"
+      },
+      {
+       "nameEs": "Sakedon",
+       "price": 720,
+       "descEs": "Bowl de arroz de sushi coronado con 5 oz de salmón fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.",
+       "macros": "530 cal · 39g prot · 14g grasa · 62g carb",
+       "badges": [
+        "nuevo"
+       ],
+       "photo": "assets/img/dishes/hokkaido/sakedon.webp"
+      }
+     ]
+    },
+    {
+     "id": "kids-menu",
+     "nameEs": "Kids Menu",
+     "noteEs": "PARA LOS PEQUEÑOS",
+     "duplicatedFrom": "kids",
+     "items": [
+      {
+       "nameEs": "Antonella Roll",
+       "price": 595,
+       "descEs": "Roll especial para niños"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Precios en RD$ · ITBIS no incluido (footer)",
+    "Ubicación: Acrópolis Business Mall, Santo Domingo · @hokkaido.sdq",
+    "Menú trilingüe: además de ES/EN tiene traducciones completas en italiano (IT) en el toggle de idioma",
+    "Los nombres de ítems no tienen claves i18n (data-i18n-name no se usa); solo se traducen secciones, descripciones, opciones y footer",
+    "Opciones de proteína (Tuna o Salmón) en Crispy Rice, Nigiri, Sashimi y Extra Proteína se integraron a la descripción por falta de campo dedicado"
+   ],
+   "issues": [
+    "Clave i18n rota: la sección Extras usa data-i18n-section=\"s7\" y data-i18n-sub=\"sub5\", pero los diccionarios EN/IT solo definen s1-s6 y sub1-sub2 — la sección Extras nunca se traduce",
+    "Clave i18n huérfana inversa: el h2 \"Nigiri & Sashimi\" NO tiene atributo data-i18n-section, aunque la traducción s6 existe en EN e IT — el título queda fijo en el texto original",
+    "Ítems duplicados: Tekkadon y Sakedon aparecen en Poke Bowls ($720) y en Macro Menu ($720) con descripciones ligeramente distintas (\"cortes de atún/salmón fresco\" vs \"5 oz de atún/salmón fresco\"); la versión Macro no tiene claves i18n",
+    "Inconsistencia ES/EN en Duo Poke Bowl (d6): ES dice \"anguila\" (proteína), EN dice \"eel sauce\" (salsa)",
+    "Posible typo en Tuna Tartare (d2): ES \"guilin chilin\" vs EN \"guilin chili\"",
+    "Typo en Salmon Riceless Roll (d24): \"lechuga risada\" debería ser \"lechuga rizada\"",
+    "El subtítulo del header en versión ES está en inglés (\"Japanese Cuisine\"); solo IT lo traduce (\"Cucina Giapponese\")",
+    "Ítems de Extras, Macro Menu y Kids Menu no tienen claves i18n (texto ES hardcoded, sin EN)",
+    "Sin precios escalonados ni ítems coming-soon en este menú (la clase CSS coming-soon existe pero no se usa en el body)"
+   ]
+  },
+  {
+   "conceptId": "cantina",
+   "conceptName": "Cantina La Cuadra",
+   "tagline": "Mexican Flavors",
+   "taglineEn": "Mexican Flavors",
+   "brandColor": "#F5A623",
+   "displayFont": "Cormorant Garamond",
+   "sections": [
+    {
+     "id": "entradas",
+     "nameEs": "Entradas",
+     "nameEn": "Starters",
+     "items": [
+      {
+       "nameEs": "Guacamole con Chips",
+       "descEs": "Guacamole fresco servido con chips de maíz crujiente.",
+       "descEn": "Fresh guacamole served with crispy corn chips.",
+       "price": 250,
+       "photo": "assets/img/dishes/cantina/guacamole-con-chips.webp"
+      },
+      {
+       "nameEs": "Nachos",
+       "descEs": "Chips de maíz, guacamole, aioli de cilantro, sour cream, pico de gallo, cilantro y cebolla encurtida. (Pollo · Cochinita Pibil · Birria · Chicharrón · Al Pastor)",
+       "descEn": "Corn chips, guacamole, cilantro aioli, sour cream, pico de gallo, cilantro and pickled onion. (Pork al pastor · Cochinita pibil · Chicken al pastor)",
+       "price": 695,
+       "photo": "assets/img/dishes/cantina/nachos.webp"
+      },
+      {
+       "nameEs": "Flautas",
+       "descEs": "Flautas crujientes, queso fresco, salsa verde, crema agria, cebolla y cilantro. (Pollo · Cochinita Pibil · Birria · Chicharrón · Al Pastor)",
+       "descEn": "Crispy flautas, fresh cheese, salsa verde, sour cream, onion and cilantro. (Cochinita pibil · Grilled chicken)",
+       "price": 595,
+       "photo": "assets/img/dishes/cantina/flautas.webp"
+      }
+     ]
+    },
+    {
+     "id": "quesadillas",
+     "nameEs": "Quesadillas",
+     "nameEn": "Quesadillas",
+     "items": [
+      {
+       "nameEs": "Birria de Res",
+       "descEs": "Res en caldo de guajillo y chile ancho, mix de quesos, cebollitas, cilantro y caldo de birria",
+       "descEn": "Beef in guajillo and ancho chile broth, cheese blend, scallions, cilantro and birria broth",
+       "price": 615,
+       "photo": "assets/img/dishes/cantina/birria-de-res.webp"
+      },
+      {
+       "nameEs": "Pollo",
+       "descEs": "Mix de quesos, pollo al horno, guacamole, cebolla encurtida y cilantro",
+       "descEn": "Cheese blend, oven-roasted chicken, guacamole, pickled onion and cilantro",
+       "price": 535,
+       "photo": "assets/img/dishes/cantina/pollo.webp"
+      },
+      {
+       "nameEs": "Cochinita Pibil",
+       "descEs": "Cerdo cocido lentamente con achiote y chile pasilla, mix de quesos y cebolla encurtida",
+       "descEn": "Slow-cooked pork with achiote and pasilla chile, cheese blend and pickled onion",
+       "price": 445,
+       "photo": "assets/img/dishes/cantina/cochinita-pibil.webp"
+      },
+      {
+       "nameEs": "Al Pastor",
+       "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca, cilantro y limón",
+       "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion, cilantro and lime",
+       "price": 595,
+       "photo": "assets/img/dishes/cantina/al-pastor.webp"
+      },
+      {
+       "nameEs": "Mix de Quesos",
+       "descEs": "Mix de quesos fundidos en tortilla dorada",
+       "descEn": "Melted cheese blend in a golden tortilla",
+       "price": 445,
+       "photo": "assets/img/dishes/cantina/mix-de-quesos.webp"
+      },
+      {
+       "nameEs": "Protein Quesadilla",
+       "descEs": "Mix de quesos, alta en proteína con extra pollo",
+       "descEn": "Cheese blend, high protein with extra chicken",
+       "price": 695,
+       "photo": "assets/img/dishes/cantina/protein-quesadilla.webp"
+      }
+     ]
+    },
+    {
+     "id": "tacos",
+     "nameEs": "Tacos",
+     "nameEn": "Tacos",
+     "items": [
+      {
+       "nameEs": "Al Pastor",
+       "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca, cilantro y limón. En tortilla de maíz",
+       "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion, cilantro and lime. Served on corn tortilla",
+       "price": 445,
+       "photo": "assets/img/dishes/cantina/al-pastor.webp"
+      },
+      {
+       "nameEs": "Cochinita Pibil",
+       "descEs": "Cerdo cocido 8 horas en hoja de plátano con achiote, cebolla encurtida y cilantro. En tortilla de maíz",
+       "descEn": "Pork slow-cooked 8 hours in banana leaf with achiote, pickled onion and cilantro. Served on corn tortilla",
+       "price": 445,
+       "photo": "assets/img/dishes/cantina/cochinita-pibil.webp"
+      },
+      {
+       "nameEs": "Chicharrón",
+       "descEs": "Chicharrón, guacamole, cebolla encurtida, cilantro y queso feta. En tortilla de maíz",
+       "descEn": "Chicharrón, guacamole, pickled onion, cilantro and feta cheese. Served on corn tortilla",
+       "price": 525,
+       "photo": "assets/img/dishes/cantina/chicharron.webp"
+      },
+      {
+       "nameEs": "Birria",
+       "descEs": "Res en caldo de guajillo y chile ancho, cebollitas, cilantro y caldo de birria. En tortilla de maíz",
+       "descEn": "Beef in guajillo and ancho chile broth, scallions, cilantro and birria broth. Served on corn tortilla",
+       "price": 515,
+       "photo": "assets/img/dishes/cantina/birria.webp"
+      },
+      {
+       "nameEs": "Quesabirria",
+       "descEs": "Queso fundido, res en guajillo y chile ancho, cebollita, cilantro y caldo de birria. En tortilla de maíz",
+       "descEn": "Melted cheese, beef in guajillo and ancho chile, scallion, cilantro and birria broth. Served on corn tortilla",
+       "price": 545,
+       "photo": "assets/img/dishes/cantina/quesabirria.webp"
+      },
+      {
+       "nameEs": "En Costra",
+       "descEs": "Proteína a elección, queso a la plancha, guacamole, cebolla encurtida y cilantro. En tortilla de maíz",
+       "descEn": "Protein of choice, grilled cheese, guacamole, pickled onion and cilantro. Served on corn tortilla",
+       "price": 595,
+       "photo": "assets/img/dishes/cantina/en-costra.webp"
+      },
+      {
+       "nameEs": "Camarones Estilo Baja",
+       "descEs": "Camarón tempura, cilantro, aioli de chipotle y repollo morado. En tortilla de maíz",
+       "descEn": "Tempura shrimp, cilantro, chipotle aioli and purple cabbage. Served on corn tortilla",
+       "price": 615,
+       "photo": "assets/img/dishes/cantina/camarones-estilo-baja.webp"
+      },
+      {
+       "nameEs": "Tacos de Pollo",
+       "descEs": "Tinga de pollo, guacamole, cebolla encurtida y queso. En tortilla de maíz",
+       "descEn": "Chicken tinga, guacamole, pickled onion and cheese. Served on corn tortilla",
+       "price": 455,
+       "photo": "assets/img/dishes/cantina/tacos-de-pollo.webp"
+      }
+     ]
+    },
+    {
+     "id": "bowls-burritos",
+     "nameEs": "Bowls & Burritos",
+     "nameEn": "Bowls & Burritos",
+     "items": [
+      {
+       "nameEs": "Mexican Bowl",
+       "descEs": "Arroz con cilantro y limón, habichuelas refritas, ensalada de maíz, pico de gallo, pepper jack, sour cream y guacamole. (Pollo · Chicharrón · Birria · Al Pastor)",
+       "descEn": "Cilantro lime rice, refried beans, corn salad, pico de gallo, pepper jack, sour cream and guacamole. (Chicken · Chicharrón · Birria · Al Pastor)",
+       "price": 815,
+       "photo": "assets/img/dishes/cantina/mexican-bowl.webp"
+      },
+      {
+       "nameEs": "Burrito",
+       "descEs": "Mix de quesos, guacamole, pico de gallo, lechuga, cebolla encurtida, queso feta, sour cream y cilantro en tortilla. (Pollo · Chicharrón · Birria · Mixto)",
+       "descEn": "Cheese blend, guacamole, pico de gallo, lettuce, pickled onion, feta, sour cream and cilantro in tortilla. (Chicken · Chicharrón · Birria · Mixed)",
+       "price": 685,
+       "photo": "assets/img/dishes/cantina/burrito.webp"
+      },
+      {
+       "nameEs": "Burrito Tex Mex",
+       "descEs": "Arroz con cilantro y limón, habichuela refrita, guacamole, sour cream, pico de gallo y mix de quesos en tortilla (Pollo · Chicharrón · Birria · Al Pastor)",
+       "descEn": "Cilantro lime rice, refried beans, guacamole, sour cream, pico de gallo and cheese blend in tortilla",
+       "price": 725,
+       "photo": "assets/img/dishes/cantina/burrito-tex-mex.webp"
+      },
+      {
+       "nameEs": "Chimichanga",
+       "descEs": "Mix de quesos, pico de gallo, sour cream, queso feta y lechuga en tortilla frita. (Pollo · Chicharrón · Birria · Mixto)",
+       "descEn": "Cheese blend, pico de gallo, sour cream, feta and lettuce in fried tortilla. (Chicken · Chicharrón · Birria · Mixed)",
+       "price": 745,
+       "photo": "assets/img/dishes/cantina/chimichanga.webp"
+      }
+     ]
+    },
+    {
+     "id": "extras",
+     "nameEs": "Extras",
+     "nameEn": "Extras",
+     "items": [
+      {
+       "nameEs": "Guacamole",
+       "price": 350
+      },
+      {
+       "nameEs": "Sour Cream",
+       "price": 85
+      },
+      {
+       "nameEs": "Salsa",
+       "price": 85
+      }
+     ]
+    },
+    {
+     "id": "proximamente",
+     "nameEs": "Próximamente",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Nachos con Chili",
+       "descEs": "Crema agria, queso fundido, jalapeños y chili",
+       "price": 795,
+       "badges": [
+        "nuevo",
+        "coming-soon"
+       ],
+       "photo": "assets/img/dishes/cantina/nachos-con-chili.webp"
+      },
+      {
+       "nameEs": "Papas con Chili",
+       "descEs": "Papas, crema agria, queso fundido, jalapeños y chili (Chili Loaded Fries)",
+       "price": 600,
+       "badges": [
+        "nuevo",
+        "coming-soon"
+       ],
+       "photo": "assets/img/dishes/cantina/papas-con-chili.webp"
+      },
+      {
+       "nameEs": "Tacos de Carne",
+       "descEs": "Próximamente",
+       "price": 565,
+       "badges": [
+        "nuevo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "macro",
+     "nameEs": "Macro Menu",
+     "noteEs": "ALTO EN PROTEÍNA",
+     "duplicatedFrom": "macro",
+     "items": [
+      {
+       "nameEs": "Protein Quesadilla",
+       "descEs": "Mix de quesos, alta en proteína con extra pollo.",
+       "price": 695,
+       "macros": "847 cal · 89g proteína · 32g grasa · 44g carbos"
+      },
+      {
+       "nameEs": "Mexican Bowl",
+       "descEs": "Elección de proteína, arroz con cilantro y limón, habichuelas refritas, ensalada de maíz, pico de gallo, queso pepper jack, sour cream y guacamole.",
+       "price": 895,
+       "macros": "Pollo: 820 cal · 49g prot · Chicharrón: 880 cal · 39g prot · Birria: 860 cal · 41g prot · Al Pastor: 865 cal · 37g prot"
+      }
+     ]
+    },
+    {
+     "id": "kids",
+     "nameEs": "Kids Menu",
+     "noteEs": "PARA LOS PEQUEÑOS",
+     "duplicatedFrom": "kids",
+     "items": [
+      {
+       "nameEs": "Quesadilla de Queso",
+       "descEs": "Incluye papas fritas o acompañamiento",
+       "price": 445
+      },
+      {
+       "nameEs": "Taquitos de Pollo con Queso (2 uds.)",
+       "descEs": "Incluye papas fritas o acompañamiento",
+       "price": 495
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Nuestras Salsas: Suave — Salsa verde · Salsa roja | Medio — Salsa campechana | Picante — Salsa habanero",
+    "Footer: Acrópolis Business Mall · Santo Domingo · Precios en RD$ · ITBIS no incluido · @cantinalacuadra.sdq",
+    "Menú trilingüe ES/EN/IT (data-i18n); se extrajo ES + EN",
+    "Las opciones de proteína (item-options / spans embebidos) se anexaron entre paréntesis a la descripción porque el schema no tiene campo de opciones"
+   ],
+   "issues": [
+    "Mexican Bowl con dos precios distintos: $815 en Bowls & Burritos vs $895 en Macro Menu (la versión macro dice 'elección de proteína'; puede ser intencional pero queda ambiguo)",
+    "Claves i18n duplicadas en sección Próximamente: 'Nachos con Chili' reusa data-i18n-desc=d20 (que pertenece a Burrito Tex Mex) y 'Papas con Chili' reusa d21 (Chimichanga) y data-i18n-opt=o2 (Flautas) — al cambiar a EN/IT esos ítems mostrarían descripciones equivocadas; por eso se omitió descEn en ambos",
+    "'Tacos de Carne' sin precio (muestra '$—'); se registró price=0",
+    "data-i18n-desc=d22 (Tacos de Carne) no existe en las tablas de traducción EN ni IT — clave rota",
+    "Opciones EN/ES inconsistentes: o1 ES='Pollo · Cochinita Pibil · Birria · Chicharrón · Al Pastor' vs EN='Pork al pastor · Cochinita pibil · Chicken al pastor'; o2 ES=mismas 5 proteínas vs EN='Cochinita pibil · Grilled chicken' — las traducciones EN no corresponden al contenido ES",
+    "El h2 de 'Bowls & Burritos' no tiene atributo data-i18n-section aunque la clave s4 existe en las tablas EN/IT — el título de sección nunca se traduce",
+    "Mexican Bowl tiene las opciones de proteína duplicadas: una vez como span embebido en la descripción y otra como div item-options (o3) con el mismo texto",
+    "Secciones 'Próximamente', 'Macro Menu' y 'Kids Menu' no tienen claves i18n — solo existen en ES y no se traducen al cambiar idioma",
+    "El subtítulo del header en versión ES está en inglés ('Mexican Flavors'); IT sí lo traduce ('Sapori Messicani') pero no hay versión en español",
+    "Ningún ítem tiene data-i18n-name, por lo que se omitió nameEn en todos los ítems (los nombres no cambian entre idiomas)",
+    "Las descripciones EN de Burrito Tex Mex (d20) y Chimichanga (d21) no incluyen las opciones de proteína embebidas en el span ES; además el mecanismo i18n usa textContent, que destruiría el span embebido al cambiar de idioma"
+   ]
+  },
+  {
+   "conceptId": "napa",
+   "conceptName": "NAPA",
+   "tagline": "Whole Foods Kitchen",
+   "taglineEn": "Whole Foods Kitchen",
+   "brandColor": "#00C853",
+   "displayFont": "Playfair Display",
+   "sections": [
+    {
+     "id": "ensaladas",
+     "nameEs": "Ensaladas",
+     "nameEn": "Salads",
+     "items": [
+      {
+       "nameEs": "Salmon Bowl",
+       "nameEn": "Salmon Bowl",
+       "descEs": "Quinoa, lechuga romana, salmón horneado, salsa ponzu, limón Meyer grillado, edamame, encurtido de nabo y zanahoria, wakame, aderezo ranch",
+       "descEn": "Quinoa, romaine, baked salmon, ponzu sauce, grilled Meyer lemon, edamame, pickled radish and carrot, wakame, ranch dressing",
+       "price": 725
+      },
+      {
+       "nameEs": "Birria Mexican Salad",
+       "nameEn": "Birria Mexican Salad",
+       "descEs": "Lechuga romana, ropa vieja de birria, queso pepper jack, pico de gallo, maíz, guacamole, frijoles negros, plátano maduro",
+       "descEn": "Romaine, birria ropa vieja, pepper jack, pico de gallo, corn, guacamole, black beans, sweet plantain",
+       "price": 655
+      },
+      {
+       "nameEs": "Chicken Caesar Salad",
+       "nameEn": "Chicken Caesar Salad",
+       "descEs": "Lechuga romana, queso parmesano, pollo a la parrilla, tomates cherry, croutones de la casa, crisp de parmesano y aderezo Caesar",
+       "descEn": "Romaine, parmesan cheese, grilled chicken, cherry tomatoes, house croutons, parmesan crisp and Caesar dressing",
+       "price": 595
+      },
+      {
+       "nameEs": "Honey Mustard Salad",
+       "nameEn": "Honey Mustard Salad",
+       "descEs": "Lechuga romana, pollo a la parrilla, tocineta crocante, queso cheddar, cebolla roja, croutones de la casa, aguacate, maíz, tomate cherry, limón y aderezo Honey Mustard",
+       "descEn": "Romaine, grilled chicken, crispy bacon, cheddar, red onion, house croutons, avocado, corn, cherry tomato, lime and Honey Mustard dressing",
+       "price": 595
+      },
+      {
+       "nameEs": "Southwest Salad",
+       "nameEn": "Southwest Salad",
+       "descEs": "Lechuga romana, pollo a la parrilla, pico de gallo, tortilla chip, habichuela negra, maíz, aguacate, cilantro, aderezo de aguacate",
+       "descEn": "Romaine, grilled chicken, pico de gallo, tortilla chip, black beans, corn, avocado, cilantro, avocado dressing",
+       "price": 595
+      },
+      {
+       "nameEs": "Chicken Cobb Salad",
+       "nameEn": "Chicken Cobb Salad",
+       "descEs": "Lechuga romana, pollo a la parrilla, blue cheese, tomates cherry, cebolla roja, huevo hervido, tocineta crujiente, aguacate, aderezo de blue cheese",
+       "descEn": "Romaine, grilled chicken, blue cheese, cherry tomatoes, red onion, hard boiled egg, crispy bacon, avocado, blue cheese dressing",
+       "price": 655
+      }
+     ]
+    },
+    {
+     "id": "extras-proteinas",
+     "nameEs": "Extras — Proteínas",
+     "nameEn": "Extras — Proteins",
+     "items": [
+      {
+       "nameEs": "Pollo",
+       "nameEn": "Chicken",
+       "descEs": "Pechuga de pollo a la parrilla",
+       "descEn": "Grilled chicken breast",
+       "price": 150
+      },
+      {
+       "nameEs": "Bacon",
+       "nameEn": "Bacon",
+       "descEs": "Crujiente bacon",
+       "descEn": "Crispy bacon",
+       "price": 150
+      },
+      {
+       "nameEs": "Tuna",
+       "nameEn": "Tuna",
+       "descEs": "Atún fresco",
+       "descEn": "Fresh tuna",
+       "price": 285
+      },
+      {
+       "nameEs": "Birria",
+       "nameEn": "Birria",
+       "descEs": "Carne de birria cocida lentamente",
+       "descEn": "Slow-cooked birria meat",
+       "price": 265
+      },
+      {
+       "nameEs": "Salmón",
+       "nameEn": "Salmon",
+       "descEs": "Salmón fresco",
+       "descEn": "Fresh salmon",
+       "price": 375
+      },
+      {
+       "nameEs": "Camarones",
+       "nameEn": "Shrimp",
+       "descEs": "Camarones frescos",
+       "descEn": "Fresh shrimp",
+       "price": 385
+      }
+     ]
+    },
+    {
+     "id": "extras-aderezos",
+     "nameEs": "Extras — Aderezos",
+     "nameEn": "Extras — Dressings",
+     "items": [
+      {
+       "nameEs": "Blue Cheese",
+       "nameEn": "Blue Cheese",
+       "price": 75
+      },
+      {
+       "nameEs": "Creamy Aguacate",
+       "nameEn": "Creamy Avocado",
+       "price": 75
+      },
+      {
+       "nameEs": "Honey Sriracha",
+       "nameEn": "Honey Sriracha",
+       "price": 125
+      },
+      {
+       "nameEs": "Creamy Thai",
+       "nameEn": "Creamy Thai",
+       "price": 50
+      },
+      {
+       "nameEs": "Ranch",
+       "nameEn": "Ranch",
+       "price": 75
+      },
+      {
+       "nameEs": "Caesar",
+       "nameEn": "Caesar",
+       "price": 75
+      },
+      {
+       "nameEs": "De la Casa",
+       "nameEn": "House",
+       "price": 50
+      },
+      {
+       "nameEs": "Honey Mustard",
+       "nameEn": "Honey Mustard",
+       "price": 125
+      },
+      {
+       "nameEs": "Vinagreta Balsámica",
+       "nameEn": "Balsamic Vinaigrette",
+       "price": 125
+      },
+      {
+       "nameEs": "Chinola Trufada",
+       "nameEn": "Passion Fruit Truffle",
+       "price": 75
+      },
+      {
+       "nameEs": "Yogurt & Ajo",
+       "nameEn": "Yogurt & Garlic",
+       "price": 75
+      }
+     ]
+    },
+    {
+     "id": "extras-crunch",
+     "nameEs": "Extras — Crunch",
+     "nameEn": "Extras — Crunch",
+     "items": [
+      {
+       "nameEs": "Almendra",
+       "nameEn": "Almond",
+       "price": 95
+      },
+      {
+       "nameEs": "Wakame",
+       "nameEn": "Wakame",
+       "price": 115
+      },
+      {
+       "nameEs": "Tortilla Chips",
+       "nameEn": "Tortilla Chips",
+       "price": 50
+      },
+      {
+       "nameEs": "Croutones",
+       "nameEn": "Croutons",
+       "price": 50
+      }
+     ]
+    },
+    {
+     "id": "extras-toppings",
+     "nameEs": "Extras — Toppings",
+     "nameEn": "Extras — Toppings",
+     "items": [
+      {
+       "nameEs": "Cebolla Crocante",
+       "nameEn": "Crispy Onion",
+       "price": 50
+      },
+      {
+       "nameEs": "Tortilla Chips",
+       "nameEn": "Tortilla Chips",
+       "price": 60
+      },
+      {
+       "nameEs": "Bacon Bits",
+       "nameEn": "Bacon Bits",
+       "price": 95
+      },
+      {
+       "nameEs": "Almendras/Nueces",
+       "nameEn": "Almonds/Nuts",
+       "price": 100
+      }
+     ]
+    },
+    {
+     "id": "extras-quesos",
+     "nameEs": "Extras — Quesos",
+     "nameEn": "Extras — Cheeses",
+     "items": [
+      {
+       "nameEs": "Parmesano",
+       "nameEn": "Parmesan",
+       "price": 95
+      },
+      {
+       "nameEs": "Galleta Parmesano",
+       "nameEn": "Parmesan Crisp",
+       "price": 100
+      },
+      {
+       "nameEs": "Blue Cheese",
+       "nameEn": "Blue Cheese",
+       "price": 95
+      },
+      {
+       "nameEs": "Pepper Jack",
+       "nameEn": "Pepper Jack",
+       "price": 95
+      },
+      {
+       "nameEs": "Queso Cheddar",
+       "nameEn": "Cheddar",
+       "price": 95
+      },
+      {
+       "nameEs": "Queso de Cabra",
+       "nameEn": "Goat Cheese",
+       "price": 95
+      },
+      {
+       "nameEs": "Queso Feta",
+       "nameEn": "Feta",
+       "price": 95
+      }
+     ]
+    },
+    {
+     "id": "extras-pan",
+     "nameEs": "Extras — Pan",
+     "nameEn": "Extras — Bread",
+     "items": [
+      {
+       "nameEs": "Pan de Masa Madre",
+       "nameEn": "Sourdough Bread",
+       "descEs": "Pan artesanal horneado diariamente, se vende entero",
+       "descEn": "Artisan bread baked daily, sold whole",
+       "price": 345
+      }
+     ]
+    },
+    {
+     "id": "byo-proteinas",
+     "nameEs": "Build Your Own / Platters — Proteínas",
+     "nameEn": "Build Your Own / Platters — Proteins",
+     "noteEs": "Fórmula: Proteína + 2 Acompañamientos + 1 Salsa",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Falafel Artesanal",
+       "nameEn": "Artisan Falafel",
+       "descEs": "5 uds, garbanzos y hierbas artesanales",
+       "descEn": "5 pcs, chickpeas and artisan herbs",
+       "price": 525,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Pechuga de Pollo",
+       "nameEn": "Chicken Breast",
+       "descEs": "6oz, marinada y al grill",
+       "descEn": "6oz, marinated and grilled",
+       "price": 595,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Albóndigas Marinara",
+       "nameEn": "Meatballs Marinara",
+       "descEs": "3 uds, carne de res en salsa artesanal",
+       "descEn": "3 pcs, beef in artisan sauce",
+       "price": 595,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Flap Meat Angus",
+       "nameEn": "Flap Meat Angus",
+       "descEs": "5oz, corte importado premium",
+       "descEn": "5oz, premium imported cut",
+       "price": 995,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Salmón al Grill",
+       "nameEn": "Grilled Salmon",
+       "descEs": "5oz, fresco, piel crocante",
+       "descEn": "5oz, fresh, crispy skin",
+       "price": 1145,
+       "badges": [
+        "coming-soon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "byo-bases",
+     "nameEs": "Build Your Own / Platters — Bases",
+     "nameEn": "Build Your Own / Platters — Bases",
+     "noteEs": "2 incluidos, extras (precio aplica como extra adicional)",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Arroz Blanco",
+       "nameEn": "White Rice",
+       "price": 100,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Arroz con Maíz",
+       "nameEn": "Corn Rice",
+       "price": 125,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Cilantro Lime Rice",
+       "nameEn": "Cilantro Lime Rice",
+       "price": 125,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Papas Salteadas",
+       "nameEn": "Sauteed Potatoes",
+       "price": 145,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Batatas Asadas",
+       "nameEn": "Roasted Sweet Potatoes",
+       "price": 145,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Vegetales Grill",
+       "nameEn": "Grilled Vegetables",
+       "price": 175,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Ensalada Napa",
+       "nameEn": "Napa Salad",
+       "price": 175,
+       "badges": [
+        "coming-soon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "byo-salsas",
+     "nameEs": "Build Your Own / Platters — Salsas",
+     "nameEn": "Build Your Own / Platters — Sauces",
+     "noteEs": "1 incluida · extras $80",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Honey Mustard Napa",
+       "nameEn": "Honey Mustard Napa",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Pesto Cremoso",
+       "nameEn": "Creamy Pesto",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Cilantro Aioli",
+       "nameEn": "Cilantro Aioli",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Blue Cheese",
+       "nameEn": "Blue Cheese",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Chipotle Aioli",
+       "nameEn": "Chipotle Aioli",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Tzatziki",
+       "nameEn": "Tzatziki",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Crema Agria",
+       "nameEn": "Sour Cream",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Buffalo Azafrán",
+       "nameEn": "Saffron Buffalo",
+       "price": 0,
+       "badges": [
+        "coming-soon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sandwiches",
+     "nameEs": "Sandwiches",
+     "nameEn": "Sandwiches",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Grilled Cheese",
+       "nameEn": "Grilled Cheese",
+       "descEs": "Triple queso, pan de masa madre",
+       "descEn": "Triple cheese, sourdough bread",
+       "price": 545,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Chicken BLT",
+       "nameEn": "Chicken BLT",
+       "descEs": "Pasta de pollo, bacon, lechuga y tomate",
+       "descEn": "Chicken paste, bacon, lettuce and tomato",
+       "price": 595,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Pesto Caprese",
+       "nameEn": "Pesto Caprese",
+       "descEs": "Mozzarella fresca y pesto artesanal",
+       "descEn": "Fresh mozzarella and artisan pesto",
+       "price": 645,
+       "badges": [
+        "coming-soon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sopas",
+     "nameEs": "Sopas",
+     "nameEn": "Soups",
+     "comingSoon": true,
+     "items": [
+      {
+       "nameEs": "Sopa de Tomate + Grilled Cheese",
+       "nameEn": "Tomato Soup + Grilled Cheese",
+       "descEs": "Combo clásico: sopa cremosa de tomate con mini grilled cheese",
+       "descEn": "Classic combo: creamy tomato soup with mini grilled cheese",
+       "price": 695,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Sopa de Tomate",
+       "nameEn": "Tomato Soup",
+       "descEs": "Cremosa, hecha con tomates asados",
+       "descEn": "Creamy, made with roasted tomatoes",
+       "price": 375,
+       "badges": [
+        "coming-soon"
+       ]
+      },
+      {
+       "nameEs": "Sopa de Cebolla",
+       "nameEn": "Onion Soup",
+       "descEs": "Estilo francés, gratinada con queso",
+       "descEn": "French style, gratineed with cheese",
+       "price": 345,
+       "badges": [
+        "coming-soon"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "napa-bread",
+     "nameEs": "NAPA Bread",
+     "nameEn": "NAPA Bread",
+     "items": [
+      {
+       "nameEs": "Pan de Masa Madre",
+       "nameEn": "Sourdough Bread",
+       "descEs": "Pan artesanal horneado diariamente, se vende entero",
+       "descEn": "Artisan bread baked daily, sold whole",
+       "price": 345
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Fórmula Build Your Own / Platters: Proteína + 2 Acompañamientos + 1 Salsa",
+    "Bases (Build Your Own): 2 incluidos; los precios listados aplican a extras adicionales",
+    "Salsas (Build Your Own): 1 incluida, extras $80",
+    "Las secciones Build Your Own / Platters, Sandwiches y Sopas están bajo el encabezado 'Próximamente' (coming soon)",
+    "Footer: Acrópolis Business Mall · Santo Domingo · Precios en RD$ · ITBIS no incluido · @napa.sdq",
+    "Comentario en HTML: 'Napa Fresh no tiene items en el Kids Menu actualmente' — no hay sección Kids embebida",
+    "El menú tiene i18n en ES/EN/IT (italiano disponible además del inglés)"
+   ],
+   "issues": [
+    "Pan de Masa Madre ($345) aparece dos veces: en Extras > Pan y en sección NAPA Bread, reutilizando las mismas claves i18n n26/d18 (precio consistente, pero ítem duplicado en el HTML)",
+    "Tortilla Chips tiene dos precios distintos: $50 en Extras > Crunch (ch22) y $60 en Extras > Toppings (ch32)",
+    "Posible solapamiento: 'Almendra' $95 en Crunch (ch20) vs 'Almendras/Nueces' $100 en Toppings (ch34)",
+    "Blue Cheese aparece en Aderezos a $75 (ch9) y en Quesos a $95 (ch26) — probablemente intencional (aderezo vs queso) pero ambiguo para el cliente",
+    "Las salsas del Build Your Own (ch1-ch8) no tienen precio individual; solo la nota '1 incluida · extras $80' — se asignó price 0",
+    "Las Bases del Build Your Own solo existen como texto dentro de un note-box (clave n13), no como ítems estructurados; los precios son cargos por extra, no precio del plato",
+    "Claves i18n huérfanas en las traducciones EN/IT sin elemento en el HTML: names.n27 ('Other Breads'/'Altri Pani'), subtitles.sub1 ('Coming Soon'), notes.n28 (nota de wrap: 'tortilla del wrap tiene cargo adicional de $75') y notes.wn ('Wrap Note') — el banner de wrap fue removido del HTML (comentario en línea 929) pero las traducciones quedaron",
+    "Colisión de clave i18n: 'n28' se usa como name (Pollo/Chicken, elemento en HTML) y también como note (wrap $75, solo en traducciones) — grupos distintos así que no rompe, pero es confuso",
+    "El encabezado de sección 'Próximamente' (línea 772) no tiene atributo data-i18n-section, por lo que no se traduce al cambiar de idioma",
+    "El ítem 'Tuna' en Extras > Proteínas está en inglés en la versión ES (debería ser 'Atún' para consistencia con 'Atún fresco' de su descripción)",
+    "Este menú no contiene datos de macros ni precios escalonados (priceVariants no aplica)"
+   ]
+  },
+  {
+   "conceptId": "bar",
+   "conceptName": "EL BAR",
+   "tagline": "Cocteles · Cervezas · Vinos · Spirits",
+   "taglineEn": "Cocktails · Beers · Wines · Spirits",
+   "brandColor": "#C9956B",
+   "displayFont": "Playfair Display",
+   "sections": [
+    {
+     "id": "after-work",
+     "nameEs": "After Work",
+     "nameEn": "After Work",
+     "noteEs": "Happy Hour · Lunes a Viernes 4-7PM · 2x1",
+     "items": [
+      {
+       "nameEs": "Monkey Penicillin",
+       "price": 615,
+       "descEs": "Miel, jengibre y cítricos coronados con la suavidad de Monkey Shoulder",
+       "descEn": "Honey, ginger and citrus crowned with the smoothness of Monkey Shoulder"
+      },
+      {
+       "nameEs": "Apple Spritz",
+       "price": 615,
+       "descEs": "Burbujeo crujiente con ralladura de limón y guarnición de manzana verde",
+       "descEn": "Crisp fizz with lemon zest and green apple garnish"
+      },
+      {
+       "nameEs": "Blueberry Mule",
+       "price": 615,
+       "descEs": "Bayas con cerveza de jengibre, Stoli Blueberi y un toque chispeante",
+       "descEn": "Berries with ginger beer, Stoli Blueberi and a sparkling touch"
+      },
+      {
+       "nameEs": "WAGMI Margarita",
+       "price": 595,
+       "descEs": "Tequila y limón fresco, coronada con sal",
+       "descEn": "Tequila and fresh lime, crowned with salt"
+      },
+      {
+       "nameEs": "WAGMI Sangría",
+       "price": 595,
+       "descEs": "Frutas jugosas y vino, en un abrazo dulce y especiado",
+       "descEn": "Juicy fruits and wine, in a sweet and spiced embrace"
+      },
+      {
+       "nameEs": "WAGMI Mojito",
+       "price": 595,
+       "descEs": "Menta crujiente, lima y ron, una ola de frescura en cada sorbo",
+       "descEn": "Crisp mint, lime and rum, a wave of freshness in every sip"
+      }
+     ]
+    },
+    {
+     "id": "signature-cocktails-wagmi",
+     "nameEs": "Signature Cocktails WAGMI",
+     "nameEn": "Signature Cocktails WAGMI",
+     "items": [
+      {
+       "nameEs": "Fanchi",
+       "price": 800,
+       "descEs": "Zesty Tequila Sunrise · Herradura Ultra, lime & orange syrup, aquafaba",
+       "descEn": "Zesty Tequila Sunrise · Herradura Ultra, lime & orange syrup, aquafaba"
+      },
+      {
+       "nameEs": "Benito",
+       "price": 570,
+       "descEs": "Mango Moscow Mule · Monkey Shoulder, mango, ginger beer, lime",
+       "descEn": "Mango Moscow Mule · Monkey Shoulder, mango, ginger beer, lime"
+      },
+      {
+       "nameEs": "Isabella",
+       "price": 595,
+       "descEs": "Tequila Sparkler · Jimador, strawberries, mint, orange juice, cava",
+       "descEn": "Tequila Sparkler · Jimador, strawberries, mint, orange juice, cava"
+      },
+      {
+       "nameEs": "Candela",
+       "price": 570,
+       "descEs": "Rum Sour with Cinnamon Twist · Ron Punta Cana, simple syrup, lime, cinnamon, aquafaba",
+       "descEn": "Rum Sour with Cinnamon Twist · Ron Punta Cana, simple syrup, lime, cinnamon, aquafaba"
+      },
+      {
+       "nameEs": "Disconnection",
+       "price": 530,
+       "descEs": "Bubbly Strawberry Maple Sparkler · Vodka Stoli, triple sec, cava, maple, strawberries",
+       "descEn": "Bubbly Strawberry Maple Sparkler · Vodka Stoli, triple sec, cava, maple, strawberries"
+      },
+      {
+       "nameEs": "Te Regalo Una Rosa",
+       "price": 495,
+       "descEs": "Delicado y floral con un toque de dulzura",
+       "descEn": "Delicate and floral with a touch of sweetness"
+      }
+     ]
+    },
+    {
+     "id": "cervezas",
+     "nameEs": "Cervezas",
+     "nameEn": "Beers",
+     "items": [
+      {
+       "nameEs": "Blue Moon",
+       "price": 240
+      },
+      {
+       "nameEs": "Coors Original",
+       "price": 240
+      },
+      {
+       "nameEs": "Corona",
+       "price": 240
+      },
+      {
+       "nameEs": "Estrella de Galicia",
+       "price": 240
+      },
+      {
+       "nameEs": "Heineken",
+       "price": 240
+      },
+      {
+       "nameEs": "Modelo Negro",
+       "price": 240
+      },
+      {
+       "nameEs": "Modelo Rubia",
+       "price": 240
+      },
+      {
+       "nameEs": "Desperados",
+       "price": 240
+      },
+      {
+       "nameEs": "Presidente Regular",
+       "price": 195
+      },
+      {
+       "nameEs": "Presidente Light",
+       "price": 195
+      }
+     ]
+    },
+    {
+     "id": "spirits-ron",
+     "nameEs": "Spirits · Ron",
+     "noteEs": "Trago / Botella · Incluye dos mezclas a elección",
+     "items": [
+      {
+       "nameEs": "Brugal Extraviejo",
+       "price": 305,
+       "priceVariants": "trago: 305 | botella: 1795"
+      },
+      {
+       "nameEs": "Brugal Doble Reserva",
+       "price": 385,
+       "priceVariants": "trago: 385 | botella: 2395"
+      },
+      {
+       "nameEs": "Punta Cana Añejo",
+       "price": 305,
+       "priceVariants": "trago: 305 | botella: 1895"
+      },
+      {
+       "nameEs": "Brugal Leyenda",
+       "price": 345,
+       "priceVariants": "trago: 345 | botella: 2995"
+      }
+     ]
+    },
+    {
+     "id": "spirits-whiskey",
+     "nameEs": "Spirits · Whiskey",
+     "nameEn": "Spirits · Whiskey",
+     "noteEs": "Trago / Botella · Incluye dos mezclas a elección",
+     "items": [
+      {
+       "nameEs": "Buchanan's 12",
+       "price": 395,
+       "priceVariants": "trago: 395 | botella: 4495"
+      },
+      {
+       "nameEs": "Monkey Shoulder",
+       "price": 405,
+       "priceVariants": "trago: 405 | botella: 3995"
+      },
+      {
+       "nameEs": "Fireball",
+       "price": 315,
+       "priceVariants": "trago: 315 | botella: 2495"
+      },
+      {
+       "nameEs": "Glenlivet",
+       "price": 545,
+       "priceVariants": "trago: 545 | botella: 5495"
+      }
+     ]
+    },
+    {
+     "id": "spirits-gin",
+     "nameEs": "Spirits · Gin",
+     "nameEn": "Spirits · Gin",
+     "noteEs": "Trago / Botella · Incluye dos mezclas a elección",
+     "items": [
+      {
+       "nameEs": "Beefeater Dry",
+       "price": 405,
+       "priceVariants": "trago: 405 | botella: 2995"
+      },
+      {
+       "nameEs": "Beefeater Pink",
+       "price": 405,
+       "priceVariants": "trago: 405 | botella: 2795"
+      },
+      {
+       "nameEs": "Bombay Sapphire",
+       "price": 395,
+       "priceVariants": "trago: 395 | botella: 2995"
+      },
+      {
+       "nameEs": "Tanqueray",
+       "price": 405,
+       "priceVariants": "trago: 405 | botella: 2995"
+      }
+     ]
+    },
+    {
+     "id": "spirits-tequila",
+     "nameEs": "Spirits · Tequila",
+     "nameEn": "Spirits · Tequila",
+     "noteEs": "Trago / Botella · Incluye dos mezclas a elección",
+     "items": [
+      {
+       "nameEs": "Herradura Ultra",
+       "price": 695,
+       "priceVariants": "trago: 695 | botella: 6995"
+      },
+      {
+       "nameEs": "Herradura Silver",
+       "price": 545,
+       "priceVariants": "trago: 545 | botella: 5495"
+      },
+      {
+       "nameEs": "Herradura Reposado",
+       "price": 645,
+       "priceVariants": "trago: 645 | botella: 6495"
+      },
+      {
+       "nameEs": "Jimador Blanco",
+       "price": 395,
+       "priceVariants": "trago: 395 | botella: 1995"
+      }
+     ]
+    },
+    {
+     "id": "spirits-vodka",
+     "nameEs": "Spirits · Vodka",
+     "nameEn": "Spirits · Vodka",
+     "noteEs": "Trago / Botella · Incluye dos mezclas a elección",
+     "items": [
+      {
+       "nameEs": "Stolichnaya",
+       "price": 395,
+       "priceVariants": "trago: 395 | botella: 1995"
+      },
+      {
+       "nameEs": "Tito's",
+       "price": 415,
+       "priceVariants": "trago: 415 | botella: 2795"
+      }
+     ]
+    },
+    {
+     "id": "vinos-blancos",
+     "nameEs": "Vinos & Copas · Vinos Blancos",
+     "noteEs": "Botellas y por copa",
+     "items": [
+      {
+       "nameEs": "Ramón Bilbao Verdejo",
+       "price": 1395,
+       "descEs": "España"
+      }
+     ]
+    },
+    {
+     "id": "vinos-tintos",
+     "nameEs": "Vinos & Copas · Vinos Tintos",
+     "items": [
+      {
+       "nameEs": "Ramón Bilbao Crianza",
+       "price": 1895,
+       "descEs": "España"
+      },
+      {
+       "nameEs": "Santiago Ruiz",
+       "price": 2195,
+       "descEs": "España"
+      },
+      {
+       "nameEs": "Paco & Lola",
+       "price": 2195,
+       "descEs": "España"
+      },
+      {
+       "nameEs": "Apothic Red",
+       "price": 1795,
+       "descEs": "Estados Unidos"
+      },
+      {
+       "nameEs": "Gentlemen's Collection",
+       "price": 1995,
+       "descEs": "Australia"
+      }
+     ]
+    },
+    {
+     "id": "vinos-copa",
+     "nameEs": "Vinos & Copas · Vinos por Copa",
+     "items": [
+      {
+       "nameEs": "Primal Roots Red Blend",
+       "price": 295
+      },
+      {
+       "nameEs": "Paco & Lola No.12 Albariño",
+       "price": 295
+      }
+     ]
+    },
+    {
+     "id": "soft-drinks",
+     "nameEs": "Soft Drinks",
+     "nameEn": "Soft Drinks",
+     "items": [
+      {
+       "nameEs": "Coca Cola / Coca Cola Zero",
+       "price": 150
+      },
+      {
+       "nameEs": "Agua Dasani",
+       "price": 95
+      },
+      {
+       "nameEs": "San Benedetto Sin Gas",
+       "price": 160,
+       "priceVariants": "250ml: 160 | 750ml: 280"
+      },
+      {
+       "nameEs": "San Benedetto Con Gas",
+       "price": 160,
+       "priceVariants": "250ml: 160 | 750ml: 280"
+      }
+     ]
+    },
+    {
+     "id": "jugos-otros",
+     "nameEs": "Jugos & Otros",
+     "nameEn": "Juices & Others",
+     "items": [
+      {
+       "nameEs": "Jugo Mixto",
+       "price": 170
+      },
+      {
+       "nameEs": "Jugos Take Out",
+       "price": 215
+      },
+      {
+       "nameEs": "Té Frío",
+       "price": 175
+      },
+      {
+       "nameEs": "Jugo de Limón",
+       "price": 155
+      },
+      {
+       "nameEs": "Jugo Cranberry",
+       "price": 175
+      }
+     ]
+    },
+    {
+     "id": "jugos-frescos",
+     "nameEs": "Jugos Frescos",
+     "nameEn": "Fresh Juices",
+     "noteEs": "$185 cada uno",
+     "items": [
+      {
+       "nameEs": "Flor de Jamaica & Limón",
+       "price": 185
+      },
+      {
+       "nameEs": "Fruit Punch",
+       "price": 185
+      },
+      {
+       "nameEs": "Jugo de Cereza",
+       "price": 185
+      },
+      {
+       "nameEs": "Jugo de Chinola",
+       "price": 185
+      },
+      {
+       "nameEs": "Jugo de Fresa",
+       "price": 185
+      },
+      {
+       "nameEs": "Jugo de Limón con Menta",
+       "price": 185
+      },
+      {
+       "nameEs": "Jugo de Sandía",
+       "price": 185
+      }
+     ]
+    },
+    {
+     "id": "postres",
+     "nameEs": "Postres",
+     "nameEn": "Desserts",
+     "duplicatedFrom": "postres",
+     "items": [
+      {
+       "nameEs": "Brookie",
+       "price": 300,
+       "descEs": "Brownie meets cookie, recién horneado",
+       "descEn": "Brownie meets cookie, freshly baked"
+      },
+      {
+       "nameEs": "Brookie con Helado",
+       "price": 385,
+       "descEs": "Con bola de helado de vainilla artesanal",
+       "descEn": "With artisan vanilla ice cream scoop"
+      },
+      {
+       "nameEs": "Flan",
+       "price": 340,
+       "descEs": "Flan clásico de la casa",
+       "descEn": "Classic house flan"
+      },
+      {
+       "nameEs": "Bola de Helado de Vainilla",
+       "price": 100
+      },
+      {
+       "nameEs": "Pudín de Pan",
+       "price": 350,
+       "descEs": "Receta tradicional, tibio y reconfortante",
+       "descEn": "Traditional recipe, warm and comforting"
+      },
+      {
+       "nameEs": "Pudín de Pan + Helado",
+       "price": 450,
+       "descEs": "Con bola de helado de vainilla",
+       "descEn": "With vanilla ice cream scoop"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Aperol Spritz: 2x1 solo los jueves, todo el día (note-box en sección After Work).",
+    "Spirits: precio trago / botella; incluye dos mezclas a elección.",
+    "Vinos & Copas: botellas y por copa.",
+    "Footer: Acrópolis Business Mall · Santo Domingo · Precios en RD$ · ITBIS no incluido · @wagmi.sdq",
+    "El menú también tiene traducción IT (toggle ES/EN/IT), no extraída por schema."
+   ],
+   "issues": [
+    "Clave i18n huérfana d11 ('Lychee Martini · Vodka Stoli, Beefeater Gin, martini bianco, lychee') existe en traducciones EN/IT pero el ítem fue removido del HTML — las descripciones del body saltan de d10 a d12.",
+    "Sección 'Jugos & Otros' (línea 793) no tiene atributo data-i18n-section='s11' aunque la traducción s11 'Juices & Others' existe — el título nunca se traduce al cambiar idioma.",
+    "Claves de sección s5-s8 (Whiskey, Gin, Tequila, Vodka) definidas en traducciones EN/IT pero los subgrupos de Spirits en el HTML son note-box sin atributos i18n — no se traducen. Lo mismo aplica a los labels Ron, Vinos Blancos, Vinos Tintos y Vinos por Copa.",
+    "Nota n1 ('Spirits, Wines & Bubbles... Price per glass / bottle') definida en traducciones EN/IT pero ningún elemento usa data-i18n-note='n1' — clave huérfana.",
+    "Probable misclasificación de vinos: 'Santiago Ruiz' y 'Paco & Lola' (ambos albariño, vinos blancos) listados bajo 'Vinos Tintos'; Paco & Lola aparece además como albariño bajo 'Vinos por Copa'.",
+    "La sección Postres es copia del menú postres (postres-menu.html) pero con precios distintos: Brookie 300 vs 295, Flan 340 vs 335, Bola de Helado 100 vs 95, Pudín de Pan 350 vs 345, Pudín + Helado 450 vs 445; solo Brookie con Helado coincide (385). Dos precios distintos para los mismos ítems entre menús.",
+    "Inconsistencia aritmética menor: Brookie con Helado $385 vs Brookie ($300) + Bola de Helado ($100) = $400, mientras Pudín + Helado sí suma exacto (350+100=450).",
+    "Los nombres de ítems no tienen claves data-i18n-name (T.en no define grupo 'names'), por lo que ningún nombre se traduce — mayormente nombres propios/marcas, probablemente intencional.",
+    "Footer del menú de EL BAR usa el handle @wagmi.sdq (de WAGMI, no del bar).",
+    "Ítems de Cervezas, Vinos por Copa, Soft Drinks y Jugos no tienen descripción ni traducción — los descs de vinos ('España', 'Estados Unidos', 'Australia') tampoco tienen clave i18n.",
+    "Subdivisión de secciones Spirits (Ron/Whiskey/Gin/Tequila/Vodka) y Vinos (Blancos/Tintos/Copa) reconstruida desde note-box labels del HTML; en el documento son una sola sección visual con subgrupos."
+   ]
+  },
+  {
+   "conceptId": "macro",
+   "conceptName": "Macro Menú",
+   "tagline": "Alto en Proteína · Opciones Saludables de Cada Concepto",
+   "taglineEn": "Fitness · Protein · Healthy",
+   "brandColor": "#9B59B6",
+   "displayFont": "Playfair Display",
+   "sections": [
+    {
+     "id": "macro-menu",
+     "nameEs": "Macro Menú",
+     "nameEn": "Macro Menu",
+     "noteEs": "Alto en proteína · Opciones saludables",
+     "items": [
+      {
+       "nameEs": "Churrasco",
+       "descEs": "Churrasco de 10 oz, acompañado de la guarnición de tu elección.",
+       "descEn": "10 oz churrasco, served with your choice of side.",
+       "price": 1385,
+       "macros": "630 cal · 73.8g prot · 33.8g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Flap Meat (Vacío)",
+       "descEs": "Corte de vacío de 8 oz, servido con la guarnición de tu elección.",
+       "descEn": "8 oz flap meat cut, served with your choice of side.",
+       "price": 1150,
+       "macros": "383 cal · 58.4g prot · 16.8g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Buffalo Chicken Wrap",
+       "nameEn": "Buffalo Chicken Wrap",
+       "descEs": "Wrap con lechuga fresca, tomate jugoso y pollo buffalo o grilled, acompañado de salsa tártara. Opciones: Buffalo · Grilled.",
+       "descEn": "Buffalo or grilled chicken wrap with fresh lettuce, juicy tomato, served with tartar sauce. Options: Buffalo · Grilled.",
+       "price": 550,
+       "macros": "450 cal · 35g prot · 20g grasa · 35g carb"
+      },
+      {
+       "nameEs": "Pechuga de Pollo",
+       "descEs": "Pechuga de pollo a la plancha de 8 onzas, acompañada de la guarnición de tu elección.",
+       "descEn": "8 oz grilled chicken breast, served with your choice of side.",
+       "price": 500,
+       "macros": "319 cal · 64g prot · 7g grasa · 0g carb"
+      },
+      {
+       "nameEs": "Flying Dutchman",
+       "descEs": "Dos tapas de cebolla hacen de pan. Carne Angus de 5 oz, cubierta con salsa de la casa y doble queso americano. Para los protein lovers.",
+       "descEn": "Two onion caps serve as the bun. 5 oz Angus beef, topped with house sauce and double American cheese. For the protein lovers.",
+       "price": 595,
+       "macros": "620 cal · 29g prot · 51.1g grasa · 11.7g carb"
+      },
+      {
+       "nameEs": "Protein Quesadilla",
+       "descEs": "Mix de quesos, alta en proteína con extra pollo.",
+       "descEn": "Cheese blend, high protein with extra chicken.",
+       "price": 695,
+       "macros": "847 cal · 89g prot · 32g grasa · 44g carb"
+      },
+      {
+       "nameEs": "Philly Bowl (El Pepe)",
+       "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
+       "descEn": "6 oz Philly meat, sautéed peppers and sour cream, over rice. High in protein.",
+       "price": 725,
+       "badges": [
+        "nuevo"
+       ],
+       "macros": "891 cal · 62g prot · 29.2g grasa · 87.4g carb"
+      },
+      {
+       "nameEs": "Tekkadon",
+       "descEs": "Bowl de arroz de sushi coronado con 5 oz de atún fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.",
+       "descEn": "Sushi rice bowl crowned with 5 oz fresh-cut tuna, toasted sesame, crispy fine leek and soy sauce.",
+       "price": 720,
+       "badges": [
+        "nuevo"
+       ],
+       "macros": "480 cal · 44g prot · 4g grasa · 62g carb"
+      },
+      {
+       "nameEs": "Sakedon",
+       "descEs": "Bowl de arroz de sushi coronado con 5 oz de salmón fresco, ajonjolí tostado, puerro fino crujiente y salsa de soya.",
+       "descEn": "Sushi rice bowl crowned with 5 oz fresh-cut salmon, toasted sesame, crispy fine leek and soy sauce.",
+       "price": 720,
+       "badges": [
+        "nuevo"
+       ],
+       "macros": "530 cal · 39g prot · 14g grasa · 62g carb"
+      },
+      {
+       "nameEs": "Mexican Bowl",
+       "descEs": "Elección de proteína, arroz con cilantro y limón, habichuelas refritas, ensalada de maíz, cilantro, pico de gallo, queso pepper jack, sour cream y guacamole.",
+       "descEn": "Choice of protein, cilantro lime rice, refried beans, corn salad, cilantro, pico de gallo, pepper jack cheese, sour cream and guacamole.",
+       "price": 895,
+       "macros": "Pollo: 820 cal · 49g prot · 33g grasa · 82g carb | Chicharrón: 880 cal · 39g prot · 45g grasa · 82g carb | Birria: 860 cal · 41g prot · 40g grasa · 85g carb | Al Pastor: 865 cal · 37g prot · 41g grasa · 82g carb"
+      }
+     ]
+    },
+    {
+     "id": "ensaladas-wraps",
+     "nameEs": "Ensaladas & Wraps",
+     "nameEn": "Salads & Wraps",
+     "noteEs": "Frescas, saludables, disponibles en wrap (+$75)",
+     "duplicatedFrom": "napa",
+     "items": [
+      {
+       "nameEs": "Honey Mustard Salad",
+       "nameEn": "Honey Mustard Salad",
+       "descEs": "Lechuga romana, pollo a la parrilla, tocineta crocante, queso cheddar, cebolla roja, croutones de la casa, aguacate, maíz, tomate cherry, limón y aderezo Honey Mustard. Disponible en wrap (+$75).",
+       "descEn": "Romaine, grilled chicken, crispy bacon, cheddar, red onion, house croutons, avocado, corn, cherry tomato, lime and Honey Mustard dressing. Available as wrap (+$75).",
+       "price": 595
+      },
+      {
+       "nameEs": "Chicken Caesar Salad",
+       "nameEn": "Chicken Caesar Salad",
+       "descEs": "Lechuga romana, queso parmesano, pollo a la parrilla, tomates cherry, croutones de la casa, crisp de parmesano y aderezo Caesar. Disponible en wrap (+$75).",
+       "descEn": "Romaine, parmesan cheese, grilled chicken, cherry tomatoes, house croutons, parmesan crisp and Caesar dressing. Available as wrap (+$75).",
+       "price": 595
+      },
+      {
+       "nameEs": "Salmón al Grill con Vegetales Salteados",
+       "nameEn": "Grilled Salmon with Sautéed Vegetables",
+       "descEs": "5 oz de salmón fresco a la parrilla, piel crocante, acompañado de vegetales salteados.",
+       "descEn": "5 oz fresh grilled salmon, crispy skin, served with sautéed vegetables.",
+       "price": 1145
+      },
+      {
+       "nameEs": "Salmon Bowl",
+       "nameEn": "Salmon Bowl",
+       "descEs": "Quinoa, lechuga romana, salmón horneado, salsa ponzu, limón Meyer grillado, edamame, encurtido de nabo y zanahoria, wakame, aderezo ranch.",
+       "descEn": "Quinoa, romaine, baked salmon, ponzu sauce, grilled Meyer lemon, edamame, pickled radish and carrot, wakame, ranch dressing.",
+       "price": 725
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Precios en RD$ · ITBIS no incluido (footer del menú)",
+    "Ensaladas de la sección Ensaladas & Wraps disponibles en formato wrap por +RD$75",
+    "Nota de concepto (existe solo en EN/IT dentro del código, sin versión ES visible): Casaducho es un food hall con 5 conceptos culinarios; el Macro Menú agrupa los ítems más saludables y altos en proteína de cada concepto",
+    "Menú trilingüe ES/EN/IT con toggle de idioma; macros codificadas como cal (C), proteína (P), grasa (G), carbos (K)"
+   ],
+   "issues": [
+    "Claves i18n rotas: los ítems con data-i18n-name n3 (Churrasco), n4 (Flap Meat), n5 (Pechuga de Pollo), n6 (Philly Bowl) y n7 (Mexican Bowl) NO tienen entrada en T.en.names ni T.it.names — el atributo apunta a traducciones inexistentes (se omitió nameEn en esos ítems)",
+    "Nota de concepto huérfana: T.en.notes.n1 y T.it.notes.n1 existen en el script pero no hay ningún elemento con data-i18n-note en el HTML — la nota nunca se renderiza y no tiene versión ES",
+    "Objetos de traducción con claves duplicadas: en T.en y T.it se definen 'sections', 'subtitles' y 'descs' DOS veces; la segunda definición sobrescribe la primera (funciona por accidente, pero es código frágil)",
+    "Mexican Bowl: la tabla de variantes (Pollo/Chicharrón/Birria/Al Pastor) es de MACROS por proteína, no de precios — precio único RD$895; se volcó la tabla completa al campo macros",
+    "La nota de concepto dice '5 culinary concepts' pero Casaducho opera 6 conceptos (WAGMI, La Pécora, Hokkaido, Cantina La Cuadra, Napa Fresh, BAR) — posible dato desactualizado",
+    "Flying Dutchman, Protein Quesadilla, Tekkadon y Sakedon no tienen atributo data-i18n-name (nombres invariables entre idiomas, presumiblemente intencional)",
+    "Numeración i18n con huecos: existen n2-n7 y n10-n13 pero no n1, n8, n9 en data-i18n-name",
+    "Subtítulo de header no coincide entre idiomas: ES 'Alto en Proteína · Opciones Saludables de Cada Concepto' vs EN 'Fitness · Protein · Healthy' (no es traducción literal)"
+   ]
+  },
+  {
+   "conceptId": "kids",
+   "conceptName": "Kids Menu",
+   "tagline": "Casaducho",
+   "brandColor": "#FF9800",
+   "displayFont": "Playfair Display",
+   "sections": [
+    {
+     "id": "hokkaido",
+     "nameEs": "Hokkaidō",
+     "items": [
+      {
+       "nameEs": "Antonella Roll",
+       "price": 595
+      }
+     ]
+    },
+    {
+     "id": "cantina",
+     "nameEs": "Cantina la Cuadra",
+     "items": [
+      {
+       "nameEs": "Quesadilla de Queso",
+       "price": 445
+      },
+      {
+       "nameEs": "Taquitos de Pollo con Queso (2 uds.)",
+       "price": 495
+      }
+     ]
+    },
+    {
+     "id": "pecora",
+     "nameEs": "La Pécora",
+     "items": [
+      {
+       "nameEs": "Macarrones con Queso",
+       "price": 345
+      },
+      {
+       "nameEs": "Pizza de Queso",
+       "descEs": "Tamaño niño",
+       "price": 600
+      }
+     ]
+    },
+    {
+     "id": "wagmi",
+     "nameEs": "WAGMI",
+     "items": [
+      {
+       "nameEs": "Mini Cheeseburger",
+       "price": 445
+      },
+      {
+       "nameEs": "Mini Cheeseburger + Bacon",
+       "price": 495
+      },
+      {
+       "nameEs": "Popcorn Chicken",
+       "price": 445
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Todos los platos del Kids Menu incluyen papas fritas o acompañamiento.",
+    "Precios no incluyen ITBIS (18%)",
+    "Precios en pesos dominicanos (DOP) · ITBIS no incluido (footer)"
+   ],
+   "issues": [
+    "El archivo no tiene atributos data-i18n: no existen traducciones EN para ningún ítem ni sección (se omiten nameEn/descEn según regla).",
+    "Las secciones llevan nombres de otros conceptos (Hokkaidō, Cantina la Cuadra, La Pécora, WAGMI) pero este archivo es el menú canónico de kids — son agrupaciones propias por concepto de origen, no copias embebidas, por lo que no se marcó duplicatedFrom.",
+    "La sección Hokkaidō usa macrón (Hokkaidō) mientras el conceptId del sistema es 'hokkaido' — consistente con estilización, no error.",
+    "Ningún ítem tiene badges, macros ni precios escalonados en este menú."
+   ]
+  },
+  {
+   "conceptId": "postres",
+   "conceptName": "POSTRES",
+   "tagline": "Casaducho",
+   "brandColor": "#C9956B",
+   "displayFont": "Playfair Display",
+   "notes": [
+    "Precios en pesos dominicanos (DOP) · ITBIS no incluido"
+   ],
+   "sections": [
+    {
+     "id": "postres",
+     "nameEs": "Postres",
+     "items": [
+      {
+       "nameEs": "Brookie",
+       "price": 295,
+       "photo": "assets/img/dishes/postres/brookie.webp"
+      },
+      {
+       "nameEs": "Brookie con Helado",
+       "descEs": "Con bola de helado de vainilla artesanal",
+       "price": 385,
+       "photo": "assets/img/dishes/postres/brookie-con-helado.webp"
+      },
+      {
+       "nameEs": "Flan",
+       "descEs": "Flan clásico de la casa",
+       "price": 335,
+       "photo": "assets/img/dishes/postres/flan.webp"
+      },
+      {
+       "nameEs": "Bola de Helado de Vainilla",
+       "price": 95,
+       "photo": "assets/img/dishes/postres/bola-de-helado-de-vainilla.webp"
+      },
+      {
+       "nameEs": "Pudín de Pan",
+       "descEs": "Receta tradicional, tibio y reconfortante",
+       "price": 345,
+       "photo": "assets/img/dishes/postres/pudin-de-pan.webp"
+      },
+      {
+       "nameEs": "Pudín de Pan + Helado",
+       "descEs": "Con bola de helado de vainilla",
+       "price": 445,
+       "photo": "assets/img/dishes/postres/pudin-de-pan-helado.webp"
+      }
+     ]
+    }
+   ],
+   "issues": [
+    "El menú no tiene sistema i18n (cero atributos data-i18n), a diferencia de otros menús del sitio — no existen traducciones EN para ningún ítem",
+    "La única sección (.menu-section) no tiene título/encabezado en el HTML; se usó 'Postres' del header de página como nombre de sección",
+    "El header de la página usa 'POSTRES' como logo y 'Casaducho' como subtitle (invertido respecto a los otros menús de concepto); el tagline reportado es el subtitle literal 'Casaducho'",
+    "Brookie y Bola de Helado de Vainilla no tienen descripción (no es error, solo se omite el campo)"
+   ]
+  }
+ ]
+}

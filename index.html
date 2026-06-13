@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CASADUCHO | Mercado Gastronómico en Acrópolis, Santo Domingo</title>
+  <meta name="description" content="6 cocinas bajo un mismo techo en Acrópolis Business Mall: burgers, sushi, tacos, pizza, cocteles y más. Ordena por PedidosYa, Uber Eats o WhatsApp. Reserva con TOI.">
+  <link rel="canonical" href="https://casaducho.com/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CASADUCHO">
+  <meta property="og:title" content="CASADUCHO | Mercado Gastronómico">
+  <meta property="og:description" content="Algo para cada gusto bajo un mismo techo. 6 cocinas en Acrópolis Business Mall, Santo Domingo.">
+  <meta property="og:url" content="https://casaducho.com/">
+  <meta property="og:image" content="https://casaducho.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_DO">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Iconos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#fff3de">
+
+  <!-- Tipografías (self-hosted): Bricolage friendly + Druk + Migra oficiales -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/druk-medium.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/migra-lightitalic.woff2" crossorigin>
+
+  <!-- LCP: el wordmark -->
+  <link rel="preload" as="image" href="assets/img/logos/casaducho.webp" fetchpriority="high">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "CASADUCHO",
+    "alternateName": "Casaducho Mercado Gastronómico",
+    "description": "Mercado gastronómico con 6 conceptos culinarios bajo un mismo techo: burgers, comida japonesa, mexicana, italiana, bar de cocteles y más.",
+    "url": "https://casaducho.com",
+    "image": "https://casaducho.com/assets/img/og-image.jpg",
+    "logo": "https://casaducho.com/assets/img/logos/casaducho.png",
+    "servesCuisine": ["American", "Japanese", "Mexican", "Italian", "Cocktails"],
+    "priceRange": "RD$300–RD$900",
+    "currenciesAccepted": "DOP",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Acrópolis Business Mall, Primer Nivel",
+      "addressLocality": "Santo Domingo",
+      "addressCountry": "DO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 18.4695063, "longitude": -69.9388353 },
+    "hasMap": "https://maps.app.goo.gl/HaLPYvmtWjRR8S928",
+    "telephone": "+18093820762",
+    "email": "info@casaducho.com",
+    "sameAs": ["https://instagram.com/casaducho"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "11:30", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:30", "closes": "23:59" }
+    ],
+    "hasMenu": "https://casaducho.com/menus/"
+  }
+  </script>
+
+  <!-- GA4: pendiente de crear propiedad. Descomentar e insertar ID.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+  -->
+</head>
+<body>
+
+  <!-- TICKER — marquesina de afiche -->
+  <div class="ticker" aria-label="Promociones activas">
+    <div class="ticker-track">
+      <span class="ticker-item">Happy Hour 2x1 · Lun–Vie 4–7PM <span class="dot">●</span></span>
+      <span class="ticker-item">Martes de Tacos 3x2 <span class="dot">●</span></span>
+      <span class="ticker-item">Más salsa, menos guerra <span class="dot">●</span></span>
+      <span class="ticker-item">Thirsty Thursday · Aperol Spritz 2x1 <span class="dot">●</span></span>
+      <span class="ticker-item">Happy Hour 2x1 · Lun–Vie 4–7PM <span class="dot">●</span></span>
+      <span class="ticker-item">Martes de Tacos 3x2 <span class="dot">●</span></span>
+      <span class="ticker-item">Más salsa, menos guerra <span class="dot">●</span></span>
+      <span class="ticker-item">Thirsty Thursday · Aperol Spritz 2x1 <span class="dot">●</span></span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#" class="nav-logo" aria-label="Casaducho — inicio">
+        <img src="assets/img/logos/casaducho.webp" alt="CASADUCHO" width="130" height="32">
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#conceptos">Conceptos</a>
+        <a href="menus/">Menús</a>
+        <a href="#promos">Promos</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#visitanos">Visítanos</a>
+        <a href="#reservar" class="btn btn-outline-ink btn-sm">Reservar</a>
+        <a href="#" class="btn btn-pink btn-sm" data-order>Ordenar</a>
+      </nav>
+      <button class="nav-burger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <div class="mobile-menu" role="dialog" aria-label="Menú de navegación">
+    <div class="mobile-menu-head">
+      <img src="assets/img/logos/casaducho.webp" alt="CASADUCHO">
+      <button class="mobile-menu-close" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav>
+      <a href="menus/" style="--mlink:#ec008c">Menús</a>
+      <a href="#conceptos" style="--mlink:#ffde17">Conceptos</a>
+      <a href="#promos" style="--mlink:#f15a29">Promos</a>
+      <a href="#delivery" style="--mlink:#00a14b">Delivery</a>
+      <a href="#reservar" style="--mlink:#d4a5a5">Reservar</a>
+      <a href="#visitanos" style="--mlink:#c9956b">Visítanos</a>
+      <a href="#contacto" style="--mlink:#ff5722">Contacto</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a href="#" class="btn btn-pink" style="flex:1" data-order>Ordenar ahora</a>
+    </div>
+  </div>
+
+  <!-- HERO — lienzo negro, el wordmark manda -->
+  <section class="hero">
+    <div class="wrap hero-content">
+      <img class="hero-logo" src="assets/img/logos/casaducho.webp" alt="CASADUCHO — Mercado Gastronómico" fetchpriority="high">
+      <span class="eyebrow">Mercado Gastronómico · Santo Domingo</span>
+      <h1>Algo para cada gusto, bajo un mismo <span class="h1-accent">techo.</span></h1>
+      <p class="hero-tag">Seis cocinas, un bar y una mesa para venir con quien quieras. Nadie tiene que ponerse de acuerdo.</p>
+      <span class="open-chip"><span class="pulse"></span><span class="open-label">Abierto · 11:30 AM – 11:00 PM</span></span>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-pink" data-order>Ordenar ahora</a>
+        <a href="menus/" class="btn btn-outline-cream">Ver los menús</a>
+      </div>
+    </div>
+    <div class="hero-band">
+      <video class="cinemagraph" autoplay muted loop playsinline preload="auto"
+             poster="assets/video/hero-poster.webp" aria-label="Alitas WAGMI glaseadas en BBQ">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <img class="cinemagraph-fallback" src="assets/video/hero-poster.webp" alt="Alitas WAGMI glaseadas en BBQ — Casaducho">
+    </div>
+  </section>
+
+  <!-- ACTION ROW -->
+  <div class="wrap action-row">
+    <div class="action-cards">
+      <a class="action-card" href="menus/">
+        <strong>Menú</strong>
+        <small>232 platos, 6 cocinas</small>
+      </a>
+      <a class="action-card" href="#" data-order>
+        <strong>Ordenar</strong>
+        <small>PedidosYa · Uber Eats · WhatsApp</small>
+      </a>
+      <a class="action-card" href="#reservar">
+        <strong>Reservar</strong>
+        <small>TOI o WhatsApp</small>
+      </a>
+    </div>
+  </div>
+
+  <!-- PLATOS ICÓNICOS -->
+  <section class="section" id="platos">
+    <div class="wrap">
+      <span class="eyebrow">El antojo</span>
+      <h2 class="section-title">¿Qué se te antoja hoy?</h2>
+      <p class="section-sub">110 platos, 6 cocinas. Desliza y elige — luego pides de las que quieras.</p>
+    </div>
+    <div class="dishes-strip" id="dishes-strip">
+      <!-- llenado por carousel-data.js + main.js -->
+    </div>
+  </section>
+
+  <!-- CONCEPTOS -->
+  <section class="section concepts" id="conceptos">
+    <div class="wrap">
+      <span class="eyebrow">La cartelera</span>
+      <h2 class="section-title">El mercado</h2>
+      <p class="section-sub">Cada concepto con su propia cocina, su propio menú y su propia personalidad. Pide de varios a la vez — esa es la gracia.</p>
+
+      <div class="concepts-grid">
+        <!-- WAGMI -->
+        <article class="concept-card reveal" style="--cc:var(--c-wagmi); --ccd:var(--c-wagmi-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/wagmi-card.webp" alt="Cheesus Christ — smash burger de WAGMI" loading="lazy" width="560" height="350">
+            <img class="concept-logo" src="assets/img/logos/wagmi.webp" alt="" loading="lazy">
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">Classic Street Food</span>
+            <h3 class="concept-name">WAGMI</h3>
+            <p class="concept-desc">Smash burgers, Philly cheesesteaks y chicken sandwiches en pan de leche japonés. Carne Angus, siempre.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="menus/wagmi.html">Ver menú</a>
+              <a class="btn btn-order" href="#" data-order="wagmi">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CANTINA -->
+        <article class="concept-card reveal" style="--cc:var(--c-cantina); --ccd:var(--c-cantina-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/cantina-card.webp" alt="Quesabirria de Cantina La Cuadra" loading="lazy" width="560" height="350">
+            <img class="concept-logo" src="assets/img/logos/cantina-la-cuadra.webp" alt="" loading="lazy">
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">Mexican Flavors</span>
+            <h3 class="concept-name">Cantina La Cuadra</h3>
+            <p class="concept-desc">Tacos al pastor, quesadillas de birria, bowls y salsas hechas en casa. México de verdad.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="menus/cantina.html">Ver menú</a>
+              <a class="btn btn-order" href="#" data-order="cantina">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PECORA -->
+        <article class="concept-card reveal" style="--cc:var(--c-pecora); --ccd:var(--c-pecora-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/pecora-card.webp" alt="Pizza Straccia-Nduja de La Pécora" loading="lazy" width="560" height="350">
+            <img class="concept-logo" src="assets/img/logos/la-pecora.webp" alt="" loading="lazy">
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">Pizza &amp; Pasta</span>
+            <h3 class="concept-name">La Pécora</h3>
+            <p class="concept-desc">Pizza de masa madre y pasta artesanal. Cacio e pepe, carbonara y las clásicas que no fallan.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="menus/pecora.html">Ver menú</a>
+              <a class="btn btn-order" href="#" data-order="pecora">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- HOKKAIDO -->
+        <article class="concept-card reveal" style="--cc:var(--c-hokkaido); --ccd:var(--c-hokkaido-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/hokkaido-card.webp" alt="Rolls y sashimi de Hokkaidō" loading="lazy" width="560" height="350">
+            <img class="concept-logo" src="assets/img/logos/hokkaido.webp" alt="" loading="lazy">
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">Japanese Cuisine</span>
+            <h3 class="concept-name">Hokkaidō</h3>
+            <p class="concept-desc">Uramaki rolls, poke bowls, nigiri y new style sashimi. Lo fresco manda.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="menus/hokkaido.html">Ver menú</a>
+              <a class="btn btn-order" href="#" data-order="hokkaido">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EL BAR -->
+        <article class="concept-card reveal" style="--cc:var(--c-bar); --ccd:var(--c-bar-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/bar-card.webp" alt="Cocteles de EL BAR — Aperol Spritz y whiskey" loading="lazy" width="560" height="350">
+            <span style="position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--druk);font-size:1.2rem;font-weight:900;color:var(--c-bar);letter-spacing:.04em;text-transform:uppercase;filter:drop-shadow(0 1px 6px rgba(0,0,0,.7))">El Bar</span>
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">Cocteles · Vinos · Spirits</span>
+            <h3 class="concept-name">EL BAR</h3>
+            <p class="concept-desc">Cocteles de autor, cervezas bien frías y vinos. Happy Hour 2x1 de lunes a viernes, 4–7PM.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="menus/bar.html">Ver menú</a>
+              <a class="btn btn-order" href="#" data-order="bar">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- HOT BROTS -->
+        <article class="concept-card coming reveal" style="--cc:var(--c-hotbrots); --ccd:var(--c-hotbrots-deep)">
+          <div class="concept-photo">
+            <img class="ph" src="assets/img/concepts/hot-brots-card.webp" alt="Chili Cheese Dog de Hot Brots" loading="lazy" width="560" height="350">
+            <span class="coming-badge">Próximamente</span>
+          </div>
+          <div class="concept-body">
+            <span class="concept-kind">NY Style Hot Dogs</span>
+            <h3 class="concept-name">HOT BROTS</h3>
+            <p class="concept-desc">Hot dogs estilo Nueva York. Ya casi. Síguelos en <a href="https://instagram.com/hot.brots" target="_blank" rel="noopener noreferrer">@hot.brots</a>.</p>
+            <div class="concept-ctas">
+              <a class="btn btn-menu" href="https://instagram.com/hot.brots" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="transversal-chips">
+        <a class="t-chip" href="menus/macro.html" style="--tc:var(--c-macro)"><span class="t-dot"></span>Macro Menú · alto en proteína</a>
+        <a class="t-chip" href="menus/kids.html" style="--tc:var(--c-kids)"><span class="t-dot"></span>Kids Menu</a>
+        <a class="t-chip" href="menus/postres.html" style="--tc:var(--c-postres)"><span class="t-dot"></span>Postres</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERLUDIO: EL ESPACIO -->
+  <section class="espacio" id="espacio">
+    <video class="espacio-video cinemagraph" autoplay muted loop playsinline preload="none"
+           poster="assets/video/bar-poster.webp" aria-label="El bar de Casaducho en Acrópolis">
+      <source src="assets/video/bar.mp4" type="video/mp4">
+    </video>
+    <img class="cinemagraph-fallback espacio-video" src="assets/video/bar-poster.webp" alt="El bar de Casaducho en Acrópolis">
+    <div class="espacio-overlay">
+      <div class="wrap">
+        <span class="eyebrow" style="color:var(--amarillo)">El lugar</span>
+        <h2>No es delivery.<br>Es <span style="color:var(--amarillo)">venir.</span></h2>
+        <p>Primer nivel de Acrópolis Business Mall. Seis cocinas, un bar, y la mesa que quieras.</p>
+        <a href="#visitanos" class="btn btn-outline-cream">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOS -->
+  <section class="section" id="promos">
+    <div class="wrap">
+      <span class="eyebrow">Promos activas</span>
+      <h2 class="section-title">La semana en Casaducho</h2>
+      <p class="section-sub">Solo lo que está vigente. Sin letra chiquita rara.</p>
+      <div class="promo-grid">
+        <article class="promo-card reveal" data-days="1,2,3,4,5">
+          <div class="promo-day">Lunes a viernes · 4–7 PM</div>
+          <h3>Happy Hour</h3>
+          <div class="promo-deal">2x1</div>
+          <p>En cocteles seleccionados de EL BAR. El after office de Acrópolis.</p>
+        </article>
+        <article class="promo-card reveal" data-days="2">
+          <div class="promo-day">Todos los martes</div>
+          <h3>Martes de Tacos</h3>
+          <div class="promo-deal">3x2</div>
+          <p>En tacos de Cantina La Cuadra. El martes se respeta.</p>
+        </article>
+        <article class="promo-card reveal" data-days="4">
+          <div class="promo-day">Todos los jueves</div>
+          <h3>Thirsty Thursday</h3>
+          <div class="promo-deal">2x1</div>
+          <p>Aperol Spritz 2x1 toda la noche en EL BAR.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY -->
+  <section class="section delivery" id="delivery">
+    <div class="wrap">
+      <span class="eyebrow">Delivery</span>
+      <h2 class="section-title">Te llevamos Casaducho a tu puerta</h2>
+      <p class="section-sub">Cada cocina tiene su propia tienda. Elige tu plataforma — o escríbele directo a PideBot por WhatsApp.</p>
+
+      <div class="matrix reveal">
+        <div class="matrix-row head">
+          <div>Cocina</div><div>PedidosYa</div><div>Uber Eats</div><div>WhatsApp</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--c-wagmi)"><span class="m-dot"></span>WAGMI</div>
+          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./wagmi-at-casaducho-b02e9275-40c3-4feb-9aa7-6066f498a7ff-menu" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en PedidosYa">PYA</a></div>
+          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/wagmi-casaducho/i8o8tDwxU1yFWCE0XFPDAg" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en Uber Eats">Uber</a></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20WAGMI" target="_blank" rel="noopener noreferrer" aria-label="WAGMI por WhatsApp">Chat</a></div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--c-cantina)"><span class="m-dot"></span>Cantina La Cuadra</div>
+          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./cantina-la-cuadra-casaducho-3dd88e53-98ed-4627-863a-2ffcc9d13871-menu" target="_blank" rel="noopener noreferrer" aria-label="Cantina en PedidosYa">PYA</a></div>
+          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/cantina-la-cuadra-casaducho/CIiMb2qgV5q531FnMAge4w" target="_blank" rel="noopener noreferrer" aria-label="Cantina en Uber Eats">Uber</a></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Cantina%20La%20Cuadra" target="_blank" rel="noopener noreferrer" aria-label="Cantina por WhatsApp">Chat</a></div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--c-pecora)"><span class="m-dot"></span>La Pécora</div>
+          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./la-pecora-at-casaducho-1d6d86b6-d9f8-4f64-b553-b1779b2143f6-menu" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en PedidosYa">PYA</a></div>
+          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/la-pecora-casaducho/q33d1Ui3XYWQnQSIpHdkRQ" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en Uber Eats">Uber</a></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20La%20P%C3%A9cora" target="_blank" rel="noopener noreferrer" aria-label="La Pécora por WhatsApp">Chat</a></div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--c-hokkaido)"><span class="m-dot"></span>Hokkaidō</div>
+          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./hokkaido-at-casaducho-a6dfb18d-076a-4053-8c79-65f873526923-menu" target="_blank" rel="noopener noreferrer" aria-label="Hokkaido en PedidosYa">PYA</a></div>
+          <div class="matrix-cell"><span class="off" title="No disponible por ahora">—</span></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Hokkaid%C5%8D" target="_blank" rel="noopener noreferrer" aria-label="Hokkaido por WhatsApp">Chat</a></div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--c-bar)"><span class="m-dot"></span>EL BAR</div>
+          <div class="matrix-cell"><span class="off">—</span></div>
+          <div class="matrix-cell"><span class="off">—</span></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20EL%20BAR" target="_blank" rel="noopener noreferrer" aria-label="EL BAR por WhatsApp">Chat</a></div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-concept" style="--mc:var(--green)"><span class="m-dot"></span>Todo el mercado</div>
+          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./casaducho-c7c4f644-3602-44e7-9b02-d2bd62ac2baa-menu" target="_blank" rel="noopener noreferrer" aria-label="Casaducho en PedidosYa">PYA</a></div>
+          <div class="matrix-cell"><span class="off" title="No disponible por ahora">—</span></div>
+          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" aria-label="Casaducho por WhatsApp">Chat</a></div>
+        </div>
+      </div>
+      <p class="delivery-note"><strong>PideBot</strong> es nuestro WhatsApp de pedidos directos: <a href="https://wa.me/18495915955" target="_blank" rel="noopener noreferrer">+1 (849) 591-5955</a></p>
+    </div>
+  </section>
+
+  <!-- RESERVAR -->
+  <section class="section" id="reservar">
+    <div class="wrap">
+      <span class="eyebrow">Reservas</span>
+      <h2 class="section-title">Asegura tu mesa</h2>
+      <p class="section-sub">Reserva en segundos con TOI, o escríbenos por WhatsApp si prefieres el trato humano.</p>
+      <div class="reserve-grid">
+        <div class="reserve-card reveal">
+          <h3>Reserva con TOI</h3>
+          <p>La vía rápida: elige fecha, hora y zona desde la app o el navegador. Confirmación al instante.</p>
+          <a class="btn btn-pink" href="https://toiapp.com/#/reservation/casa-ducho" target="_blank" rel="noopener noreferrer">Reservar con TOI</a>
+          <div class="store-badges">
+            <a class="store-badge" href="https://apps.apple.com/do/app/toi/id1510765668" target="_blank" rel="noopener noreferrer">App Store</a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.snow.snoweats&hl=es_DO" target="_blank" rel="noopener noreferrer">Google Play</a>
+          </div>
+        </div>
+        <div class="reserve-card reveal">
+          <h3>Reserva por WhatsApp</h3>
+          <p>Para grupos grandes, cumpleaños o eventos: escríbenos y lo cuadramos contigo.</p>
+          <a class="btn btn-wa" href="https://wa.me/18495399762?text=%C2%A1Hola!%20Quiero%20reservar%20una%20mesa%20en%20Casaducho" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+          <div class="hours-box">
+            <strong>Horario</strong>
+            Dom–Jue · 11:30 AM – 11:00 PM<br>
+            Vie–Sáb · 11:30 AM – 12:00 AM
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATIVO -->
+  <section class="section corp" id="empresas">
+    <div class="wrap corp-inner">
+      <div>
+        <span class="eyebrow">Empresas</span>
+        <h2>Tu oficina queda arriba.<br>Tu almuerzo, aquí abajo.</h2>
+        <p>Casaducho está en el corazón de Acrópolis Business Mall. Catering corporativo, eventos privados, activaciones y beneficios para empresas de la torre y alrededores.</p>
+        <ul>
+          <li>10% de descuento corporativo con carnet</li>
+          <li>Almuerzo express para equipos</li>
+          <li>Catering y eventos a tu medida</li>
+        </ul>
+      </div>
+      <div>
+        <a class="btn btn-wa" style="width:100%" href="https://wa.me/18495399762?text=%C2%A1Hola!%20Me%20interesa%20informaci%C3%B3n%20sobre%20Catering%20y%20Eventos" target="_blank" rel="noopener noreferrer">Hablar con Mercadeo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISITANOS -->
+  <section class="section" id="visitanos">
+    <div class="wrap">
+      <span class="eyebrow">Visítanos</span>
+      <h2 class="section-title">Estamos en Acrópolis</h2>
+      <div class="visit-grid">
+        <div class="visit-info">
+          <p><strong>Acrópolis Business Mall, Primer Nivel</strong><br>Av. Winston Churchill, Santo Domingo</p>
+          <div class="hours-box">
+            <strong>Horario</strong>
+            Dom–Jue · 11:30 AM – 11:00 PM<br>
+            Vie–Sáb · 11:30 AM – 12:00 AM
+          </div>
+          <a class="rating-badge" href="https://www.google.com/maps/place/CASADUCHO/@18.4695114,-69.9414102,17z/data=!4m6!3m5!1s0x8eaf891baa3287d5:0xe11d18a8e39d25c4!8m2!3d18.4695063!4d-69.9388353!16s%2Fg%2F11tdr53b17" target="_blank" rel="noopener noreferrer">
+            <span class="stars">★★★★½</span> 4.5 en Google · ver reseñas →
+          </a>
+          <a class="btn btn-outline-ink" href="https://maps.app.goo.gl/HaLPYvmtWjRR8S928" target="_blank" rel="noopener noreferrer" style="width:max-content">Cómo llegar</a>
+        </div>
+        <div class="visit-map reveal">
+          <iframe src="https://maps.google.com/maps?q=CASADUCHO%2C+Acr%C3%B3polis+Business+Mall%2C+Santo+Domingo&z=17&output=embed" title="Mapa de CASADUCHO en Acrópolis Business Mall" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="wrap">
+      <span class="eyebrow">Contacto</span>
+      <h2 class="section-title">¿De qué quieres hablar?</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://wa.me/18495915955" target="_blank" rel="noopener noreferrer">
+          <strong>PideBot · Delivery</strong><span>+1 (849) 591-5955</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/18495399762" target="_blank" rel="noopener noreferrer">
+          <strong>Mercadeo · Eventos</strong><span>+1 (849) 539-9762</span>
+        </a>
+        <a class="contact-card" href="https://wa.me/18494735565" target="_blank" rel="noopener noreferrer">
+          <strong>Contabilidad</strong><span>+1 (849) 473-5565</span>
+        </a>
+        <a class="contact-card" href="mailto:info@casaducho.com">
+          <strong>Información general</strong><span>info@casaducho.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img class="f-logo" src="assets/img/logos/casaducho.webp" alt="CASADUCHO">
+        <p style="font-size:.88rem;max-width:32ch">Mercado gastronómico · Acrópolis Business Mall, Primer Nivel, Santo Domingo</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/casaducho" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Casaducho">IG — @casaducho</a>
+        </div>
+      </div>
+      <div>
+        <h4>Menús</h4>
+        <ul>
+          <li><a href="menus/wagmi.html">WAGMI</a></li>
+          <li><a href="menus/cantina.html">Cantina La Cuadra</a></li>
+          <li><a href="menus/pecora.html">La Pécora</a></li>
+          <li><a href="menus/hokkaido.html">Hokkaidō</a></li>
+          <li><a href="menus/bar.html">EL BAR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Especiales</h4>
+        <ul>
+          <li><a href="menus/macro.html">Macro Menú</a></li>
+          <li><a href="menus/kids.html">Kids Menu</a></li>
+          <li><a href="menus/postres.html">Postres</a></li>
+          <li><a href="#promos">Promos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Casaducho</h4>
+        <ul>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#reservar">Reservar</a></li>
+          <li><a href="#empresas">Empresas</a></li>
+          <li><a href="#visitanos">Cómo llegar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">© 2026 CASADUCHO · Mercado Gastronómico · Santo Domingo, República Dominicana</div>
+  </footer>
+
+  <!-- BOTTOM ACTION BAR -->
+  <nav class="bottombar" aria-label="Acciones rápidas">
+    <a class="bb-item" href="menus/">Menús</a>
+    <a class="bb-fab" href="#" data-order aria-label="Ordenar ahora">Ordenar</a>
+    <a class="bb-item" href="#reservar">Reservar</a>
+  </nav>
+
+  <!-- ORDER SHEET -->
+  <dialog class="sheet" id="order-sheet">
+    <div class="sheet-inner">
+      <div class="sheet-handle"></div>
+      <div class="sheet-step active" data-step="1">
+        <h3>¿De cuál cocina?</h3>
+        <p class="sheet-sub">Cada cocina tiene su propia tienda de delivery.</p>
+        <div class="sheet-concepts">
+          <button class="sheet-concept" data-concept="wagmi" style="--scc:var(--c-wagmi-deep)"><span class="sc-dot"></span>WAGMI</button>
+          <button class="sheet-concept" data-concept="cantina" style="--scc:var(--c-cantina-deep)"><span class="sc-dot"></span>Cantina La Cuadra</button>
+          <button class="sheet-concept" data-concept="pecora" style="--scc:var(--c-pecora-deep)"><span class="sc-dot"></span>La Pécora</button>
+          <button class="sheet-concept" data-concept="hokkaido" style="--scc:var(--c-hokkaido-deep)"><span class="sc-dot"></span>Hokkaidō</button>
+          <button class="sheet-concept" data-concept="bar" style="--scc:var(--c-bar-deep)"><span class="sc-dot"></span>EL BAR</button>
+          <button class="sheet-concept" data-concept="general" style="--scc:var(--green)"><span class="sc-dot"></span>De todo un poco</button>
+        </div>
+      </div>
+      <div class="sheet-step" data-step="2">
+        <button class="sheet-back">← Cambiar cocina</button>
+        <h3 class="sheet-concept-name">WAGMI</h3>
+        <p class="sheet-sub">¿Por dónde quieres pedir?</p>
+        <div class="sheet-channels"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/delivery-links.js"></script>
+  <script src="assets/js/carousel-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
