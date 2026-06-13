@@ -2,154 +2,202 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
 <meta name="theme-color" content="#fff3de">
 <title>Elige tu mesa · Casaducho</title>
 <link rel="icon" href="favicon-64.png">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/druk-medium.woff2" crossorigin>
 <style>
-  @font-face { font-family:'Bricolage'; src:url('assets/fonts/bricolage.woff2') format('woff2'); font-weight:400 800; font-display:swap; }
-  @font-face { font-family:'Druk Wide'; src:url('assets/fonts/druk-heavy.woff2') format('woff2'); font-weight:900; font-display:swap; }
-  @font-face { font-family:'Druk Wide'; src:url('assets/fonts/druk-medium.woff2') format('woff2'); font-weight:500; font-display:swap; }
-  :root{ --crema:#fff3de; --crema2:#fbeccf; --papel:#fffaf0; --verde:#006838; --verde-noche:#06371f; --rosa:#ec008c; --amarillo:#ffde17; --naranja:#f15a29; --tinta:#20140f; --suave:#6b5d50;
-    --c-wagmi:#a8616c; --c-pecora:#3d5a5b; --c-hokkaido:#d6431a; --c-bar:#8f6238; --c-comedor:#b97607; --c-terraza:#2f7d52;
-    --display:'Bricolage',-apple-system,system-ui,sans-serif; --druk:'Druk Wide','Bricolage',sans-serif; --sans:-apple-system,'Helvetica Neue',system-ui,sans-serif; }
+  @font-face{font-family:'Bricolage';src:url('assets/fonts/bricolage.woff2') format('woff2');font-weight:400 800;font-display:swap}
+  @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-heavy.woff2') format('woff2');font-weight:900;font-display:swap}
+  @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-medium.woff2') format('woff2');font-weight:500;font-display:swap}
+  :root{--crema:#fff3de;--crema2:#fbeccf;--papel:#fffaf0;--verde:#006838;--verde-noche:#06371f;--rosa:#ec008c;--amarillo:#ffde17;--naranja:#f15a29;--tinta:#20140f;--suave:#6b5d50;
+    --c-wagmi:#a8616c;--c-pecora:#3d5a5b;--c-hokkaido:#d6431a;--c-bar:#8f6238;--c-comedor:#b97607;--c-terraza:#2f7d52;
+    --display:'Bricolage',-apple-system,system-ui,sans-serif;--druk:'Druk Wide','Bricolage',sans-serif;--sans:-apple-system,'Helvetica Neue',system-ui,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:var(--sans);background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased}
+  html,body{height:100%}
+  body{font-family:var(--sans);background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased;overflow:hidden}
   a{text-decoration:none;color:inherit}
-  .vf-top{position:sticky;top:0;z-index:20;background:rgba(255,243,222,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.08)}
-  .vf-top-in{max-width:1180px;margin:0 auto;padding:0 18px;height:56px;display:flex;align-items:center;justify-content:space-between}
+  /* topbar */
+  .vf-top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(255,243,222,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.08)}
+  .vf-top-in{max-width:1280px;margin:0 auto;padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between}
   .vf-back{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem}
-  .vf-back img{height:21px}
-  .vf-top .btn{display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:999px;background:var(--rosa);color:#fff;font-family:var(--druk);font-weight:500;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}
-  .vf-hero{max-width:1180px;margin:0 auto;padding:30px 18px 8px;text-align:center}
-  .vf-eyebrow{font-family:var(--druk);font-weight:500;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--verde)}
-  .vf-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3rem);margin:8px 0 6px;letter-spacing:-.01em}
-  .vf-hero p{color:var(--suave);max-width:52ch;margin:0 auto;font-size:1.02rem}
-  .vf-wrap{max-width:1180px;margin:0 auto;padding:18px;display:grid;gap:20px;grid-template-columns:1fr}
-  @media(min-width:920px){ .vf-wrap{grid-template-columns:1fr 1fr;align-items:start} }
-  /* PLANO */
-  .vf-plan{position:relative;background:var(--verde-noche);border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(32,20,15,.12)}
-  .vf-plan svg{display:block;width:100%;height:auto}
-  .vf-rect{transition:opacity .25s}
-  .vf-rect.act{opacity:.95;stroke:var(--amarillo);stroke-width:6}
-  .vf-hot{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;background:var(--papel);color:var(--tinta);border:2px solid var(--hc,#fff);border-radius:999px;padding:7px 13px;font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .14s,box-shadow .14s;white-space:nowrap}
-  .vf-hot::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--hc,#fff)}
-  .vf-hot:hover{transform:translate(-50%,-50%) scale(1.06)}
-  .vf-hot.on{background:var(--hc,#fff);color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 6px 16px rgba(0,0,0,.4)}
-  .vf-hint{position:absolute;left:50%;top:10px;transform:translateX(-50%);font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo)}
-  /* VISTA */
-  .vf-view{border-radius:22px;overflow:hidden;background:var(--crema2);box-shadow:0 10px 30px rgba(32,20,15,.12);display:flex;flex-direction:column}
-  .vf-photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:#06371f}
-  .vf-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease;transform:scale(1.05)}
-  .vf-photo img.show{opacity:1;transform:scale(1);transition:opacity .5s ease,transform 6s ease}
-  .vf-photo .vf-soon{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:20px;background:linear-gradient(135deg,#06371f,#0c4a2c)}
-  .vf-photo.soon .vf-soon{display:flex}
-  .vf-cap{padding:18px 20px 20px}
-  .vf-cap .k{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
-  .vf-cap h2{font-family:var(--display);font-weight:800;font-size:1.5rem;margin:4px 0 6px}
-  .vf-cap p{color:var(--suave);font-size:.96rem}
-  .vf-note{max-width:1180px;margin:0 auto;padding:6px 18px 40px;color:var(--suave);font-size:.85rem;text-align:center}
-  .vf-note b{color:var(--verde)}
+  .vf-back img{height:20px}
+  .vf-title{font-family:var(--druk);font-weight:500;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
+  /* viewport del mapa (estilo google maps) */
+  .vf-vp{position:fixed;inset:54px 0 0 0;overflow:hidden;background:#eadfca;touch-action:none;cursor:grab}
+  .vf-vp:active{cursor:grabbing}
+  .vf-inner{position:absolute;left:0;top:0;width:1200px;height:900px;transform-origin:0 0;will-change:transform}
+  .vf-inner svg{display:block;width:1200px;height:900px}
+  /* pins estilo maps */
+  .vf-pin{position:absolute;transform:translate(-50%,-100%) scale(var(--inv,1));transform-origin:bottom center;cursor:pointer;z-index:5}
+  .vf-pin-body{display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+  .vf-pin-head{display:inline-flex;align-items:center;gap:6px;background:var(--pc,#fff);color:#fff;border-radius:999px;padding:6px 12px;font-family:var(--druk);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .vf-pin-tip{width:0;height:0;border:7px solid transparent;border-top-color:var(--pc,#fff);margin-top:-1px}
+  .vf-pin.on .vf-pin-head{outline:3px solid #fff;box-shadow:0 0 0 5px rgba(255,255,255,.35)}
+  .vf-pin:hover .vf-pin-head{filter:brightness(1.06)}
+  /* controles */
+  .vf-ctrl{position:fixed;right:14px;bottom:calc(38vh + 18px);z-index:25;display:flex;flex-direction:column;gap:8px}
+  .vf-ctrl button{width:42px;height:42px;border:0;border-radius:12px;background:var(--papel);box-shadow:0 4px 12px rgba(32,20,15,.18);font-size:1.3rem;font-weight:700;color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .vf-ctrl button:active{transform:scale(.95)}
+  .vf-hint{position:fixed;top:66px;left:50%;transform:translateX(-50%);z-index:25;background:rgba(6,55,31,.9);color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:999px;transition:opacity .4s;pointer-events:none}
+  .vf-hint.gone{opacity:0}
+  /* panel street-view (place card) */
+  .vf-card{position:fixed;left:0;right:0;bottom:0;z-index:28;background:var(--papel);border-radius:22px 22px 0 0;box-shadow:0 -10px 30px rgba(32,20,15,.2);transform:translateY(100%);transition:transform .35s cubic-bezier(.22,1,.36,1);max-height:46vh;display:flex;flex-direction:column}
+  .vf-card.up{transform:translateY(0)}
+  @media(min-width:900px){ .vf-card{left:auto;right:18px;bottom:18px;width:390px;border-radius:20px;max-height:none} .vf-ctrl{bottom:18px} }
+  .vf-card-photo{position:relative;height:240px;overflow:hidden;border-radius:22px 22px 0 0;background:#06371f;flex:0 0 auto}
+  @media(min-width:900px){ .vf-card-photo{border-radius:20px 20px 0 0} }
+  .vf-card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;transform:scale(1.06)}
+  .vf-card-photo img.show{opacity:1;transform:scale(1);transition:opacity .4s,transform 7s ease}
+  .vf-card-photo .soon{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:20px;background:linear-gradient(135deg,#06371f,#0c4a2c)}
+  .vf-card-photo.soon .soon{display:flex}
+  .vf-card-x{position:absolute;top:10px;right:10px;z-index:3;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,250,240,.9);font-size:1.1rem;cursor:pointer;line-height:1}
+  .vf-card-body{padding:16px 18px 20px}
+  .vf-card-body .k{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
+  .vf-card-body h2{font-family:var(--display);font-weight:800;font-size:1.4rem;margin:3px 0 6px}
+  .vf-card-body p{color:var(--suave);font-size:.95rem;margin-bottom:12px}
+  .vf-card-body .btn{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:999px;background:var(--rosa);color:#fff;font-family:var(--druk);font-weight:500;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase}
+  .vf-note{position:fixed;left:14px;bottom:14px;z-index:24;font-size:.62rem;color:var(--suave);background:rgba(255,243,222,.85);padding:6px 10px;border-radius:8px;max-width:60vw}
+  @media(min-width:900px){ .vf-note{max-width:320px} }
 </style>
 </head>
 <body>
   <header class="vf-top"><div class="vf-top-in">
     <a class="vf-back" href="index.html"><span style="opacity:.7">←</span><img src="assets/img/logos/casaducho.webp" alt="Casaducho"></a>
-    <a class="btn" href="#" data-go-reservar>Reservar</a>
+    <span class="vf-title">Elige tu mesa</span>
+    <a class="vf-back" href="index.html#reservar" style="color:var(--rosa);font-weight:700">Reservar</a>
   </div></header>
 
-  <section class="vf-hero">
-    <span class="vf-eyebrow">Elige tu mesa</span>
-    <h1>Mira desde dónde te vas a sentar</h1>
-    <p>Toca una zona del mercado y mira la vista real desde ahí — como elegir asiento antes de venir.</p>
-  </section>
-
-  <div class="vf-wrap">
-    <div class="vf-plan" id="vf-plan">
-      <span class="vf-hint" aria-hidden="true">Toca una zona</span>
-      <svg viewBox="0 0 1000 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <rect x="0" y="0" width="1000" height="760" fill="var(--verde-noche)"/>
-        <!-- planta en L (aprox. a la arquitectónica) -->
-        <path d="M60 60 H620 V300 H940 V520 H620 V700 H60 Z" fill="#0c4a2c" stroke="#1f6440" stroke-width="3"/>
-        <!-- cocinas perimetrales -->
-        <rect class="vf-rect" data-zone="wagmi"   x="80"  y="80"  width="180" height="150" rx="10" fill="var(--c-wagmi)"    opacity=".55"/>
-        <rect class="vf-rect" data-zone="hokkaido" x="290" y="80"  width="160" height="120" rx="10" fill="var(--c-hokkaido)" opacity=".5"/>
-        <rect class="vf-rect" data-zone="pecora"  x="80"  y="500" width="180" height="170" rx="10" fill="var(--c-pecora)"   opacity=".5"/>
-        <rect class="vf-rect" data-zone="bar"     x="660" y="320" width="250" height="170" rx="10" fill="var(--c-bar)"      opacity=".5"/>
-        <!-- comedor central -->
-        <rect class="vf-rect" data-zone="comedor" x="300" y="260" width="300" height="400" rx="12" fill="var(--crema)"      opacity=".10"/>
-        <!-- terraza -->
-        <rect class="vf-rect" data-zone="terraza" x="660" y="60" width="250" height="220" rx="14" fill="var(--c-terraza)"   opacity=".4"/>
-        <!-- mesitas decorativas -->
-        <g fill="var(--crema)" opacity=".18">
-          <circle cx="360" cy="340" r="14"/><circle cx="460" cy="340" r="14"/><circle cx="540" cy="340" r="14"/>
-          <circle cx="360" cy="450" r="14"/><circle cx="460" cy="450" r="14"/><circle cx="540" cy="450" r="14"/>
-          <circle cx="360" cy="560" r="14"/><circle cx="460" cy="560" r="14"/><circle cx="540" cy="560" r="14"/>
+  <div class="vf-vp" id="vf-vp">
+    <div class="vf-inner" id="vf-inner">
+      <svg viewBox="0 0 1200 900" aria-hidden="true">
+        <rect x="0" y="0" width="1200" height="900" fill="#dccfae"/>
+        <!-- caminos / exterior suave -->
+        <rect x="0" y="0" width="1200" height="900" fill="#e7dcc1"/>
+        <!-- footprint del local (L) -->
+        <path d="M120 110 H720 V360 H1080 V620 H720 V790 H120 Z" fill="var(--crema)" stroke="#cdbf9f" stroke-width="4"/>
+        <!-- pasillo central -->
+        <rect x="350" y="110" width="90" height="680" fill="#efe4ca"/>
+        <!-- cocinas -->
+        <rect x="140" y="130" width="190" height="200" rx="10" fill="var(--c-wagmi)" opacity=".85"/>
+        <rect x="460" y="130" width="240" height="150" rx="10" fill="var(--c-hokkaido)" opacity=".82"/>
+        <rect x="140" y="560" width="190" height="210" rx="10" fill="var(--c-pecora)" opacity=".82"/>
+        <rect x="760" y="390" width="300" height="210" rx="10" fill="var(--c-bar)" opacity=".82"/>
+        <rect x="760" y="130" width="300" height="210" rx="14" fill="var(--c-terraza)" opacity=".55"/>
+        <!-- comedor + mesitas -->
+        <rect x="460" y="320" width="240" height="450" rx="12" fill="#f3e7cc"/>
+        <g fill="#c9b48a">
+          <circle cx="510" cy="380" r="13"/><circle cx="590" cy="380" r="13"/><circle cx="650" cy="380" r="13"/>
+          <circle cx="510" cy="470" r="13"/><circle cx="590" cy="470" r="13"/><circle cx="650" cy="470" r="13"/>
+          <circle cx="510" cy="560" r="13"/><circle cx="590" cy="560" r="13"/><circle cx="650" cy="560" r="13"/>
+          <circle cx="510" cy="650" r="13"/><circle cx="590" cy="650" r="13"/><circle cx="650" cy="650" r="13"/>
         </g>
+        <!-- etiquetas tenues sobre cocinas -->
+        <g font-family="Druk Wide, sans-serif" font-size="15" font-weight="500" fill="#fff" opacity=".9" letter-spacing="1">
+          <text x="170" y="160">WAGMI</text><text x="490" y="160">HOKKAIDŌ</text>
+          <text x="170" y="590">LA PÉCORA</text><text x="790" y="420">EL BAR</text><text x="790" y="160">TERRAZA</text>
+        </g>
+        <!-- entrada -->
+        <rect x="350" y="790" width="90" height="36" rx="6" fill="var(--amarillo)"/>
+        <text x="365" y="815" font-family="Druk Wide, sans-serif" font-size="13" fill="#5a4a00">ENTRADA</text>
       </svg>
-      <button class="vf-hot on" data-zone="comedor" style="left:45%;top:54%;--hc:var(--c-comedor)">Comedor</button>
-      <button class="vf-hot" data-zone="wagmi"   style="left:17%;top:20%;--hc:var(--c-wagmi)">WAGMI</button>
-      <button class="vf-hot" data-zone="hokkaido" style="left:37%;top:18%;--hc:var(--c-hokkaido)">Hokkaidō</button>
-      <button class="vf-hot" data-zone="pecora"  style="left:17%;top:77%;--hc:var(--c-pecora)">La Pécora</button>
-      <button class="vf-hot" data-zone="bar"     style="left:79%;top:53%;--hc:var(--c-bar)">El Bar</button>
-      <button class="vf-hot" data-zone="terraza" style="left:79%;top:22%;--hc:var(--c-terraza)">Terraza</button>
-    </div>
-
-    <div class="vf-view">
-      <div class="vf-photo" id="vf-photo">
-        <img id="vf-img-a" alt="">
-        <img id="vf-img-b" alt="">
-        <div class="vf-soon">Vista de esta zona<br>próximamente</div>
-      </div>
-      <div class="vf-cap">
-        <span class="k" id="vf-k">Tu vista desde</span>
-        <h2 id="vf-name">Comedor</h2>
-        <p id="vf-desc">El corazón del mercado: mesas comunales para venir con quien quieras.</p>
-        <a class="btn" href="index.html#reservar" style="display:inline-flex;align-items:center;height:46px;padding:0 22px;margin-top:14px;border-radius:999px;background:var(--rosa);color:#fff;font-family:var(--druk);font-weight:500;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase">Reservar mesa →</a>
-      </div>
+      <button class="vf-pin" data-zone="wagmi"    style="left:235px;top:230px;--pc:var(--c-wagmi)"><span class="vf-pin-body"><span class="vf-pin-head">WAGMI</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vf-pin" data-zone="hokkaido" style="left:580px;top:205px;--pc:var(--c-hokkaido)"><span class="vf-pin-body"><span class="vf-pin-head">Hokkaidō</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vf-pin" data-zone="pecora"   style="left:235px;top:665px;--pc:var(--c-pecora)"><span class="vf-pin-body"><span class="vf-pin-head">La Pécora</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vf-pin" data-zone="bar"      style="left:910px;top:495px;--pc:var(--c-bar)"><span class="vf-pin-body"><span class="vf-pin-head">El Bar</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vf-pin" data-zone="terraza"  style="left:910px;top:240px;--pc:var(--c-terraza)"><span class="vf-pin-body"><span class="vf-pin-head">Terraza</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vf-pin" data-zone="comedor"  style="left:580px;top:545px;--pc:var(--c-comedor)"><span class="vf-pin-body"><span class="vf-pin-head">Comedor</span><span class="vf-pin-tip"></span></span></button>
     </div>
   </div>
 
-  <p class="vf-note"><b>v1 · vista por zona.</b> Pronto: la vista exacta desde cada mesa con fotos 360 de cada asiento (estilo Ticketmaster). ¿Listo para venir? <a href="index.html#reservar" style="color:var(--rosa);font-weight:600">Reserva tu mesa →</a></p>
+  <span class="vf-hint" id="vf-hint">Arrastra · zoom · toca un pin</span>
+  <div class="vf-ctrl">
+    <button id="vf-zin" aria-label="Acercar">+</button>
+    <button id="vf-zout" aria-label="Alejar">−</button>
+    <button id="vf-home" aria-label="Centrar" style="font-size:1rem">⌂</button>
+  </div>
+  <span class="vf-note">Mapa del local · v1 por zona. Pronto: vista exacta por mesa (fotos 360).</span>
+
+  <div class="vf-card" id="vf-card">
+    <div class="vf-card-photo" id="vf-photo">
+      <button class="vf-card-x" id="vf-x" aria-label="Cerrar">×</button>
+      <img id="vf-img-a" alt=""><img id="vf-img-b" alt="">
+      <div class="soon">Vista de esta zona<br>próximamente</div>
+    </div>
+    <div class="vf-card-body">
+      <span class="k">Tu vista desde</span>
+      <h2 id="vf-name">—</h2>
+      <p id="vf-desc">—</p>
+      <a class="btn" href="index.html#reservar">Reservar mesa →</a>
+    </div>
+  </div>
 
   <script>
   (function(){
     var IMG='assets/img/interior/';
-    var ZONES={
+    var Z={
       comedor:{name:'Comedor',desc:'El corazón del mercado: mesas comunales para venir con quien quieras.',photos:['comedor-2.webp','comedor-3.webp','comedor-5.webp']},
-      wagmi:{name:'WAGMI',desc:'Frente a la barra de smash burgers y philly. Acción a la vista.',photos:['wagmi.webp','wagmi-v.webp','wagmi2.webp']},
+      wagmi:{name:'WAGMI',desc:'Frente a la barra de smash burgers y philly.',photos:['wagmi.webp','wagmi-v.webp','wagmi2.webp']},
       hokkaido:{name:'Hokkaidō',desc:'Junto a la barra de sushi y rolls.',photos:['hokkaido.webp']},
       pecora:{name:'La Pécora',desc:'Cerca del horno de pizza de masa madre.',photos:['pecora.webp']},
-      bar:{name:'EL BAR',desc:'En la barra: cocteles, vinos y la mejor vibra de la noche.',photos:['bar.webp']},
-      terraza:{name:'Terraza',desc:'Al aire libre, en el primer piso de Acrópolis.',photos:[]}
+      bar:{name:'EL BAR',desc:'En la barra: cocteles, vinos y la mejor vibra.',photos:['bar.webp']},
+      terraza:{name:'Terraza',desc:'Al aire libre, primer piso de Acrópolis.',photos:[]}
     };
+    /* ---------- pan / zoom (estilo maps) ---------- */
+    var vp=document.getElementById('vf-vp'), inner=document.getElementById('vf-inner');
+    var IW=1200, IH=900, st={x:0,y:0,s:1}, MIN=0.4, MAX=2.6;
+    function clampS(s){return Math.max(MIN,Math.min(MAX,s));}
+    function clamp(){
+      var vw=vp.clientWidth, vh=vp.clientHeight, w=IW*st.s, h=IH*st.s, m=120;
+      st.x=Math.min(m,Math.max(vw-w-m,st.x)); if(w<vw) st.x=(vw-w)/2;
+      st.y=Math.min(m,Math.max(vh-h-m,st.y)); if(h<vh) st.y=(vh-h)/2;
+    }
+    function apply(){ inner.style.transform='translate('+st.x+'px,'+st.y+'px) scale('+st.s+')';
+      var inv=1/st.s; document.querySelectorAll('.vf-pin').forEach(function(p){p.style.setProperty('--inv',inv);}); }
+    function fit(){ var vw=vp.clientWidth,vh=vp.clientHeight; st.s=clampS(Math.min(vw/IW,vh/IH)*0.98); st.x=(vw-IW*st.s)/2; st.y=(vh-IH*st.s)/2; apply(); }
+    function zoomAt(cx,cy,f){ var ns=clampS(st.s*f),k=ns/st.s; st.x=cx-(cx-st.x)*k; st.y=cy-(cy-st.y)*k; st.s=ns; clamp(); apply(); }
+    /* drag */
+    var drag=null;
+    vp.addEventListener('pointerdown',function(e){ drag={x:e.clientX,y:e.clientY,ox:st.x,oy:st.y,moved:false,t:e.target}; try{vp.setPointerCapture(e.pointerId);}catch(_){} });
+    vp.addEventListener('pointermove',function(e){ if(!drag||pinch)return; var dx=e.clientX-drag.x,dy=e.clientY-drag.y; if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true; st.x=drag.ox+dx; st.y=drag.oy+dy; clamp(); apply(); });
+    vp.addEventListener('pointerup',function(e){
+      if(drag&&!drag.moved){ var pin=(e.target.closest&&e.target.closest('.vf-pin')); if(pin) select(pin.getAttribute('data-zone')); }
+      drag=null;
+    });
+    vp.addEventListener('wheel',function(e){ e.preventDefault(); var r=vp.getBoundingClientRect(); zoomAt(e.clientX-r.left,e.clientY-r.top, e.deltaY<0?1.12:0.89); hideHint(); },{passive:false});
+    /* pinch */
+    var pinch=null, pts={};
+    vp.addEventListener('pointerdown',function(e){ pts[e.pointerId]={x:e.clientX,y:e.clientY}; var k=Object.keys(pts); if(k.length===2){ var a=pts[k[0]],b=pts[k[1]]; pinch={d:Math.hypot(a.x-b.x,a.y-b.y),s:st.s}; } });
+    vp.addEventListener('pointermove',function(e){ if(pts[e.pointerId])pts[e.pointerId]={x:e.clientX,y:e.clientY}; if(pinch){ var k=Object.keys(pts); if(k.length>=2){ var a=pts[k[0]],b=pts[k[1]],d=Math.hypot(a.x-b.x,a.y-b.y); var r=vp.getBoundingClientRect(); var cx=(a.x+b.x)/2-r.left, cy=(a.y+b.y)/2-r.top; var ns=clampS(pinch.s*(d/pinch.d)),kk=ns/st.s; st.x=cx-(cx-st.x)*kk; st.y=cy-(cy-st.y)*kk; st.s=ns; clamp(); apply(); } } });
+    function clearPt(e){ delete pts[e.pointerId]; if(Object.keys(pts).length<2)pinch=null; }
+    vp.addEventListener('pointerup',clearPt); vp.addEventListener('pointercancel',clearPt);
+    /* controles */
+    function ctrZoom(f){ zoomAt(vp.clientWidth/2,vp.clientHeight/2,f); }
+    document.getElementById('vf-zin').onclick=function(){ctrZoom(1.25);hideHint();};
+    document.getElementById('vf-zout').onclick=function(){ctrZoom(0.8);hideHint();};
+    document.getElementById('vf-home').onclick=function(){fit();hideHint();};
+    var hint=document.getElementById('vf-hint'); function hideHint(){hint.classList.add('gone');}
+    vp.addEventListener('pointerdown',function(){setTimeout(hideHint,400);});
+    /* ---------- panel ---------- */
+    var card=document.getElementById('vf-card'), photo=document.getElementById('vf-photo');
     var imgA=document.getElementById('vf-img-a'), imgB=document.getElementById('vf-img-b');
-    var photo=document.getElementById('vf-photo');
-    var nameEl=document.getElementById('vf-name'), descEl=document.getElementById('vf-desc');
-    var frontA=true, idx=0, cur=null, timer=null;
-    function front(){return frontA?imgA:imgB;} function back(){return frontA?imgB:imgA;}
-    function show(zone){
-      var z=ZONES[zone]; if(!z) return;
-      cur=zone; idx=0;
-      nameEl.textContent=z.name; descEl.textContent=z.desc;
-      document.querySelectorAll('.vf-hot').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-zone')===zone);});
-      document.querySelectorAll('.vf-rect').forEach(function(r){r.classList.toggle('act',r.getAttribute('data-zone')===zone);});
-      clearInterval(timer);
+    var nm=document.getElementById('vf-name'), de=document.getElementById('vf-desc');
+    var fA=true, idx=0, timer=null;
+    function paint(f){ var b=fA?imgB:imgA; b.src=IMG+f; b.onload=function(){ requestAnimationFrame(function(){ b.classList.add('show'); (fA?imgA:imgB).classList.remove('show'); fA=!fA; }); }; }
+    function select(zone){
+      var z=Z[zone]; if(!z)return;
+      document.querySelectorAll('.vf-pin').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-zone')===zone);});
+      nm.textContent=z.name; de.textContent=z.desc; idx=0; clearInterval(timer);
+      card.classList.add('up');
       if(!z.photos.length){ photo.classList.add('soon'); imgA.classList.remove('show'); imgB.classList.remove('show'); return; }
-      photo.classList.remove('soon');
-      paint(z.photos[0]);
+      photo.classList.remove('soon'); paint(z.photos[0]);
       if(z.photos.length>1){ timer=setInterval(function(){ idx=(idx+1)%z.photos.length; paint(z.photos[idx]); },4200); }
     }
-    function paint(file){
-      var b=back();
-      b.src=IMG+file;
-      b.onload=function(){ requestAnimationFrame(function(){ b.classList.add('show'); front().classList.remove('show'); frontA=!frontA; }); };
-    }
-    document.querySelectorAll('.vf-hot').forEach(function(b){ b.addEventListener('click',function(){ show(b.getAttribute('data-zone')); }); });
-    document.querySelector('[data-go-reservar]').addEventListener('click',function(e){e.preventDefault();location.href='index.html#reservar';});
-    show('comedor');
+    document.getElementById('vf-x').onclick=function(){ card.classList.remove('up'); document.querySelectorAll('.vf-pin').forEach(function(p){p.classList.remove('on');}); clearInterval(timer); };
+    window.addEventListener('resize',fit);
+    fit();
   })();
   </script>
 </body>
