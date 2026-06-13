@@ -312,4 +312,100 @@
       setTimeout(function () { try { prev.pause(); } catch (e) {} }, 1100);
     }, 6500);
   })();
+
+  /* ===== VITRINA 360 — tabs por concepto, héroe + thumbs ===== */
+  (function () {
+    var tabsEl = document.getElementById('v360-tabs');
+    if (!tabsEl) return;
+    var VID = 'assets/video/';
+    var V360 = {
+      wagmi:    { label: 'WAGMI',     color: '--c-wagmi',    menu: 'menus/wagmi.html',    items: [
+        { name: 'Oklahoma Smashed Burger', price: 'RD$ 745', slug: 'f360-wagmi-oklahoma' },
+        { name: 'Cheesus Christ',          price: 'RD$ 795', slug: 'f360-burger' } ] },
+      cantina:  { label: 'CANTINA',   color: '--c-cantina',  menu: 'menus/cantina.html',  items: [
+        { name: 'Birria de Res', price: 'RD$ 615', slug: 'f360-cantina-birria' },
+        { name: 'Al Pastor',     price: 'RD$ 595', slug: 'f360-cantina-pastor' } ] },
+      pecora:   { label: 'LA PÉCORA', color: '--c-pecora',   menu: 'menus/pecora.html',   items: [
+        { name: 'Carnívora', price: 'RD$ 695', slug: 'f360-pecora-carnivora' },
+        { name: 'Pepperoni', price: 'RD$ 545', slug: 'f360-pizza' } ] },
+      hokkaido: { label: 'HOKKAIDŌ',  color: '--c-hokkaido', menu: 'menus/hokkaido.html', items: [
+        { name: 'Ducho Roll', price: 'RD$ 635', slug: 'f360-hokkaido-roll' },
+        { name: 'Ducho Poke', price: 'RD$ 645', slug: 'f360-poke' } ] },
+      bar:      { label: 'EL BAR',    color: '--c-bar',      menu: 'menus/bar.html',      items: [
+        { name: 'Te Regalo Una Rosa', price: 'RD$ 495', slug: 'f360-bar-rosa' },
+        { name: 'Candela',            price: 'RD$ 570', slug: 'f360-bar-candela' } ] }
+    };
+    var ORDER = ['wagmi', 'cantina', 'pecora', 'hokkaido', 'bar'];
+    var stage = document.getElementById('v360-stage'),
+        thumbsEl = document.getElementById('v360-thumbs'),
+        heroVid = document.getElementById('v360-hero-vid'),
+        heroMedia = heroVid.parentElement,
+        nameEl = document.getElementById('v360-name'),
+        priceEl = document.getElementById('v360-price'),
+        linkEl = document.getElementById('v360-link'),
+        section = document.getElementById('vitrina360');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var inView = false, curMenu = 'menus/';
+
+    function playHero() { if (reduce || !inView) return; var p = heroVid.play(); if (p && p.catch) p.catch(function () {}); }
+
+    function loadHero(item) {
+      nameEl.textContent = item.name;
+      priceEl.textContent = item.price;
+      linkEl.href = curMenu;
+      heroMedia.style.backgroundImage = "url('" + VID + item.slug + "-poster.webp')";
+      if (reduce) { heroVid.removeAttribute('src'); heroVid.innerHTML = ''; return; }
+      heroVid.poster = VID + item.slug + '-poster.webp';
+      heroVid.innerHTML = '<source src="' + VID + item.slug + '.webm" type="video/webm"><source src="' + VID + item.slug + '.mp4" type="video/mp4">';
+      heroVid.load();
+      playHero();
+    }
+
+    function selectConcept(k) {
+      var c = V360[k]; if (!c) return;
+      curMenu = c.menu;
+      stage.style.setProperty('--fc', 'var(' + c.color + ')');
+      Array.prototype.forEach.call(tabsEl.querySelectorAll('.v360-tab'), function (b) { var on = b.getAttribute('data-k') === k; b.classList.toggle('is-active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
+      thumbsEl.innerHTML = '';
+      c.items.forEach(function (it, idx) {
+        var li = document.createElement('li');
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'v360-thumb' + (idx === 0 ? ' is-active' : '');
+        btn.setAttribute('aria-label', it.name);
+        btn.innerHTML = '<img src="' + VID + it.slug + '-poster.webp" alt="' + it.name + '" loading="lazy" decoding="async">';
+        btn.addEventListener('click', function () {
+          Array.prototype.forEach.call(thumbsEl.querySelectorAll('.v360-thumb'), function (x) { x.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          loadHero(it);
+        });
+        li.appendChild(btn);
+        thumbsEl.appendChild(li);
+      });
+      loadHero(c.items[0]);
+    }
+
+    ORDER.forEach(function (k, i) {
+      var c = V360[k];
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'v360-tab' + (i === 0 ? ' is-active' : '');
+      b.setAttribute('role', 'tab');
+      b.setAttribute('data-k', k);
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      b.style.setProperty('--fc', 'var(' + c.color + ')');
+      b.textContent = c.label;
+      b.addEventListener('click', function () { selectConcept(k); });
+      tabsEl.appendChild(b);
+    });
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { inView = e.isIntersecting; if (inView) playHero(); else { try { heroVid.pause(); } catch (x) {} } });
+      }, { threshold: 0.25 });
+      io.observe(section);
+    } else { inView = true; }
+
+    selectConcept('wagmi');
+  })();
 })();

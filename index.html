@@ -188,19 +188,27 @@
     <div class="dishes-strip" id="dishes-strip">
       <!-- llenado por carousel-data.js + main.js -->
     </div>
-    <div class="wrap food360" aria-label="Platos en 360">
-      <figure class="f360-card" style="--fc:var(--c-wagmi)">
-        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-burger-poster.webp" aria-label="Classic Smash en 360"><source src="assets/video/f360-burger.webm" type="video/webm"><source src="assets/video/f360-burger.mp4" type="video/mp4"></video></div>
-        <figcaption><span class="f360-name">Cheesus Christ</span><span class="f360-tag">WAGMI</span></figcaption>
-      </figure>
-      <figure class="f360-card" style="--fc:var(--c-pecora)">
-        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-pizza-poster.webp" aria-label="Pizza Pepperoni en 360"><source src="assets/video/f360-pizza.webm" type="video/webm"><source src="assets/video/f360-pizza.mp4" type="video/mp4"></video></div>
-        <figcaption><span class="f360-name">Pepperoni</span><span class="f360-tag">La Pécora</span></figcaption>
-      </figure>
-      <figure class="f360-card" style="--fc:var(--c-hokkaido)">
-        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-poke-poster.webp" aria-label="Poke Bowl en 360"><source src="assets/video/f360-poke.webm" type="video/webm"><source src="assets/video/f360-poke.mp4" type="video/mp4"></video></div>
-        <figcaption><span class="f360-name">Ducho Poke</span><span class="f360-tag">Hokkaidō</span></figcaption>
-      </figure>
+  </section>
+
+  <!-- VITRINA 360 — cada plato girando, por concepto -->
+  <section class="vitrina360" id="vitrina360" aria-label="Platos en 360 grados">
+    <div class="wrap">
+      <header class="v360-head">
+        <span class="eyebrow">Míralo antes de pedirlo</span>
+        <h2 class="section-title">Cada plato, en <span class="h1-accent">360°</span></h2>
+        <p class="section-sub">Gíralos, míralos por todos lados. Sin filtros, sin trucos — así llegan a tu mesa.</p>
+      </header>
+      <div class="v360-tabs" role="tablist" id="v360-tabs" aria-label="Conceptos"></div>
+      <div class="v360-stage" id="v360-stage" style="--fc:var(--c-wagmi)">
+        <figure class="v360-hero">
+          <div class="v360-media"><video id="v360-hero-vid" class="cinemagraph" muted loop playsinline preload="none" aria-label="Plato en 360 grados"></video></div>
+          <figcaption class="v360-cap">
+            <span class="v360-cap-text"><span class="v360-name" id="v360-name"></span><span class="v360-price" id="v360-price"></span></span>
+            <a class="v360-link" id="v360-link" href="menus/">Ver en el menú →</a>
+          </figcaption>
+        </figure>
+        <ul class="v360-thumbs" id="v360-thumbs" role="list"></ul>
+      </div>
     </div>
   </section>
 
