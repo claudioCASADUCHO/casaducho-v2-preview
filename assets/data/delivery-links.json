@@ -18,34 +18,82 @@
   },
   "conceptos": {
     "wagmi": {
-      "pedidosya": { "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./wagmi-at-casaducho-b02e9275-40c3-4feb-9aa7-6066f498a7ff-menu", "activo": true },
-      "ubereats": { "url": "https://www.ubereats.com/do-en/store/wagmi-casaducho/i8o8tDwxU1yFWCE0XFPDAg", "activo": true },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./wagmi-at-casaducho-b02e9275-40c3-4feb-9aa7-6066f498a7ff-menu",
+        "activo": true
+      },
+      "ubereats": {
+        "url": "https://www.ubereats.com/do-en/store/wagmi-casaducho/i8o8tDwxU1yFWCE0XFPDAg",
+        "activo": true
+      },
+      "whatsapp": {
+        "activo": true
+      }
     },
     "cantina": {
-      "pedidosya": { "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./cantina-la-cuadra-casaducho-3dd88e53-98ed-4627-863a-2ffcc9d13871-menu", "activo": true },
-      "ubereats": { "url": "https://www.ubereats.com/do-en/store/cantina-la-cuadra-casaducho/CIiMb2qgV5q531FnMAge4w", "activo": true },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./cantina-la-cuadra-casaducho-3dd88e53-98ed-4627-863a-2ffcc9d13871-menu",
+        "activo": true
+      },
+      "ubereats": {
+        "url": "https://www.ubereats.com/do-en/store/cantina-la-cuadra-casaducho/CIiMb2qgV5q531FnMAge4w",
+        "activo": true
+      },
+      "whatsapp": {
+        "activo": true
+      }
     },
     "pecora": {
-      "pedidosya": { "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./la-pecora-at-casaducho-1d6d86b6-d9f8-4f64-b553-b1779b2143f6-menu", "activo": true },
-      "ubereats": { "url": "https://www.ubereats.com/do-en/store/la-pecora-casaducho/q33d1Ui3XYWQnQSIpHdkRQ", "activo": true },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./la-pecora-at-casaducho-1d6d86b6-d9f8-4f64-b553-b1779b2143f6-menu",
+        "activo": true
+      },
+      "ubereats": {
+        "url": "https://www.ubereats.com/do-en/store/la-pecora-casaducho/q33d1Ui3XYWQnQSIpHdkRQ",
+        "activo": true
+      },
+      "whatsapp": {
+        "activo": true
+      }
     },
     "hokkaido": {
-      "pedidosya": { "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./hokkaido-at-casaducho-a6dfb18d-076a-4053-8c79-65f873526923-menu", "activo": true },
-      "ubereats": { "url": "https://www.ubereats.com/do/store/casaducho/a5eB4aKSXSC83cyvbmCbbg", "activo": false, "_nota": "Tienda general UE cerrada desde 7 jun 2026. Hokkaido no tiene tienda UE propia." },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./hokkaido-at-casaducho-a6dfb18d-076a-4053-8c79-65f873526923-menu",
+        "activo": true
+      },
+      "ubereats": {
+        "url": "https://www.ubereats.com/do-en/store/casaducho/cxQsTFeMWQmgXJm1pfdYow",
+        "activo": true
+      },
+      "whatsapp": {
+        "activo": true
+      }
     },
     "bar": {
-      "pedidosya": { "url": "", "activo": false },
-      "ubereats": { "url": "", "activo": false },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "",
+        "activo": false
+      },
+      "ubereats": {
+        "url": "",
+        "activo": false
+      },
+      "whatsapp": {
+        "activo": true
+      }
     },
     "general": {
-      "pedidosya": { "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./casaducho-c7c4f644-3602-44e7-9b02-d2bd62ac2baa-menu", "activo": true },
-      "ubereats": { "url": "https://www.ubereats.com/do/store/casaducho/a5eB4aKSXSC83cyvbmCbbg", "activo": false, "_nota": "CERRADA desde 7 jun 2026 — reactivar con Uber Eats antes de poner activo:true" },
-      "whatsapp": { "activo": true }
+      "pedidosya": {
+        "url": "https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./casaducho-c7c4f644-3602-44e7-9b02-d2bd62ac2baa-menu",
+        "activo": true
+      },
+      "ubereats": {
+        "url": "https://www.ubereats.com/do-en/store/casaducho/cxQsTFeMWQmgXJm1pfdYow",
+        "activo": true
+      },
+      "whatsapp": {
+        "activo": true
+      }
     }
   },
   "social": {

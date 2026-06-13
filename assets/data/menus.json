@@ -2527,6 +2527,98 @@
               "descEn": "With vanilla ice cream scoop"
             }
           ]
+        },
+        {
+          "id": "cafe",
+          "nameEs": "Café",
+          "nameEn": "Coffee",
+          "items": [
+            {
+              "nameEs": "Dominicano",
+              "nameEn": "Dominicano",
+              "descEs": "Café dominicano, fuerte y dulce",
+              "price": 95
+            },
+            {
+              "nameEs": "Expresso",
+              "nameEn": "Expresso",
+              "price": 85
+            },
+            {
+              "nameEs": "Expreso Largo",
+              "nameEn": "Expreso Largo",
+              "price": 95
+            },
+            {
+              "nameEs": "Expreso Doble",
+              "nameEn": "Expreso Doble",
+              "price": 185
+            },
+            {
+              "nameEs": "Cortado",
+              "nameEn": "Cortado",
+              "descEs": "Espresso con un toque de leche",
+              "price": 125
+            },
+            {
+              "nameEs": "Capuchino Italiano",
+              "nameEn": "Capuchino Italiano",
+              "price": 145
+            },
+            {
+              "nameEs": "Capuchino Americano",
+              "nameEn": "Capuchino Americano",
+              "price": 175
+            },
+            {
+              "nameEs": "Mocaccino",
+              "nameEn": "Mocaccino",
+              "descEs": "Espresso, chocolate y leche",
+              "price": 195
+            },
+            {
+              "nameEs": "Café Frío",
+              "nameEn": "Café Frío",
+              "price": 145
+            }
+          ]
+        },
+        {
+          "id": "te",
+          "nameEs": "Té",
+          "nameEn": "Tea",
+          "items": [
+            {
+              "nameEs": "Hatsu Blanco",
+              "nameEn": "Hatsu Blanco",
+              "price": 175
+            },
+            {
+              "nameEs": "Hatsu Amarillo",
+              "nameEn": "Hatsu Amarillo",
+              "price": 175
+            },
+            {
+              "nameEs": "Hatsu Azul",
+              "nameEn": "Hatsu Azul",
+              "price": 175
+            },
+            {
+              "nameEs": "Hatsu Negro",
+              "nameEn": "Hatsu Negro",
+              "price": 175
+            },
+            {
+              "nameEs": "Hatsu Rojo",
+              "nameEn": "Hatsu Rojo",
+              "price": 175
+            },
+            {
+              "nameEs": "Hatsu Soda",
+              "nameEn": "Hatsu Soda",
+              "price": 245
+            }
+          ]
         }
       ],
       "notes": [
