@@ -689,16 +689,13 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 }
 
 .follow-logo-wrap {
-  min-height: 64px; width: 100%;
+  min-height: 58px; width: 100%;
   display: flex; align-items: center; justify-content: center;
-  border-radius: 14px; padding: 13px 14px;
-  background: color-mix(in srgb, var(--fc) 8%, var(--papel));
+  padding: 6px 8px;
 }
 .follow-logo-wrap img {
-  max-height: 46px; max-width: 86%; width: auto; object-fit: contain;
+  max-height: 48px; max-width: 86%; width: auto; object-fit: contain;
 }
-/* logos de tinta clara (Hokkaidō crema, Pécora rosa/gris) sobre tile oscuro para que se lean */
-.follow-card.invert .follow-logo-wrap { background: var(--verde-noche); }
 /* fallback de texto cuando no hay logo .webp (Hot Brots / EL BAR) */
 .follow-logo-text {
   font-family: var(--druk); font-weight: 900;
