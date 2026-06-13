@@ -105,6 +105,29 @@
         'text-transform:uppercase;letter-spacing:.16em;font-size:10px;color:#fff3de;' +
         'background:#006838;padding:8px 13px;border-radius:999px;' +
         'box-shadow:0 4px 16px rgba(0,104,56,.34);}' +
+      // CTA Reservar en TOI (único elemento rosa)
+      '.p360-cta{position:absolute;left:50%;transform:translateX(-50%);z-index:6;' +
+        'bottom:max(74px,calc(env(safe-area-inset-bottom) + 64px));' +
+        'display:inline-flex;align-items:center;gap:8px;text-decoration:none;' +
+        'background:#ec008c;color:#fff;border-radius:999px;' +
+        'padding:15px 26px;font-family:"Druk Wide","Bricolage",-apple-system,sans-serif;' +
+        'font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:12px;' +
+        'box-shadow:0 10px 30px rgba(236,0,140,.4),0 2px 8px rgba(0,0,0,.2);' +
+        'transition:transform .16s ease,box-shadow .16s ease;}' +
+      '.p360-cta:hover{transform:translateX(-50%) translateY(-2px);}' +
+      '.p360-cta:active{transform:translateX(-50%) scale(.97);}' +
+      '.p360-cta svg{width:15px;height:15px;}' +
+      '.p360-cta-note{position:absolute;left:50%;transform:translateX(-50%);z-index:5;' +
+        'bottom:max(54px,calc(env(safe-area-inset-bottom) + 44px));pointer-events:none;' +
+        'font-family:-apple-system,sans-serif;font-size:11.5px;color:#fff3de;opacity:.9;' +
+        'text-shadow:0 1px 6px rgba(0,0,0,.5);white-space:nowrap;}' +
+      // En modo reserva el label flota ARRIBA (header) y el CTA manda abajo
+      '.p360-root.p360-rsv .p360-label{bottom:auto;top:max(58px,calc(env(safe-area-inset-top) + 46px));}' +
+      // Scrims sutiles para lectura premium de título / badge / CTA
+      '.p360-scrim-t{position:absolute;left:0;right:0;top:0;height:148px;z-index:3;pointer-events:none;' +
+        'background:linear-gradient(to bottom,rgba(18,8,0,.34),rgba(18,8,0,0));}' +
+      '.p360-scrim-b{position:absolute;left:0;right:0;bottom:0;height:200px;z-index:3;pointer-events:none;' +
+        'background:linear-gradient(to top,rgba(18,8,0,.44),rgba(18,8,0,0));}' +
       // Loader
       '.p360-loader{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;' +
         'display:flex;flex-direction:column;align-items:center;gap:16px;transition:opacity .4s ease;}' +
@@ -181,6 +204,9 @@
     this.image = (opts.image || '').toString();
     this.fallbackImage = (opts.fallbackImage || '').toString();
     this.label = (opts.label || '').toString();
+    this.reserveUrl = (opts.reserveUrl || '').toString();
+    this.reserveLabel = (opts.reserveLabel || 'Reservar en TOI').toString();
+    this.fallbackBadge = (opts.fallbackBadge || '360 próximamente').toString();
     this.onClose = (typeof opts.onClose === 'function') ? opts.onClose : null;
 
     this.destroyed = false;
@@ -271,6 +297,13 @@
     root.setAttribute('aria-label', this.label ? ('Vista 360: ' + this.label) : 'Vista 360');
     this.root = root;
 
+    if (this.label || this.reserveUrl) {
+      var st = document.createElement('div'); st.className = 'p360-scrim-t'; root.appendChild(st);
+    }
+    if (this.reserveUrl) {
+      var sb = document.createElement('div'); sb.className = 'p360-scrim-b'; root.appendChild(sb);
+    }
+
     var loader = document.createElement('div');
     loader.className = 'p360-loader';
     loader.innerHTML = '<div class="p360-ring"></div>' +
@@ -292,6 +325,22 @@
       lab.innerHTML = '<p class="p360-kicker">Tu vista desde</p><h2 class="p360-title"></h2>';
       lab.querySelector('.p360-title').textContent = this.label;
       root.appendChild(lab);
+    }
+
+    if (this.reserveUrl) {
+      root.classList.add('p360-rsv');
+      var note = document.createElement('div');
+      note.className = 'p360-cta-note';
+      note.textContent = 'Elige esta zona y termina tu reserva en TOI.';
+      root.appendChild(note);
+      var cta = document.createElement('a');
+      cta.className = 'p360-cta';
+      cta.href = this.reserveUrl;
+      cta.target = '_blank';
+      cta.rel = 'noopener noreferrer';
+      cta.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
+        '<span>' + this.reserveLabel + '</span>';
+      root.appendChild(cta);
     }
 
     document.body.appendChild(root);
@@ -376,7 +425,7 @@
 
     var badge = document.createElement('div');
     badge.className = 'p360-badge';
-    badge.textContent = '360 próximamente';
+    badge.textContent = this.fallbackBadge;
 
     if (!src) {
       this._hideLoader();

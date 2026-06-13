@@ -12,284 +12,182 @@
   @font-face{font-family:'Bricolage';src:url('assets/fonts/bricolage.woff2') format('woff2');font-weight:400 800;font-display:swap}
   @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-heavy.woff2') format('woff2');font-weight:900;font-display:swap}
   @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-medium.woff2') format('woff2');font-weight:500;font-display:swap}
-  :root{--crema:#fff3de;--crema2:#fbeccf;--papel:#fffaf0;--verde:#006838;--verde-noche:#06371f;--rosa:#ec008c;--amarillo:#ffde17;--tinta:#20140f;--suave:#6b5d50;
-    --c-wagmi:#a8616c;--c-pecora:#3d5a5b;--c-hokkaido:#d6431a;--c-bar:#8f6238;--c-comedor:#b97607;--c-terraza:#2f7d52;
+  :root{--crema:#fff3de;--papel:#fffaf0;--verde:#006838;--verde-noche:#06371f;--rosa:#ec008c;--tinta:#20140f;--suave:#6b5d50;
     --display:'Bricolage',-apple-system,system-ui,sans-serif;--druk:'Druk Wide','Bricolage',sans-serif;--sans:-apple-system,'Helvetica Neue',system-ui,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{font-family:var(--sans);background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased;overflow:hidden}
   a{text-decoration:none;color:inherit}
-  .vf-top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(255,243,222,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.08)}
-  .vf-top-in{max-width:1280px;margin:0 auto;padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between}
+  .vf-top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(255,243,222,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.07)}
+  .vf-top-in{max-width:1280px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;justify-content:space-between}
   .vf-back{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem}
-  .vf-back img{height:20px}
-  .vf-title{font-family:var(--druk);font-weight:500;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
-  .vf-vp{position:fixed;inset:54px 0 0 0;overflow:hidden;background:#e9dcc0;touch-action:none;cursor:grab;overscroll-behavior:contain}
-  .vf-vp:active{cursor:grabbing}
-  .vf-inner{position:absolute;left:0;top:0;width:1208px;height:1000px;transform-origin:0 0;will-change:transform}
-  .vf-inner svg{display:block;width:1208px;height:1000px}
-  /* pins estilo maps */
-  .vf-pin{position:absolute;transform:translate(-50%,-100%) scale(var(--inv,1));transform-origin:bottom center;cursor:pointer;z-index:5;border:0;background:none;padding:0}
-  .vf-pin-body{display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 4px 6px rgba(0,0,0,.32))}
-  .vf-pin-head{order:1;display:inline-flex;align-items:center;gap:6px;background:var(--pc,#fff);color:#fff;border-radius:999px;padding:6px 13px;font-family:var(--druk);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-  .vf-pin-tip{order:2;width:0;height:0;border:7px solid transparent;border-top-color:var(--pc,#fff);margin-top:-1px}
-  .vf-pin-dot{order:3;width:15px;height:6px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.42),rgba(0,0,0,0));margin-top:0px}
-  .vf-pin.on .vf-pin-body{filter:drop-shadow(0 8px 11px rgba(0,0,0,.4));animation:vfpop .3s cubic-bezier(.22,1,.36,1)}
-  .vf-pin.on .vf-pin-head{outline:3px solid #fff;box-shadow:0 0 0 5px rgba(255,255,255,.4)}
-  @keyframes vfpop{0%{transform:scale(1)}42%{transform:scale(1.14)}100%{transform:scale(1)}}
-  @media(hover:hover){.vf-pin:hover .vf-pin-head{filter:brightness(1.06)}}
-  @media(prefers-reduced-motion:reduce){.vf-pin.on .vf-pin-body{animation:none}}
+  .vf-back img{height:19px}
+  .vf-rsv{color:var(--rosa);font-weight:700;font-size:.8rem}
+  /* intro */
+  .vf-intro{position:fixed;top:52px;left:0;right:0;z-index:20;text-align:center;padding:16px 16px 8px;pointer-events:none}
+  .vf-intro h1{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,4.4vw,1.7rem);color:var(--tinta);line-height:1.05}
+  .vf-intro p{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.13em;text-transform:uppercase;color:var(--verde);margin-top:6px}
+  /* mapa */
+  .vp{position:fixed;inset:118px 0 0 0;overflow:hidden;background:var(--crema);touch-action:none;cursor:grab}
+  .vp:active{cursor:grabbing}
+  .vp-inner{position:absolute;left:0;top:0;width:1208px;height:1000px;transform-origin:0 0;will-change:transform}
+  .vp-inner svg{display:block;width:1208px;height:1000px}
+  /* pins minimalistas */
+  .vp-pin{position:absolute;transform:translate(-50%,-50%) scale(var(--inv,1));transform-origin:center;cursor:pointer;z-index:5;border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:9px;outline:none}
+  .vp-pin:focus-visible .vp-dot{outline:2px solid var(--verde);outline-offset:3px}
+  .vp-dot{position:relative;width:18px;height:18px;border-radius:50%;background:var(--papel);border:2.5px solid var(--verde);box-shadow:0 3px 8px rgba(6,55,31,.28);transition:transform .16s,background .16s}
+  .vp-dot::after{content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:var(--verde);transform:translate(-50%,-50%);transition:background .16s}
+  .vp-lbl{font-family:var(--druk);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--verde);white-space:nowrap;text-shadow:0 1px 0 rgba(255,243,222,.9)}
+  @media(hover:hover){.vp-pin:hover .vp-dot{transform:scale(1.14)}}
+  .vp-pin.on .vp-dot{background:var(--verde);box-shadow:0 0 0 4px rgba(255,250,240,.9),0 4px 12px rgba(6,55,31,.4);animation:vpPulse 1.6s ease-out infinite}
+  .vp-pin.on .vp-dot::after{background:var(--papel)}
+  @keyframes vpPulse{0%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 0 rgba(0,104,56,.35)}70%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 16px rgba(0,104,56,0)}100%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 0 rgba(0,104,56,0)}}
+  @media(prefers-reduced-motion:reduce){.vp-pin.on .vp-dot{animation:none}}
   /* controles */
-  .vf-ctrl{position:fixed;right:14px;bottom:calc(40vh + 18px);z-index:25;display:flex;flex-direction:column;gap:8px}
-  .vf-ctrl button{width:44px;height:44px;border:0;border-radius:13px;background:var(--papel);box-shadow:0 4px 12px rgba(32,20,15,.18);font-size:1.3rem;font-weight:700;color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center}
-  .vf-ctrl button:active{transform:scale(.95)}
-  .vf-hint{position:fixed;top:66px;left:50%;transform:translateX(-50%);z-index:25;background:rgba(6,55,31,.9);color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:999px;transition:opacity .4s;pointer-events:none}
-  .vf-hint.gone{opacity:0}
-  /* place card */
-  .vf-card{position:fixed;left:0;right:0;bottom:0;z-index:28;background:var(--papel);border-radius:22px 22px 0 0;box-shadow:0 -10px 30px rgba(32,20,15,.2);transform:translateY(calc(100% + 40px));transition:transform .35s cubic-bezier(.22,1,.36,1);max-height:62vh;display:flex;flex-direction:column}
-  .vf-card.up{transform:translateY(0)}
-  @media(min-width:900px){ .vf-card{left:auto;right:18px;bottom:18px;width:392px;border-radius:20px;max-height:none} .vf-ctrl{bottom:18px} }
-  .vf-card-photo{position:relative;height:236px;overflow:hidden;border-radius:22px 22px 0 0;background:#06371f;flex:0 0 auto;cursor:pointer}
-  @media(max-height:760px){ .vf-card-photo{height:186px} }
-  @media(max-height:640px){ .vf-card{max-height:70vh} .vf-card-photo{height:148px} }
-  @media(min-width:900px){ .vf-card-photo{border-radius:20px 20px 0 0} }
-  .vf-card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s;transform:scale(1.06)}
-  .vf-card-photo img.show{opacity:1;transform:scale(1);transition:opacity .4s,transform 7s ease}
-  .vf-card-photo .soon{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:20px;background:linear-gradient(135deg,#06371f,#0c4a2c)}
-  .vf-card-photo.soon .soon{display:flex}
-  .vf-360chip{position:absolute;left:12px;bottom:12px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:rgba(6,55,31,.82);color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px;backdrop-filter:blur(4px)}
-  .vf-360chip svg{width:13px;height:13px}
-  .vf-card-x{position:absolute;top:10px;right:10px;z-index:4;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,250,240,.92);font-size:1.1rem;cursor:pointer;line-height:1}
-  .vf-card-body{padding:15px 18px 20px}
-  .vf-card-body .k{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
-  .vf-card-body h2{font-family:var(--display);font-weight:800;font-size:1.4rem;margin:3px 0 6px}
-  .vf-card-body p{color:var(--suave);font-size:.92rem;margin-bottom:14px;line-height:1.4}
-  .vf-cta-row{display:flex;gap:10px}
-  .vf-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;height:48px;border-radius:999px;font-family:var(--druk);font-weight:500;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:0}
-  .vf-btn.p{background:var(--rosa);color:#fff}
-  .vf-btn.p svg{width:15px;height:15px}
-  .vf-btn.g{background:transparent;color:var(--verde);border:1.6px solid rgba(0,104,56,.4)}
-  .vf-btn:active{transform:scale(.97)}
-  .vf-note{position:fixed;left:14px;bottom:14px;z-index:24;font-size:.62rem;color:var(--suave);background:rgba(255,243,222,.85);padding:6px 10px;border-radius:8px;max-width:62vw}
-  @media(min-width:900px){ .vf-note{max-width:320px} }
+  .vp-ctrl{position:fixed;right:14px;bottom:18px;z-index:25;display:flex;flex-direction:column;gap:8px}
+  .vp-ctrl button{width:44px;height:44px;border:0;border-radius:13px;background:var(--papel);box-shadow:0 4px 12px rgba(32,20,15,.16);font-size:1.3rem;font-weight:700;color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .vp-ctrl button:active{transform:scale(.95)}
+  /* hint */
+  .vp-hint{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:24;background:rgba(6,55,31,.9);color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 15px;border-radius:999px;transition:opacity .4s;pointer-events:none}
+  .vp-hint.gone{opacity:0}
+  /* transporte */
+  .vp-warp{position:fixed;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,#fffaf0 0%,#fffaf0 45%,#006838 100%);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;z-index:40}
+  .vp-warp.go{transform:translate(-50%,-50%) scale(260);opacity:1;transition:transform .55s cubic-bezier(.7,0,.25,1),opacity .55s ease}
+  @media(prefers-reduced-motion:reduce){.vp-warp.go{transition:opacity .25s}}
 </style>
 </head>
 <body>
   <header class="vf-top"><div class="vf-top-in">
     <a class="vf-back" href="index.html"><span style="opacity:.7">&#8592;</span><img src="assets/img/logos/casaducho.webp" alt="Casaducho"></a>
-    <span class="vf-title">Elige tu mesa</span>
-    <a class="vf-back" href="index.html#reservar" style="color:var(--rosa);font-weight:700">Reservar</a>
+    <a class="vf-rsv" href="index.html#reservar">Reservar</a>
   </div></header>
 
-  <div class="vf-vp" id="vf-vp">
-    <div class="vf-inner" id="vf-inner">
-<svg viewBox="0 0 1208 1000" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+  <div class="vf-intro">
+    <h1>Elige dónde vivir Casaducho</h1>
+    <p>Toca una zona para ver el POV</p>
+  </div>
+
+  <div class="vp" id="vp">
+    <div class="vp-inner" id="vp-inner">
+<svg viewBox="0 0 1208 1000" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <pattern id="vf-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#006838" stroke-width="0.6" stroke-opacity="0.05"/>
+    <pattern id="vf-terr" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="11" stroke="#006838" stroke-width="1" stroke-opacity="0.07"/>
     </pattern>
-    <pattern id="vf-hatch" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="11" stroke="#006838" stroke-width="1" stroke-opacity="0.10"/>
-    </pattern>
-    <marker id="vf-arrow" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M1 1 L11 6 L1 11 Z" fill="#ec008c"/>
-    </marker>
+    <marker id="vf-ar" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#006838"/></marker>
   </defs>
-
-  <rect x="0" y="0" width="1208" height="1000" fill="#e9dcc0"/>
-  <rect x="0" y="0" width="1208" height="1000" fill="url(#vf-grid)"/>
-
-  <!-- sombra suave del footprint -->
-  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" transform="translate(7,10)" fill="#1c120a" opacity="0.10"/>
-  <!-- footprint del local -->
-  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" fill="#fff3de" stroke="#006838" stroke-width="5" stroke-linejoin="round"/>
-  <!-- setback interior tenue -->
-  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" fill="none" stroke="#006838" stroke-width="1.2" stroke-opacity="0.22" transform="translate(0,0)" style="paint-order:stroke" stroke-dasharray="0"/>
-
-  <!-- COCINAS / spine -->
-  <path d="M 217.4 285.0 L 374.5 285.0 L 501.3 130.0 L 519.4 300.0 L 374.5 315.0 L 217.4 315.0 Z" fill="url(#vf-hatch)" stroke="#006838" stroke-width="1.6" stroke-opacity="0.5"/>
-  <g stroke="#006838" stroke-width="1.4" stroke-opacity="0.35">
-    <line x1="254" y1="285" x2="254" y2="310"/><line x1="290" y1="285" x2="290" y2="310"/><line x1="326" y1="285" x2="326" y2="310"/><line x1="362" y1="285" x2="362" y2="310"/><line x1="411" y1="285" x2="411" y2="310"/><line x1="459" y1="285" x2="459" y2="310"/>
-  </g>
-
-  <!-- BAR -->
-  <rect x="531.5" y="450.0" width="193" height="55" rx="7" fill="#006838" fill-opacity="0.09" stroke="#006838" stroke-width="2"/>
-  <g fill="#006838" fill-opacity="0.5"><circle cx="550" cy="520" r="4.5"/><circle cx="574" cy="520" r="4.5"/><circle cx="598" cy="520" r="4.5"/><circle cx="622" cy="520" r="4.5"/><circle cx="646" cy="520" r="4.5"/><circle cx="670" cy="520" r="4.5"/><circle cx="695" cy="520" r="4.5"/></g>
-
-  <!-- BAÑOS -->
-  <g fill="none" stroke="#006838" stroke-width="1.6" stroke-opacity="0.5">
-    <polygon points="205.4,500.0 283.9,500.0 283.9,600.0 205.4,600.0"/>
-    <polygon points="283.9,500.0 356.4,500.0 356.4,600.0 283.9,600.0"/>
-  </g>
-
-  <!-- ISLA / jardín comedor -->
-  <path d="M 362.4 490.0 C 362.4 435.0, 405.9 429.5, 416.8 451.5 C 454.8 468.0, 471.1 473.5, 471.1 490.0 C 471.1 545.0, 427.6 550.5, 416.8 528.5 C 378.7 512.0, 362.4 506.5, 362.4 490.0 Z" fill="#006838" fill-opacity="0.08" stroke="#006838" stroke-width="1.6"/>
-
-  <!-- MESAS comedor -->
-  <g fill="none" stroke="#006838" stroke-width="1.4" stroke-opacity="0.5"><circle cx="350.3" cy="430.0" r="11"/><circle cx="350.3" cy="490.0" r="11"/><circle cx="350.3" cy="570.0" r="11"/><circle cx="350.3" cy="630.0" r="11"/><circle cx="398.6" cy="430.0" r="11"/><circle cx="398.6" cy="490.0" r="11"/><circle cx="398.6" cy="570.0" r="11"/><circle cx="398.6" cy="630.0" r="11"/><circle cx="447.0" cy="430.0" r="11"/><circle cx="447.0" cy="490.0" r="11"/><circle cx="447.0" cy="570.0" r="11"/><circle cx="447.0" cy="630.0" r="11"/><circle cx="495.3" cy="490.0" r="11"/><circle cx="495.3" cy="570.0" r="11"/><circle cx="495.3" cy="630.0" r="11"/></g>
-  <!-- MESAS terraza -->
-  <g fill="none" stroke="#006838" stroke-width="1.4" stroke-opacity="0.5"><circle cx="706.7" cy="420.0" r="10"/><circle cx="729.9" cy="488.4" r="10"/><circle cx="680.6" cy="556.8" r="10"/><circle cx="703.8" cy="625.2" r="10"/><circle cx="654.5" cy="693.6" r="10"/><circle cx="677.7" cy="762.0" r="10"/></g>
-
-  <!-- ENTRADA plaza -->
-  <line x1="60.4" y1="380.0" x2="187.2" y2="380.0" stroke="#ec008c" stroke-width="2.4" marker-end="url(#vf-arrow)"/>
-  <text x="92" y="355" font-family="Druk Wide,sans-serif" font-size="8.5" font-weight="500" letter-spacing="1.4" fill="#006838" fill-opacity=".7" text-anchor="start">ENTRADA</text>
-  <text x="92" y="376" font-family="Druk Wide,sans-serif" font-size="8.5" font-weight="500" letter-spacing="1.4" fill="#006838" fill-opacity=".7" text-anchor="start">PLAZA</text>
-
-  <!-- ENTRADA exterior -->
-  <line x1="966.4" y1="450.0" x2="851.6" y2="480.0" stroke="#ec008c" stroke-width="2.4" marker-end="url(#vf-arrow)"/>
-  <text x="978" y="440" font-family="Druk Wide,sans-serif" font-size="8.5" font-weight="500" letter-spacing="1.4" fill="#006838" fill-opacity=".7" text-anchor="start">ENTRADA</text>
-  <text x="978" y="460" font-family="Druk Wide,sans-serif" font-size="8.5" font-weight="500" letter-spacing="1.4" fill="#006838" fill-opacity=".7" text-anchor="start">EXTERIOR</text>
-
-  <!-- etiquetas funcionales tenues -->
-  <text x="362" y="210" font-family="Druk Wide,sans-serif" font-size="12" font-weight="500" letter-spacing="2" fill="#006838" fill-opacity=".5" text-anchor="middle">COCINAS</text>
-  <text x="749" y="620" font-family="Druk Wide,sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="#006838" fill-opacity=".5" text-anchor="middle">TERRAZA</text>
-  <text x="272" y="645" font-family="Druk Wide,sans-serif" font-size="8.5" font-weight="500" letter-spacing="2" fill="#006838" fill-opacity=".5" text-anchor="middle">BAÑOS</text>
-
-  <!-- título + norte + escala -->
-  <text x="40" y="60" font-family="Bricolage,sans-serif" font-weight="800" font-size="30" fill="#006838">Casaducho</text>
-  <text x="42" y="80" font-family="Druk Wide,sans-serif" font-weight="500" font-size="10" letter-spacing="1.5" fill="#006838" fill-opacity=".7">PLANTA · ACRÓPOLIS · 190 COMENSALES</text>
-  <g transform="translate(1130,90)">
-    <circle r="20" fill="none" stroke="#006838" stroke-width="1.6" stroke-opacity=".5"/>
-    <path d="M0 -15 L6 5 L0 1 L-6 5 Z" fill="#006838"/>
-    <text x="0" y="-24" font-family="Druk Wide,sans-serif" font-size="10" fill="#006838" text-anchor="middle">N</text>
-  </g>
-  <g transform="translate(40,930)">
-    <line x1="0" y1="0" x2="120" y2="0" stroke="#006838" stroke-width="3"/>
-    <line x1="0" y1="-5" x2="0" y2="5" stroke="#006838" stroke-width="3"/>
-    <line x1="60" y1="-4" x2="60" y2="4" stroke="#006838" stroke-width="2"/>
-    <line x1="120" y1="-5" x2="120" y2="5" stroke="#006838" stroke-width="3"/>
-    <text x="60" y="20" font-family="Druk Wide,sans-serif" font-size="10" fill="#006838" fill-opacity=".7" text-anchor="middle">0 — 5 M</text>
-  </g>
+  <rect x="0" y="0" width="1208" height="1000" fill="#fff3de"/>
+  <!-- terraza: extensión orgánica atada al borde derecho -->
+  <path d="M 869.8 400.0 L 1002.6 510.0 L 918.1 640.0 L 845.6 520.0 Z" fill="url(#vf-terr)" stroke="#006838" stroke-width="3" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <!-- footprint suavizado -->
+  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" fill="#fffaf0" stroke="#006838" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <g><circle cx="423" cy="230" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="302" cy="430" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="411" cy="500" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="568" cy="450" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="701" cy="400" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="471" cy="570" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="556" cy="700" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="773" cy="550" r="40" fill="#006838" fill-opacity="0.04"/></g>
+  <!-- entradas -->
+  <line x1="48" y1="380" x2="163" y2="380" stroke="#006838" stroke-width="2.4" marker-end="url(#vf-ar)"/>
+  <text x="103" y="352" font-family="Druk Wide,sans-serif" font-weight="500" font-size="9" letter-spacing="1.5" fill="#006838" fill-opacity="0.7" text-anchor="middle">PLAZA</text>
+  <line x1="1015" y1="460" x2="900" y2="460" stroke="#006838" stroke-width="2.4" marker-end="url(#vf-ar)"/>
+  <text x="966" y="432" font-family="Druk Wide,sans-serif" font-weight="500" font-size="9" letter-spacing="1.5" fill="#006838" fill-opacity="0.7" text-anchor="middle">CALLE</text>
+  <g transform="translate(1140,80)"><circle r="16" fill="none" stroke="#006838" stroke-width="1.4" stroke-opacity=".45"/><path d="M0 -12 L5 4 L0 0 L-5 4 Z" fill="#006838"/><text x="0" y="-19" font-family="Druk Wide,sans-serif" font-size="9" fill="#006838" text-anchor="middle">N</text></g>
 </svg>
-      <button class="vf-pin" data-zone="wagmi" style="left:278px;top:300px;--pc:var(--c-wagmi)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">WAGMI</span><span class="vf-pin-tip"></span></span></button>
-      <button class="vf-pin" data-zone="hokkaido" style="left:411px;top:270px;--pc:var(--c-hokkaido)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">Hokkaidō</span><span class="vf-pin-tip"></span></span></button>
-      <button class="vf-pin" data-zone="pecora" style="left:507px;top:205px;--pc:var(--c-pecora)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">La Pécora</span><span class="vf-pin-tip"></span></span></button>
-      <button class="vf-pin" data-zone="bar" style="left:622px;top:460px;--pc:var(--c-bar)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">El Bar</span><span class="vf-pin-tip"></span></span></button>
-      <button class="vf-pin" data-zone="comedor" style="left:423px;top:570px;--pc:var(--c-comedor)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">Comedor</span><span class="vf-pin-tip"></span></span></button>
-      <button class="vf-pin" data-zone="terraza" style="left:761px;top:460px;--pc:var(--c-terraza)"><span class="vf-pin-body"><span class="vf-pin-dot"></span><span class="vf-pin-head">Terraza</span><span class="vf-pin-tip"></span></span></button>
+      <button class="vp-pin" data-zone="wagmi" style="left:423px;top:230px"><span class="vp-dot"></span><span class="vp-lbl">WAGMI</span></button>
+      <button class="vp-pin" data-zone="pecora" style="left:302px;top:430px"><span class="vp-dot"></span><span class="vp-lbl">La Pécora</span></button>
+      <button class="vp-pin" data-zone="wagmi2" style="left:411px;top:500px"><span class="vp-dot"></span><span class="vp-lbl">WAGMI2</span></button>
+      <button class="vp-pin" data-zone="cantina" style="left:568px;top:450px"><span class="vp-dot"></span><span class="vp-lbl">Cantina</span></button>
+      <button class="vp-pin" data-zone="panaderia" style="left:701px;top:400px"><span class="vp-dot"></span><span class="vp-lbl">Panadería</span></button>
+      <button class="vp-pin" data-zone="hokkaido" style="left:471px;top:570px"><span class="vp-dot"></span><span class="vp-lbl">Hokkaidō</span></button>
+      <button class="vp-pin" data-zone="bar" style="left:556px;top:700px"><span class="vp-dot"></span><span class="vp-lbl">El Bar</span></button>
+      <button class="vp-pin" data-zone="terraza" style="left:773px;top:550px"><span class="vp-dot"></span><span class="vp-lbl">Terraza</span></button>
     </div>
   </div>
 
-  <span class="vf-hint" id="vf-hint">Arrastra &middot; zoom &middot; toca un pin</span>
-  <div class="vf-ctrl">
-    <button id="vf-zin" aria-label="Acercar">+</button>
-    <button id="vf-zout" aria-label="Alejar">&#8722;</button>
-    <button id="vf-home" aria-label="Centrar" style="font-size:1rem">&#8962;</button>
+  <span class="vp-hint" id="vp-hint">Arrastra · zoom · toca una zona</span>
+  <div class="vp-ctrl">
+    <button id="vp-zin" aria-label="Acercar">+</button>
+    <button id="vp-zout" aria-label="Alejar">&#8722;</button>
+    <button id="vp-home" aria-label="Centrar" style="font-size:1rem">&#8962;</button>
   </div>
-  <span class="vf-note">Plano del local. Toca un pin &#8594; ve la vista 360 de esa zona.</span>
+  <div class="vp-warp" id="vp-warp"></div>
 
-  <div class="vf-card" id="vf-card">
-    <div class="vf-card-photo" id="vf-photo">
-      <button class="vf-card-x" id="vf-x" aria-label="Cerrar">&times;</button>
-      <img id="vf-img-a" alt=""><img id="vf-img-b" alt="">
-      <div class="soon">Vista de esta zona<br>pr&oacute;ximamente</div>
-      <span class="vf-360chip" id="vf-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Ver 360&deg;</span>
-    </div>
-    <div class="vf-card-body">
-      <span class="k">Tu vista desde</span>
-      <h2 id="vf-name">&mdash;</h2>
-      <p id="vf-desc">&mdash;</p>
-      <div class="vf-cta-row">
-        <button class="vf-btn p" id="vf-360"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span id="vf-360t">Ver en 360&deg;</span></button>
-        <a class="vf-btn g" href="index.html#reservar">Reservar &#8594;</a>
-      </div>
-    </div>
-  </div>
-
+  <script src="assets/js/toi-config.js"></script>
   <script src="assets/js/pano360.js" defer></script>
   <script>
   (function(){
     var IMG='assets/img/interior/', IMG360='assets/img/360/';
-    /* has360:true cuando Miguel suba el render a assets/img/360/{zona}.jpg */
+    /* foto interior de respaldo por zona (mientras no haya 360 real). has360 auto-detecta {zona}.jpg */
     var Z={
-      comedor:{name:'Comedor',desc:'El corazón del mercado: mesas comunales para venir con quien quieras.',photos:['comedor-2.webp','comedor-3.webp','comedor-5.webp'],has360:false},
-      wagmi:{name:'WAGMI',desc:'Frente a la barra de smash burgers y philly.',photos:['wagmi.webp','wagmi-v.webp','wagmi2.webp'],has360:false},
-      hokkaido:{name:'Hokkaidō',desc:'Junto a la barra de sushi y rolls.',photos:['hokkaido.webp'],has360:false},
-      pecora:{name:'La Pécora',desc:'Cerca del horno de pizza de masa madre.',photos:['pecora.webp'],has360:false},
-      bar:{name:'EL BAR',desc:'En la barra: cocteles, vinos y la mejor vibra.',photos:['bar.webp'],has360:false},
-      terraza:{name:'Terraza',desc:'Al aire libre, primer piso de Acrópolis.',photos:['comedor-5.webp'],has360:false}
+      wagmi:{name:'WAGMI',photo:'wagmi.webp'},
+      pecora:{name:'La Pécora',photo:'pecora.webp'},
+      wagmi2:{name:'WAGMI2',photo:'wagmi2.webp'},
+      cantina:{name:'Cantina',photo:'comedor-3.webp'},
+      panaderia:{name:'Panadería',photo:'comedor-1.webp'},
+      hokkaido:{name:'Hokkaidō',photo:'hokkaido.webp'},
+      bar:{name:'El Bar',photo:'bar.webp'},
+      terraza:{name:'Terraza',photo:'comedor-5.webp'}
     };
-    /* ---------- pan / zoom ---------- */
-    var vp=document.getElementById('vf-vp'), inner=document.getElementById('vf-inner');
+    var TOI=(window.CASADUCHO_TOI||{});
+    function reserveUrl(zone){
+      if(TOI.reserveUrl) return TOI.reserveUrl;
+      var wa=TOI.whatsappWaiter||'18495915955';
+      return 'https://wa.me/'+wa+'?text='+encodeURIComponent('¡Hola! Quiero reservar en la zona '+(Z[zone]?Z[zone].name:''));
+    }
+    /* ---------- pan/zoom ---------- */
+    var vp=document.getElementById('vp'), inner=document.getElementById('vp-inner');
     var IW=1208, IH=1000, st={x:0,y:0,s:1}, MIN=0.4, MAX=2.8;
     function clampS(s){return Math.max(MIN,Math.min(MAX,s));}
-    function clamp(){
-      var vw=vp.clientWidth, vh=vp.clientHeight, w=IW*st.s, h=IH*st.s, m=120;
-      st.x=Math.min(m,Math.max(vw-w-m,st.x)); if(w<vw) st.x=(vw-w)/2;
-      st.y=Math.min(m,Math.max(vh-h-m,st.y)); if(h<vh) st.y=(vh-h)/2;
-    }
-    function apply(){ inner.style.transform='translate('+st.x+'px,'+st.y+'px) scale('+st.s+')';
-      var inv=1/st.s; document.querySelectorAll('.vf-pin').forEach(function(p){p.style.setProperty('--inv',inv);}); }
-    function fit(){ var vw=vp.clientWidth,vh=vp.clientHeight; st.s=clampS(Math.min(vw/IW,vh/IH)*0.98); st.x=(vw-IW*st.s)/2; st.y=(vh-IH*st.s)/2; apply(); }
-    function zoomAt(cx,cy,f){ var ns=clampS(st.s*f),k=ns/st.s; st.x=cx-(cx-st.x)*k; st.y=cy-(cy-st.y)*k; st.s=ns; clamp(); apply(); }
-    var drag=null, pinch=null, pts={};
-    vp.addEventListener('pointerdown',function(e){ pts[e.pointerId]={x:e.clientX,y:e.clientY};
-      var k=Object.keys(pts); if(k.length===2){ var a=pts[k[0]],b=pts[k[1]]; pinch={d:Math.hypot(a.x-b.x,a.y-b.y),s:st.s}; drag=null; return; }
-      drag={x:e.clientX,y:e.clientY,ox:st.x,oy:st.y,moved:false,t:Date.now(),tg:e.target}; try{vp.setPointerCapture(e.pointerId);}catch(_){}
-    });
+    function clamp(){var vw=vp.clientWidth,vh=vp.clientHeight,w=IW*st.s,h=IH*st.s,m=120;
+      st.x=Math.min(m,Math.max(vw-w-m,st.x)); if(w<vw)st.x=(vw-w)/2;
+      st.y=Math.min(m,Math.max(vh-h-m,st.y)); if(h<vh)st.y=(vh-h)/2;}
+    function apply(){inner.style.transform='translate('+st.x+'px,'+st.y+'px) scale('+st.s+')';
+      var inv=1/st.s; document.querySelectorAll('.vp-pin').forEach(function(p){p.style.setProperty('--inv',inv);});}
+    function fit(){var vw=vp.clientWidth,vh=vp.clientHeight; st.s=clampS(Math.min(vw/IW,vh/IH)*0.98); st.x=(vw-IW*st.s)/2; st.y=(vh-IH*st.s)/2; apply();}
+    function zoomAt(cx,cy,f){var ns=clampS(st.s*f),k=ns/st.s; st.x=cx-(cx-st.x)*k; st.y=cy-(cy-st.y)*k; st.s=ns; clamp(); apply();}
+    var drag=null,pinch=null,pts={};
+    vp.addEventListener('pointerdown',function(e){pts[e.pointerId]={x:e.clientX,y:e.clientY};
+      var k=Object.keys(pts); if(k.length===2){var a=pts[k[0]],b=pts[k[1]];pinch={d:Math.hypot(a.x-b.x,a.y-b.y),s:st.s};drag=null;return;}
+      drag={x:e.clientX,y:e.clientY,ox:st.x,oy:st.y,moved:false,t:Date.now(),tg:e.target}; try{vp.setPointerCapture(e.pointerId);}catch(_){}});
     vp.addEventListener('pointermove',function(e){
       if(pts[e.pointerId])pts[e.pointerId]={x:e.clientX,y:e.clientY};
-      if(pinch){ var k=Object.keys(pts); if(k.length>=2){ var a=pts[k[0]],b=pts[k[1]],d=Math.hypot(a.x-b.x,a.y-b.y); var r=vp.getBoundingClientRect(); var cx=(a.x+b.x)/2-r.left, cy=(a.y+b.y)/2-r.top; var ns=clampS(pinch.s*(d/pinch.d)),kk=ns/st.s; st.x=cx-(cx-st.x)*kk; st.y=cy-(cy-st.y)*kk; st.s=ns; clamp(); apply(); } return; }
-      if(!drag)return; var dx=e.clientX-drag.x,dy=e.clientY-drag.y; if(Math.hypot(dx,dy)>8)drag.moved=true; st.x=drag.ox+dx; st.y=drag.oy+dy; clamp(); apply();
-    });
+      if(pinch){var k=Object.keys(pts); if(k.length>=2){var a=pts[k[0]],b=pts[k[1]],d=Math.hypot(a.x-b.x,a.y-b.y);var r=vp.getBoundingClientRect();var cx=(a.x+b.x)/2-r.left,cy=(a.y+b.y)/2-r.top;var ns=clampS(pinch.s*(d/pinch.d)),kk=ns/st.s;st.x=cx-(cx-st.x)*kk;st.y=cy-(cy-st.y)*kk;st.s=ns;clamp();apply();}return;}
+      if(!drag)return; var dx=e.clientX-drag.x,dy=e.clientY-drag.y; if(Math.hypot(dx,dy)>8)drag.moved=true; st.x=drag.ox+dx; st.y=drag.oy+dy; clamp(); apply();});
     function endPt(e){
-      if(drag&&!drag.moved&&(Date.now()-drag.t)<500){ var pin=(e.target.closest&&e.target.closest('.vf-pin')); if(pin){ lastFocused=pin; select(pin.getAttribute('data-zone')); } }
-      delete pts[e.pointerId]; if(Object.keys(pts).length<2)pinch=null; if(Object.keys(pts).length===0)drag=null;
-    }
+      if(drag&&!drag.moved&&(Date.now()-drag.t)<500){var pin=(e.target.closest&&e.target.closest('.vp-pin')); if(pin){lastFocused=pin; select(pin.getAttribute('data-zone'), e.clientX, e.clientY);}}
+      delete pts[e.pointerId]; if(Object.keys(pts).length<2)pinch=null; if(Object.keys(pts).length===0)drag=null;}
     vp.addEventListener('pointerup',endPt); vp.addEventListener('pointercancel',function(e){delete pts[e.pointerId];if(Object.keys(pts).length<2)pinch=null;drag=null;});
-    vp.addEventListener('wheel',function(e){ e.preventDefault(); var r=vp.getBoundingClientRect(); zoomAt(e.clientX-r.left,e.clientY-r.top, e.deltaY<0?1.12:0.89); hideHint(); },{passive:false});
-    function ctrZoom(f){ zoomAt(vp.clientWidth/2,vp.clientHeight/2,f); }
-    document.getElementById('vf-zin').onclick=function(){ctrZoom(1.25);hideHint();};
-    document.getElementById('vf-zout').onclick=function(){ctrZoom(0.8);hideHint();};
-    document.getElementById('vf-home').onclick=function(){fit();hideHint();};
-    var hint=document.getElementById('vf-hint'); function hideHint(){hint.classList.add('gone');}
-    try{ if(localStorage.getItem('vf_seen')) hint.classList.add('gone'); else localStorage.setItem('vf_seen','1'); }catch(_){}
+    vp.addEventListener('wheel',function(e){e.preventDefault();var r=vp.getBoundingClientRect();zoomAt(e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.12:0.89);hideHint();},{passive:false});
+    function ctrZoom(f){zoomAt(vp.clientWidth/2,vp.clientHeight/2,f);}
+    document.getElementById('vp-zin').onclick=function(){ctrZoom(1.25);hideHint();};
+    document.getElementById('vp-zout').onclick=function(){ctrZoom(0.8);hideHint();};
+    document.getElementById('vp-home').onclick=function(){fit();hideHint();};
+    var hint=document.getElementById('vp-hint'); function hideHint(){hint.classList.add('gone');}
+    try{if(localStorage.getItem('vp_seen'))hint.classList.add('gone');else localStorage.setItem('vp_seen','1');}catch(_){}
     vp.addEventListener('pointerdown',function(){setTimeout(hideHint,500);});
-    /* ---------- place card ---------- */
-    var card=document.getElementById('vf-card'), photo=document.getElementById('vf-photo');
-    var imgA=document.getElementById('vf-img-a'), imgB=document.getElementById('vf-img-b');
-    var nm=document.getElementById('vf-name'), de=document.getElementById('vf-desc'), chip=document.getElementById('vf-chip'), btn360t=document.getElementById('vf-360t');
-    var fA=true, idx=0, timer=null, curZone=null, lastFocused=null;
-    function paint(f){ var b=fA?imgB:imgA; b.src=IMG+f; b.onload=function(){ requestAnimationFrame(function(){ b.classList.add('show'); (fA?imgA:imgB).classList.remove('show'); fA=!fA; }); }; }
-    function setBtn(has){ btn360t.textContent = has ? 'Ver en 360\u00b0' : 'Vista 360 \u00b7 pronto'; }
-    function probe360(zone){
-      var z=Z[zone]; if(!z||z._probed) return;
-      if(z.has360){ z._probed=true; return; }
-      var im=new Image();
-      im.onload=function(){ z.has360=true; z._probed=true; if(curZone===zone){ setBtn(true); chip.style.display='inline-flex'; } };
-      im.onerror=function(){ z._probed=true; };
-      im.src=IMG360+zone+'.jpg';
-    }
-    function select(zone){
-      var z=Z[zone]; if(!z)return; curZone=zone;
-      document.querySelectorAll('.vf-pin').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-zone')===zone);});
-      nm.textContent=z.name; de.textContent=z.desc; idx=0; clearInterval(timer);
-      setBtn(z.has360); chip.style.display = z.has360 ? 'inline-flex' : 'none'; probe360(zone);
-      card.classList.add('up');
-      try{ if(navigator.vibrate) navigator.vibrate(8); }catch(_){}
-      if(!z.photos.length){ photo.classList.add('soon'); imgA.classList.remove('show'); imgB.classList.remove('show'); return; }
-      photo.classList.remove('soon'); paint(z.photos[0]);
-      if(z.photos.length>1){ timer=setInterval(function(){ idx=(idx+1)%z.photos.length; paint(z.photos[idx]); },4200); }
-    }
-    function closeCard(){ card.classList.remove('up'); document.querySelectorAll('.vf-pin').forEach(function(p){p.classList.remove('on');}); clearInterval(timer); curZone=null; }
-    document.getElementById('vf-x').onclick=closeCard;
-    /* ---------- 360 ---------- */
+    /* ---------- transporte + 360 ---------- */
+    var warp=document.getElementById('vp-warp'), lastFocused=null;
+    function probe(zone){ var z=Z[zone]; if(!z||z._p) return; if(z.has360){z._p=1;return;}
+      var im=new Image(); im.onload=function(){z.has360=true;z._p=1;}; im.onerror=function(){z._p=1;}; im.src=IMG360+zone+'.jpg'; }
+    Object.keys(Z).forEach(probe);
     function openPano(zone){
       var z=Z[zone]; if(!z||!window.Pano360)return;
-      var img = z.has360 ? (IMG360+zone+'.jpg') : null;
-      var fb  = (z.photos&&z.photos.length) ? (IMG+z.photos[0]) : '';
-      try{ history.pushState({pano:zone},''); }catch(_){}
-      window.Pano360.open({ image:img, fallbackImage:fb, label:z.name, onClose:onPanoClose });
+      window.Pano360.open({
+        image: z.has360 ? (IMG360+zone+'.jpg') : null,
+        fallbackImage: IMG+z.photo,
+        label: z.name,
+        fallbackBadge: 'Referencia visual',
+        reserveUrl: reserveUrl(zone),
+        reserveLabel: 'Reservar en TOI',
+        onClose: function(){ if(lastFocused&&lastFocused.focus){try{lastFocused.focus();}catch(_){}} }
+      });
     }
-    function onPanoClose(){
-      if(history.state && history.state.pano){ try{ history.back(); }catch(_){} }
-      if(lastFocused && lastFocused.focus){ try{ lastFocused.focus(); }catch(_){} }
+    function select(zone, sx, sy){
+      document.querySelectorAll('.vp-pin').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-zone')===zone);});
+      try{if(navigator.vibrate)navigator.vibrate(8);}catch(_){}
+      warp.style.left=(sx||window.innerWidth/2)+'px'; warp.style.top=(sy||window.innerHeight/2)+'px';
+      warp.classList.add('go');
+      setTimeout(function(){ openPano(zone); }, 430);
+      setTimeout(function(){ warp.classList.remove('go'); document.querySelectorAll('.vp-pin').forEach(function(p){p.classList.remove('on');}); }, 1150);
     }
-    window.addEventListener('popstate',function(){ if(window.Pano360) window.Pano360.close(); });
-    document.getElementById('vf-360').onclick=function(){ if(curZone) openPano(curZone); };
-    photo.addEventListener('click',function(e){ if(e.target.closest('#vf-x'))return; if(curZone) openPano(curZone); });
     window.addEventListener('resize',fit);
-    window.addEventListener('orientationchange',function(){ setTimeout(fit,250); });
+    window.addEventListener('orientationchange',function(){setTimeout(fit,250);});
     fit();
   })();
   </script>

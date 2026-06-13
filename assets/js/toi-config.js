@@ -9,5 +9,6 @@ window.CASADUCHO_TOI = {
   tableParam: "mesa",          // nombre del parámetro de mesa que espera SnowEats en la URL
   perTableUrls: {},            // opcional: { "5": "https://app.snoweats.com/..." } si cada mesa tiene URL propia
   whatsappWaiter: "18495915955", // PideBot — para "llamar al mesero"
+  reserveUrl: "",              // <-- URL de RESERVAS de TOI (el viewfinder manda aquí desde "Reservar en TOI"). Mientras vacío, cae a WhatsApp.
   brand: "Casaducho"
 };

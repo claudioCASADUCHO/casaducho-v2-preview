@@ -137,8 +137,8 @@
               "badges": [
                 "nuevo"
               ],
-              "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
-              "descEn": "6 oz Philly meat, sautéed peppers and sour cream, over rice. High in protein.",
+              "descEs": "6 oz de carne de Philly, pimientos salteados, sobre arroz. Alto en proteína.",
+              "descEn": "6 oz Philly meat, sautéed peppers, over rice. High in protein.",
               "photo": "assets/img/dishes/wagmi/philly-bowl-el-pepe.webp"
             },
             {
@@ -414,7 +414,7 @@
               "badges": [
                 "nuevo"
               ],
-              "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
+              "descEs": "6 oz de carne de Philly, pimientos salteados, sobre arroz. Alto en proteína.",
               "macros": "891 cal · 62g prot · 29.2g grasa · 87.4g carb"
             }
           ]
@@ -601,8 +601,8 @@
             {
               "nameEs": "Ajo y Perejil",
               "price": 495,
-              "descEs": "Salsa pomodoro con ajo confitado y perejil fresco",
-              "descEn": "Pomodoro sauce with garlic confit and fresh parsley",
+              "descEs": "Salsa pomodoro con ajo confitado, perejil fresco, maíz y tocineta",
+              "descEn": "Pomodoro sauce with garlic confit, fresh parsley, corn and bacon",
               "photo": "assets/img/dishes/pecora/ajo-y-perejil.webp"
             },
             {
@@ -615,8 +615,8 @@
             {
               "nameEs": "Plátano di Lusso",
               "price": 545,
-              "descEs": "Plátano maduro, mozzarella y un toque dominicano",
-              "descEn": "Sweet plantain, mozzarella and a Dominican touch",
+              "descEs": "Plátano maduro, mozzarella, hongos y parmesano",
+              "descEn": "Sweet plantain, mozzarella, mushroom and parmesan",
               "photo": "assets/img/dishes/pecora/platano-di-lusso.webp"
             },
             {
@@ -646,8 +646,8 @@
             {
               "nameEs": "Straccia-Nduja",
               "price": 645,
-              "descEs": "Tomate cherry rostizado, 'nduja con pomodoro, stracciatella, ralladura de limón y aceite de oliva",
-              "descEn": "Roasted cherry tomato, 'nduja with pomodoro, stracciatella, lemon zest and olive oil",
+              "descEs": "'Nduja con pomodoro, stracciatella y aceite de oliva",
+              "descEn": "'Nduja with pomodoro, stracciatella and olive oil",
               "badges": [
                 "nuevo"
               ],
@@ -666,8 +666,8 @@
             {
               "nameEs": "Fenway Pizza",
               "price": 675,
-              "descEs": "Salchicha italiana, cebolla, pimientos rojos, albahaca y aioli de cerveza con harissa",
-              "descEn": "Italian sausage, onion, red peppers, basil and harissa beer aioli",
+              "descEs": "Salchicha italiana, cebolla caramelizada, pimientos rojos, albahaca y aioli de cerveza con harissa",
+              "descEn": "Italian sausage, caramelized onion, red peppers, basil and harissa beer aioli",
               "badges": [
                 "nuevo"
               ],
@@ -854,8 +854,8 @@
             {
               "nameEs": "Duo Poke Bowl",
               "price": 645,
-              "descEs": "Ensalada de cangrejo, algas, atún y salmón con spicy mayo, anguila, zanahoria, pepino, aguacate y edamame",
-              "descEn": "Crab salad, seaweed, tuna and salmon with spicy mayo, eel sauce, carrot, cucumber, avocado and edamame",
+              "descEs": "Ensalada de cangrejo, atún y salmón con spicy mayo, anguila, zanahoria, pepino, aguacate y edamame",
+              "descEn": "Crab salad, tuna and salmon with spicy mayo, eel sauce, carrot, cucumber, avocado and edamame",
               "photo": "assets/img/dishes/hokkaido/duo-poke-bowl.webp"
             },
             {
@@ -882,8 +882,8 @@
             {
               "nameEs": "Nazar Bowl",
               "price": 645,
-              "descEs": "Medio cup arroz, doble wakame, doble tuna, king crab, edamame, ajonjolí, spicy mayo y salsa de anguila",
-              "descEn": "Half cup rice, double wakame, double tuna, king crab, edamame, sesame, spicy mayo and eel sauce",
+              "descEs": "Medio cup arroz, doble tuna, king crab, edamame, ajonjolí, spicy mayo y salsa de anguila",
+              "descEn": "Half cup rice, double tuna, king crab, edamame, sesame, spicy mayo and eel sauce",
               "badges": [
                 "nuevo"
               ],
@@ -951,8 +951,8 @@
             {
               "nameEs": "Salmon Duo Roll",
               "price": 645,
-              "descEs": "Salmón, cream cheese, furikake, shichimi; por fuera salmón, salsa de anguila, aguacate y puerro",
-              "descEn": "Salmon, cream cheese, furikake, shichimi; topped with salmon, eel sauce, avocado and leek",
+              "descEs": "Salmón, cream cheese, furikake, sashimi; por fuera salmón, salsa de anguila, aguacate y puerro",
+              "descEn": "Salmon, cream cheese, furikake, sashimi; topped with salmon, eel sauce, avocado and leek",
               "photo": "assets/img/dishes/hokkaido/salmon-duo-roll.webp"
             },
             {
@@ -1025,8 +1025,8 @@
             {
               "nameEs": "Salmon Riceless Roll",
               "price": 795,
-              "descEs": "Salmón, queso crema, lechuga risada, mango maduro, kamikama, salsa spicy y anguila",
-              "descEn": "Salmon, cream cheese, curly lettuce, ripe mango, kamikama, spicy sauce and eel",
+              "descEs": "Salmón, queso crema, lechuga risada, kamikama, salsa spicy y anguila",
+              "descEn": "Salmon, cream cheese, curly lettuce, kamikama, spicy sauce and eel",
               "photo": "assets/img/dishes/hokkaido/salmon-riceless-roll.webp"
             }
           ]
@@ -1194,8 +1194,8 @@
             },
             {
               "nameEs": "Nachos",
-              "descEs": "Chips de maíz, guacamole, aioli de cilantro, sour cream, pico de gallo, cilantro y cebolla encurtida. (Pollo · Cochinita Pibil · Birria · Chicharrón · Al Pastor)",
-              "descEn": "Corn chips, guacamole, cilantro aioli, sour cream, pico de gallo, cilantro and pickled onion. (Pork al pastor · Cochinita pibil · Chicken al pastor)",
+              "descEs": "Chips de maíz, guacamole, aioli de cilantro, sour cream, pico de gallo, cilantro, cebolla encurtida y queso feta. (Pollo · Cochinita Pibil · Birria · Chicharrón · Al Pastor)",
+              "descEn": "Corn chips, guacamole, cilantro aioli, sour cream, pico de gallo, cilantro, pickled onion and feta cheese. (Pork al pastor · Cochinita pibil · Chicken al pastor)",
               "price": 695,
               "photo": "assets/img/dishes/cantina/nachos.webp"
             },
@@ -1236,8 +1236,8 @@
             },
             {
               "nameEs": "Al Pastor",
-              "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca, cilantro y limón",
-              "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion, cilantro and lime",
+              "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca y cilantro",
+              "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion and cilantro",
               "price": 595,
               "photo": "assets/img/dishes/cantina/al-pastor.webp"
             },
@@ -1250,8 +1250,8 @@
             },
             {
               "nameEs": "Protein Quesadilla",
-              "descEs": "Mix de quesos, alta en proteína con extra pollo",
-              "descEn": "Cheese blend, high protein with extra chicken",
+              "descEs": "Mix de quesos y queso feta, alta en proteína con extra pollo",
+              "descEn": "Cheese blend and feta, high protein with extra chicken",
               "price": 695,
               "photo": "assets/img/dishes/cantina/protein-quesadilla.webp"
             }
@@ -1264,8 +1264,8 @@
           "items": [
             {
               "nameEs": "Al Pastor",
-              "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca, cilantro y limón. En tortilla de maíz",
-              "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion, cilantro and lime. Served on corn tortilla",
+              "descEs": "Cerdo al pastor, guacamole, piña asada, cebolla blanca y cilantro. En tortilla de maíz",
+              "descEn": "Al pastor pork, guacamole, grilled pineapple, white onion and cilantro. Served on corn tortilla",
               "price": 445,
               "photo": "assets/img/dishes/cantina/al-pastor.webp"
             },
@@ -1278,8 +1278,8 @@
             },
             {
               "nameEs": "Chicharrón",
-              "descEs": "Chicharrón, guacamole, cebolla encurtida, cilantro y queso feta. En tortilla de maíz",
-              "descEn": "Chicharrón, guacamole, pickled onion, cilantro and feta cheese. Served on corn tortilla",
+              "descEs": "Chicharrón, guacamole, cebolla encurtida, cilantro, queso feta y limón. En tortilla de maíz",
+              "descEn": "Chicharrón, guacamole, pickled onion, cilantro, feta cheese and lime. Served on corn tortilla",
               "price": 525,
               "photo": "assets/img/dishes/cantina/chicharron.webp"
             },
@@ -1342,8 +1342,8 @@
             },
             {
               "nameEs": "Burrito",
-              "descEs": "Mix de quesos, guacamole, pico de gallo, lechuga, cebolla encurtida, queso feta, sour cream y cilantro en tortilla. (Pollo · Chicharrón · Birria · Mixto)",
-              "descEn": "Cheese blend, guacamole, pico de gallo, lettuce, pickled onion, feta, sour cream and cilantro in tortilla. (Chicken · Chicharrón · Birria · Mixed)",
+              "descEs": "Mix de quesos, guacamole, pico de gallo, lechuga, queso feta, sour cream y cilantro en tortilla. (Pollo · Chicharrón · Birria · Mixto)",
+              "descEn": "Cheese blend, guacamole, pico de gallo, lettuce, feta, sour cream and cilantro in tortilla. (Chicken · Chicharrón · Birria · Mixed)",
               "price": 685,
               "photo": "assets/img/dishes/cantina/burrito.webp"
             },
@@ -1356,8 +1356,8 @@
             },
             {
               "nameEs": "Chimichanga",
-              "descEs": "Mix de quesos, pico de gallo, sour cream, queso feta y lechuga en tortilla frita. (Pollo · Chicharrón · Birria · Mixto)",
-              "descEn": "Cheese blend, pico de gallo, sour cream, feta and lettuce in fried tortilla. (Chicken · Chicharrón · Birria · Mixed)",
+              "descEs": "Mix de quesos, pico de gallo, sour cream y queso feta en tortilla frita. (Pollo · Chicharrón · Birria · Mixto)",
+              "descEn": "Cheese blend, pico de gallo, sour cream and feta in fried tortilla. (Chicken · Chicharrón · Birria · Mixed)",
               "price": 745,
               "photo": "assets/img/dishes/cantina/chimichanga.webp"
             }
@@ -1418,7 +1418,7 @@
           "items": [
             {
               "nameEs": "Protein Quesadilla",
-              "descEs": "Mix de quesos, alta en proteína con extra pollo.",
+              "descEs": "Mix de quesos y queso feta, alta en proteína con extra pollo.",
               "price": 695,
               "macros": "847 cal · 89g proteína · 32g grasa · 44g carbos"
             },
@@ -2694,15 +2694,15 @@
             },
             {
               "nameEs": "Protein Quesadilla",
-              "descEs": "Mix de quesos, alta en proteína con extra pollo.",
-              "descEn": "Cheese blend, high protein with extra chicken.",
+              "descEs": "Mix de quesos y queso feta, alta en proteína con extra pollo.",
+              "descEn": "Cheese blend and feta, high protein with extra chicken.",
               "price": 695,
               "macros": "847 cal · 89g prot · 32g grasa · 44g carb"
             },
             {
               "nameEs": "Philly Bowl (El Pepe)",
-              "descEs": "6 oz de carne de Philly, pimientos salteados y sour cream, sobre arroz. Alto en proteína.",
-              "descEn": "6 oz Philly meat, sautéed peppers and sour cream, over rice. High in protein.",
+              "descEs": "6 oz de carne de Philly, pimientos salteados, sobre arroz. Alto en proteína.",
+              "descEn": "6 oz Philly meat, sautéed peppers, over rice. High in protein.",
               "price": 725,
               "badges": [
                 "nuevo"
