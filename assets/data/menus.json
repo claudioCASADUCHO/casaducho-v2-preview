@@ -1317,6 +1317,14 @@
               "descEn": "Chicken tinga, guacamole, pickled onion and cheese. Served on corn tortilla",
               "price": 455,
               "photo": "assets/img/dishes/cantina/tacos-de-pollo.webp"
+            },
+            {
+              "nameEs": "Tacos de Carne",
+              "descEs": "Próximamente",
+              "price": 565,
+              "badges": [
+                "nuevo"
+              ]
             }
           ]
         },
@@ -1399,14 +1407,6 @@
                 "coming-soon"
               ],
               "photo": "assets/img/dishes/cantina/papas-con-chili.webp"
-            },
-            {
-              "nameEs": "Tacos de Carne",
-              "descEs": "Próximamente",
-              "price": 565,
-              "badges": [
-                "nuevo"
-              ]
             }
           ]
         },

@@ -833,3 +833,13 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
   .f360-name { font-family: var(--display); font-weight: 800; font-size: 1.12rem; color: var(--tinta); }
   .f360-tag { font-family: var(--druk); font-weight: 500; font-size: .5rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fc); }
 }
+
+/* ============ HUB DE MENÚS — concept-cards (no más grid Claude-like) ============ */
+.hub-concepts-sec { background: var(--crema); padding: 10px 0 52px; }
+.hub-concepts-sec .wrap { max-width: 1180px; }
+.hub-concepts-sec .concepts-grid { display: grid; grid-template-columns: 1fr; gap: 16px; overflow: visible; margin: 0; padding: 0; }
+@media (min-width: 640px) { .hub-concepts-sec .concepts-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .hub-concepts-sec .concepts-grid { grid-template-columns: repeat(3, 1fr); } }
+.hub-concepts-sec .concept-card { flex: none; max-width: none; }
+.concept-photo-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--cfc, #7d3c98), color-mix(in srgb, var(--cfc, #7d3c98) 65%, #000)); }
+.concept-photo-fallback span { font-family: var(--druk); font-weight: 500; color: #fff; font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; opacity: .95; }
