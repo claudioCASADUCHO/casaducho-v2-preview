@@ -185,12 +185,12 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.02; l
   @keyframes heroArc { from { opacity: 0; transform: rotate(-14deg) scale(.96); } to { opacity: .34; transform: rotate(0) scale(1); } }
 }
 .hero-content { position: relative; z-index: 2; width: 100%; padding-block: clamp(40px, 7vh, 80px) clamp(28px, 4vh, 48px); display: flex; flex-direction: column; align-items: flex-start; }
-.hero-logo { width: min(560px, 84vw); height: auto; margin-bottom: clamp(22px, 4vh, 40px); }
+.hero-logo { width: min(480px, 80vw); height: auto; margin-bottom: clamp(16px, 3vh, 28px); }
 .hero .eyebrow { color: var(--verde); }
 .hero h1 { color: var(--tinta); font-family: var(--display); font-weight: 800; font-size: clamp(2.1rem, 6vw, 4.4rem); line-height: 1.0; max-width: 15ch; margin-bottom: var(--space-3); }
 .hero h1 .h1-accent { color: var(--rosa); }
 .hero-tag { font-family: var(--sans); font-weight: 400; color: var(--tinta-suave); margin-bottom: var(--space-4); font-size: 1.16rem; line-height: 1.55; max-width: 42ch; }
-.open-chip { display: inline-flex; align-items: center; gap: 9px; background: var(--papel); border: 1px solid rgba(32,20,15,.1); color: var(--tinta); border-radius: var(--r-pill); padding: 9px 16px; font-family: var(--druk); font-weight: 500; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: var(--space-4); box-shadow: var(--sh-1); }
+.open-chip { display: inline-flex; align-items: center; gap: 9px; background: var(--papel); border: 1px solid rgba(32,20,15,.1); color: var(--tinta); border-radius: var(--r-pill); padding: 9px 16px; font-family: var(--druk); font-weight: 500; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; margin: 18px 0 0; box-shadow: var(--sh-1); }
 .open-chip .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--c-napa); animation: pulse 2s ease-in-out infinite; }
 .open-chip.closed .pulse { background: var(--naranja); animation: none; }
 @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: .55; } }
@@ -580,24 +580,31 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 .dlv-chip.ue  { color: #05712f; } .dlv-chip.ue:hover  { background: #05712f; color: #fff; }
 .dlv-chip.wa  { color: #0f7a3d; } .dlv-chip.wa:hover  { background: #0f7a3d; color: #fff; }
 .dlv-chip.soon { color: rgba(32,20,15,.4); border-style: dashed; border-color: rgba(32,20,15,.2); cursor: default; pointer-events: none; }
+/* === Delivery "tablero": grid centrado, costilla de color + kicker + PideBot 6ª celda === */
+.dlv { max-width: 920px; margin-inline: auto; width: 100%; }
+.dlv-card { position: relative; border-top: 4px solid var(--mc); }
+.dlv-card-head { flex-wrap: wrap; }
+.dlv-card-kicker { margin-left: auto; font-family: var(--sans); font-weight: 400; font-size: .8rem; letter-spacing: 0; text-transform: none; color: var(--tinta-suave); }
+.dlv-card--pidebot { text-decoration: none; color: var(--tinta); }
+.dlv-card--pidebot .dlv-chip { flex: 1; }
+.dlv-card--pidebot .pidebot-chip { color: #fff; background: #0f7a3d; border-color: #0f7a3d; }
+.dlv-card--pidebot:hover .pidebot-chip { background: #0c6633; }
+@media (min-width: 980px) { .dlv-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 641px) and (max-width: 979px) { .dlv-card--pidebot { grid-column: 1 / -1; } }
+/* stagger de entrada — "puestos encendiéndose" */
+.dlv.reveal .dlv-card { opacity: 0; transform: translateY(14px); }
+.dlv.reveal.in .dlv-card { opacity: 1; transform: none; transition: opacity .4s ease, transform .4s ease; transition-delay: calc(var(--i, 0) * 55ms); }
+@media (prefers-reduced-motion: reduce) { .dlv.reveal .dlv-card { opacity: 1; transform: none; } }
 @media (max-width: 640px) {
   .dlv-shortcut { flex-direction: column; align-items: stretch; gap: 14px; padding: 22px 18px 18px; }
   .dlv-shortcut .dlv-chips { width: 100%; }
   .dlv-shortcut .dlv-chip { flex: 1; min-width: 0; }
   .dlv-grid { grid-template-columns: 1fr; }
   .dlv-chip { flex: 1; min-height: 44px; min-width: 0; }
+  .dlv-card-kicker { margin-left: 0; flex-basis: 100%; }
 }
 
-/* ===== PideBot pill — pedidos directos por WhatsApp ===== */
-.pidebot-note { display: inline-flex; align-items: center; gap: 14px; margin-top: 22px; padding: 14px 20px 14px 14px; background: var(--papel); border-radius: var(--r-pill); box-shadow: var(--sh-1); text-decoration: none; color: var(--tinta); transition: transform .15s, box-shadow .15s; width: max-content; max-width: 100%; }
-.pidebot-note:hover { transform: translateY(-2px); box-shadow: var(--sh-2); }
-.pidebot-ico { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: var(--whatsapp); color: #fff; flex: 0 0 auto; }
-.pidebot-txt { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
-.pidebot-txt strong { font-family: var(--druk); font-weight: 500; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; color: var(--verde); }
-.pidebot-txt span { font-family: var(--sans); font-size: .9rem; color: var(--tinta-suave); }
-.pidebot-arrow { font-size: 1rem; color: var(--verde); margin-left: 4px; transition: transform .15s; flex: 0 0 auto; }
-.pidebot-note:hover .pidebot-arrow { transform: translateX(4px); }
-@media (max-width: 480px) { .pidebot-note { width: 100%; } .pidebot-txt span { font-size: .82rem; } }
+/* PideBot ahora es la 6ª card del grid de delivery (.dlv-card--pidebot) */
 
 /* footer */". Así el orden del CSS sigue el orden del DOM.
 
@@ -682,12 +689,16 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 }
 
 .follow-logo-wrap {
-  height: 52px; width: 100%;
+  min-height: 64px; width: 100%;
   display: flex; align-items: center; justify-content: center;
+  border-radius: 14px; padding: 13px 14px;
+  background: color-mix(in srgb, var(--fc) 8%, var(--papel));
 }
 .follow-logo-wrap img {
-  max-height: 52px; max-width: 88%; width: auto; object-fit: contain;
+  max-height: 46px; max-width: 86%; width: auto; object-fit: contain;
 }
+/* logos de tinta clara (Hokkaidō crema, Pécora rosa/gris) sobre tile oscuro para que se lean */
+.follow-card.invert .follow-logo-wrap { background: var(--verde-noche); }
 /* fallback de texto cuando no hay logo .webp (Hot Brots / EL BAR) */
 .follow-logo-text {
   font-family: var(--druk); font-weight: 900;
@@ -857,12 +868,4 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 .concepts::after  { background: linear-gradient(to left,  var(--crema), transparent) !important; }
 
 /* ===== DELIVERY · dropdowns compactos (reemplaza la grilla) ===== */
-.dlv-list { display: flex; flex-direction: column; gap: 10px; max-width: 640px; margin: 0 auto; }
-.dlv-drop { background: var(--papel); border-radius: var(--r-card); box-shadow: var(--sh-1); overflow: hidden; }
-.dlv-drop summary { display: flex; align-items: center; gap: 11px; padding: 16px 18px; cursor: pointer; list-style: none; font-family: var(--druk); font-weight: 500; font-size: .66rem; letter-spacing: .03em; text-transform: uppercase; color: var(--tinta); }
-.dlv-drop summary::-webkit-details-marker { display: none; }
-.dlv-drop summary::marker { content: ''; }
-.dlv-drop .dlv-chev { margin-left: auto; color: var(--mc); transition: transform .2s; font-size: .85rem; }
-.dlv-drop[open] .dlv-chev { transform: rotate(180deg); }
-.dlv-drop[open] summary { padding-bottom: 8px; }
-.dlv-drop .dlv-chips { padding: 0 18px 16px; }
+/* (dropdowns .dlv-drop retirados — delivery ahora es grid de cards .dlv-card) */
