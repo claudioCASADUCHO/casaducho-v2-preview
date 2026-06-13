@@ -32,7 +32,7 @@
   <!-- LCP: el wordmark -->
   <link rel="preload" as="image" href="assets/img/logos/casaducho.webp" fetchpriority="high">
 
-  <link rel="stylesheet" href="assets/css/main.css?v=9">
+  <link rel="stylesheet" href="assets/css/main.css?v=11">
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -143,16 +143,10 @@
         </div>
         <span class="open-chip"><span class="pulse"></span><span class="open-label">Abierto · 11:30 AM – 11:00 PM</span></span>
       </div>
-      <figure class="hero-band hero-rot">
-        <video class="cinemagraph hero-rot-v active" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.webp" aria-label="Alitas WAGMI glaseadas en BBQ"><source src="assets/video/hero.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/wagmi-poster.webp" aria-label="Smash burger WAGMI"><source src="assets/video/wagmi.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/pecora-poster.webp" aria-label="Pizza de La Pécora"><source src="assets/video/pecora.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/cantina-poster.webp" aria-label="Tacos de Cantina La Cuadra"><source src="assets/video/cantina.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/hokkaido-poster.webp" aria-label="Sushi de Hokkaidō"><source src="assets/video/hokkaido.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/elbar-poster.webp" aria-label="Coctel de EL BAR"><source src="assets/video/elbar.mp4" type="video/mp4"></video>
-        <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" poster="assets/video/brookie-poster.webp" aria-label="Brookie de postre"><source src="assets/video/brookie.mp4" type="video/mp4"></video>
-        <img class="cinemagraph-fallback" src="assets/video/hero-poster.webp" alt="Comida de Casaducho">
-      </figure>
+      <div class="hero-feature">
+        <span class="hero-feat-label">¿Qué se te antoja hoy? <em>desliza &#8594;</em></span>
+        <div class="dishes-strip" id="dishes-strip"><!-- llenado por carousel-data.js + main.js --></div>
+      </div>
     </div>
   </section>
 
@@ -174,17 +168,6 @@
     </div>
   </div>
 
-  <!-- PLATOS ICÓNICOS -->
-  <section class="section" id="platos">
-    <div class="wrap">
-      <span class="eyebrow">El antojo</span>
-      <h2 class="section-title">¿Qué se te antoja hoy?</h2>
-      <p class="section-sub">Un antojo de cada cocina. Desliza &#8594; y pide de las que quieras.</p>
-    </div>
-    <div class="dishes-strip" id="dishes-strip">
-      <!-- llenado por carousel-data.js + main.js -->
-    </div>
-  </section>
 
   <!-- CONCEPTOS -->
   <section class="section concepts" id="conceptos">
@@ -665,7 +648,7 @@
 
   <script src="assets/js/delivery-links.js"></script>
   <script src="assets/js/carousel-data.js"></script>
-  <script src="assets/js/main.js?v=9"></script>
+  <script src="assets/js/main.js?v=11"></script>
   <script src="assets/js/recorrido.js" defer></script>
 </body>
 </html>
