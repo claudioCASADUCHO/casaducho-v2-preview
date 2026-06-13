@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>CASADUCHO | Mercado Gastronómico en Acrópolis, Santo Domingo</title>
-  <meta name="description" content="6 cocinas bajo un mismo techo en Acrópolis Business Mall: burgers, sushi, tacos, pizza, cocteles y más. Ordena por PedidosYa, Uber Eats o WhatsApp. Reserva con TOI.">
+  <meta name="description" content="6 cocinas bajo un mismo techo en Acrópolis Business Center: burgers, sushi, tacos, pizza, cocteles y más. Ordena por PedidosYa, Uber Eats o WhatsApp. Reserva con TOI.">
   <link rel="canonical" href="https://casaducho.com/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CASADUCHO">
   <meta property="og:title" content="CASADUCHO | Mercado Gastronómico">
-  <meta property="og:description" content="Algo para cada gusto bajo un mismo techo. 6 cocinas en Acrópolis Business Mall, Santo Domingo.">
+  <meta property="og:description" content="Algo para cada gusto bajo un mismo techo. 6 cocinas en Acrópolis Business Center, Santo Domingo.">
   <meta property="og:url" content="https://casaducho.com/">
-  <meta property="og:image" content="https://casaducho.com/assets/img/og-image.jpg">
+  <meta property="og:image" content="https://claudiocasaducho.github.io/casaducho-v2-preview/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_DO">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://claudiocasaducho.github.io/casaducho-v2-preview/assets/img/og-image.jpg">
 
   <!-- Iconos -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -28,7 +29,6 @@
   <!-- Tipografías (self-hosted): Bricolage friendly + Druk + Migra oficiales -->
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/druk-medium.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/migra-lightitalic.woff2" crossorigin>
 
   <!-- LCP: el wordmark -->
   <link rel="preload" as="image" href="assets/img/logos/casaducho.webp" fetchpriority="high">
@@ -44,14 +44,14 @@
     "alternateName": "Casaducho Mercado Gastronómico",
     "description": "Mercado gastronómico con 6 conceptos culinarios bajo un mismo techo: burgers, comida japonesa, mexicana, italiana, bar de cocteles y más.",
     "url": "https://casaducho.com",
-    "image": "https://casaducho.com/assets/img/og-image.jpg",
+    "image": "https://claudiocasaducho.github.io/casaducho-v2-preview/assets/img/og-image.jpg",
     "logo": "https://casaducho.com/assets/img/logos/casaducho.png",
     "servesCuisine": ["American", "Japanese", "Mexican", "Italian", "Cocktails"],
     "priceRange": "RD$300–RD$900",
     "currenciesAccepted": "DOP",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Acrópolis Business Mall, Primer Nivel",
+      "streetAddress": "Acrópolis Business Center, Primer piso",
       "addressLocality": "Santo Domingo",
       "addressCountry": "DO"
     },
@@ -180,6 +180,20 @@
     <div class="dishes-strip" id="dishes-strip">
       <!-- llenado por carousel-data.js + main.js -->
     </div>
+    <div class="wrap food360" aria-label="Platos en 360">
+      <figure class="f360-card" style="--fc:var(--c-wagmi)">
+        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-burger-poster.webp" aria-label="Classic Smash en 360"><source src="assets/video/f360-burger.webm" type="video/webm"><source src="assets/video/f360-burger.mp4" type="video/mp4"></video></div>
+        <figcaption><span class="f360-name">Classic Smash</span><span class="f360-tag">WAGMI</span></figcaption>
+      </figure>
+      <figure class="f360-card" style="--fc:var(--c-pecora)">
+        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-pizza-poster.webp" aria-label="Pizza Pepperoni en 360"><source src="assets/video/f360-pizza.webm" type="video/webm"><source src="assets/video/f360-pizza.mp4" type="video/mp4"></video></div>
+        <figcaption><span class="f360-name">Pepperoni</span><span class="f360-tag">La Pécora</span></figcaption>
+      </figure>
+      <figure class="f360-card" style="--fc:var(--c-hokkaido)">
+        <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-poke-poster.webp" aria-label="Poke Bowl en 360"><source src="assets/video/f360-poke.webm" type="video/webm"><source src="assets/video/f360-poke.mp4" type="video/mp4"></video></div>
+        <figcaption><span class="f360-name">Ducho Poke</span><span class="f360-tag">Hokkaidō</span></figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- CONCEPTOS -->
@@ -300,24 +314,66 @@
     </div>
   </section>
 
-  <!-- INTERLUDIO: EL ESPACIO — scroll-cinematic (render del espacio real) -->
-  <section class="espacio cine-space" id="espacio" data-frames="121" data-path="assets/scroll/space/f_" data-bg="#06371f">
-    <div class="cine-sticky">
-      <canvas aria-hidden="true"></canvas>
-      <video class="cine-video" muted loop playsinline preload="none"
-             poster="assets/video/espacio-cine-poster.jpg" aria-label="El espacio de Casaducho en Acrópolis">
-        <source src="assets/video/espacio-cine.webm" type="video/webm">
-        <source src="assets/video/espacio-cine.mp4" type="video/mp4">
-      </video>
-      <div class="espacio-overlay cine-overlay">
-        <div class="wrap">
-          <span class="eyebrow" style="color:var(--amarillo)">El lugar</span>
-          <h2 class="cine-line" data-in="0" data-out="0.7">No es delivery.<br>Es <span style="color:var(--amarillo)">venir.</span></h2>
-          <p class="cine-line" data-in="0.15" data-out="0.95">Primer nivel de Acrópolis Business Mall. Seis cocinas, un bar, y la mesa que quieras.</p>
-          <div class="espacio-ctas">
-            <a href="#visitanos" class="btn btn-outline-cream">Cómo llegar</a>
-            <a href="#" class="btn btn-cream-solid" data-order data-order-mode="mesa">Ordenar en mesa</a>
-          </div>
+  <!-- RECORRIDO DEL LOCAL — mapa + viaje entre zonas -->
+  <section class="section recorrido" id="recorrido">
+    <div class="wrap">
+      <span class="eyebrow">El recorrido</span>
+      <h2 class="section-title">Camina el local sin moverte</h2>
+      <p class="section-sub">Toca una zona del mapa y te transportamos ahí. Pasea por el pasillo, asómate a cada cocina y siéntate en el comedor — como si ya estuvieras aquí.</p>
+    </div>
+    <div class="rl-stage" id="rl-stage" role="region" aria-label="Recorrido interactivo del local">
+      <div class="rl-map" id="rl-map">
+        <svg class="rl-plano" viewBox="0 0 1000 620" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <rect x="0" y="0" width="1000" height="620" fill="var(--verde-noche)"/>
+          <rect x="56" y="48" width="888" height="524" rx="22" fill="#0c4a2c" stroke="var(--c-pecora-deep)" stroke-width="2.5"/>
+          <rect x="300" y="48" width="74" height="524" rx="10" fill="var(--crema)" opacity=".10"/>
+          <rect x="84"  y="80"  width="190" height="210" rx="12" fill="var(--c-wagmi)"    opacity=".5"/>
+          <rect x="84"  y="330" width="190" height="210" rx="12" fill="var(--c-pecora)"   opacity=".5"/>
+          <rect x="400" y="80"  width="240" height="190" rx="12" fill="var(--c-cantina)"  opacity=".4"/>
+          <rect x="400" y="320" width="240" height="220" rx="12" fill="var(--crema)"      opacity=".10"/>
+          <rect x="720" y="80"  width="190" height="460" rx="12" fill="var(--c-bar)"      opacity=".5"/>
+          <rect x="300" y="560" width="74" height="40" rx="8" fill="var(--amarillo)" opacity=".7"/>
+        </svg>
+        <button class="rl-hotspot" data-zone="entrada"  style="left:33.7%;top:90%;--hc:var(--amarillo);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Entrada</button>
+        <button class="rl-hotspot" data-zone="wagmi"    style="left:18%;top:30%;--hc:var(--c-wagmi)"><span class="rl-hs-dot"></span>WAGMI</button>
+        <button class="rl-hotspot" data-zone="pecora"   style="left:18%;top:70%;--hc:var(--c-pecora)"><span class="rl-hs-dot"></span>La Pécora</button>
+        <button class="rl-hotspot" data-zone="bar"      style="left:81.5%;top:50%;--hc:var(--c-bar)"><span class="rl-hs-dot"></span>El Bar</button>
+        <button class="rl-hotspot" data-zone="comedor"  style="left:52%;top:70%;--hc:var(--crema);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Comedor</button>
+        <span class="rl-hint" aria-hidden="true">Toca una zona para entrar</span>
+      </div>
+      <div class="rl-zone" id="rl-zone" aria-hidden="true">
+        <div class="rl-zone-img" id="rl-zone-img-a"></div>
+        <div class="rl-zone-img" id="rl-zone-img-b"></div>
+        <div class="rl-zone-scrim"></div>
+        <div class="rl-zone-cap">
+          <span class="rl-zone-label" id="rl-zone-label"></span>
+          <h3 class="rl-zone-title" id="rl-zone-title"></h3>
+          <div class="rl-zone-nav" id="rl-zone-nav" aria-label="Fotos de la zona"></div>
+        </div>
+        <button class="rl-back" id="rl-back" type="button"><span aria-hidden="true">←</span> Volver al mapa</button>
+        <button class="rl-arrow rl-prev" id="rl-prev" type="button" aria-label="Foto anterior">‹</button>
+        <button class="rl-arrow rl-next" id="rl-next" type="button" aria-label="Foto siguiente">›</button>
+      </div>
+      <div class="rl-flash" id="rl-flash" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- INTERLUDIO: EL ESPACIO -->
+  <section class="espacio" id="espacio">
+    <video class="espacio-video cinemagraph" autoplay muted loop playsinline preload="none"
+           poster="assets/video/espacio-cine-poster.jpg" aria-label="El espacio de Casaducho en Acrópolis">
+      <source src="assets/video/espacio-cine.webm" type="video/webm">
+      <source src="assets/video/espacio-cine.mp4" type="video/mp4">
+    </video>
+    <img class="cinemagraph-fallback espacio-video" src="assets/video/espacio-cine-poster.jpg" alt="El espacio de Casaducho en Acrópolis">
+    <div class="espacio-overlay">
+      <div class="wrap">
+        <span class="eyebrow" style="color:var(--amarillo)">El lugar</span>
+        <h2>No es delivery.<br>Es <span style="color:var(--amarillo)">venir.</span></h2>
+        <p>Primer piso de Acrópolis Business Center. Seis cocinas, un bar, y la mesa que quieras.</p>
+        <div class="espacio-ctas">
+          <a href="#visitanos" class="btn btn-outline-cream">Cómo llegar</a>
+          <a href="#" class="btn btn-cream-solid" data-order data-order-mode="mesa">Ordenar en mesa</a>
         </div>
       </div>
     </div>
@@ -359,48 +415,71 @@
       <h2 class="section-title">Te llevamos Casaducho a tu puerta</h2>
       <p class="section-sub">Cada cocina tiene su propia tienda. Elige tu plataforma — o escríbele directo a PideBot por WhatsApp.</p>
 
-      <div class="matrix reveal">
-        <div class="matrix-row head">
-          <div>Cocina</div><div>PedidosYa</div><div>Uber Eats</div><div>WhatsApp</div>
+      <div class="dlv reveal">
+        <div class="dlv-shortcut" style="--mc:var(--amarillo)">
+          <span class="dlv-shortcut-tag">Atajo · pide de todo</span>
+          <span class="dlv-shortcut-main">
+            <span class="dlv-dot"></span>
+            <span class="dlv-shortcut-txt">
+              <span class="dlv-name">Todo el mercado</span>
+              <span class="dlv-desc">Las cocinas que quieras, en un solo pedido</span>
+            </span>
+          </span>
+          <span class="dlv-chips">
+            <a class="dlv-chip pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./casaducho-c7c4f644-3602-44e7-9b02-d2bd62ac2baa-menu" target="_blank" rel="noopener noreferrer" aria-label="Todo el mercado en PedidosYa">PedidosYa</a>
+            <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" aria-label="Todo el mercado por WhatsApp">WhatsApp</a>
+          </span>
         </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--c-wagmi)"><span class="m-dot"></span>WAGMI</div>
-          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./wagmi-at-casaducho-b02e9275-40c3-4feb-9aa7-6066f498a7ff-menu" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en PedidosYa">PYA</a></div>
-          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/wagmi-casaducho/i8o8tDwxU1yFWCE0XFPDAg" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en Uber Eats">Uber</a></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20WAGMI" target="_blank" rel="noopener noreferrer" aria-label="WAGMI por WhatsApp">Chat</a></div>
-        </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--c-cantina)"><span class="m-dot"></span>Cantina La Cuadra</div>
-          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./cantina-la-cuadra-casaducho-3dd88e53-98ed-4627-863a-2ffcc9d13871-menu" target="_blank" rel="noopener noreferrer" aria-label="Cantina en PedidosYa">PYA</a></div>
-          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/cantina-la-cuadra-casaducho/CIiMb2qgV5q531FnMAge4w" target="_blank" rel="noopener noreferrer" aria-label="Cantina en Uber Eats">Uber</a></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Cantina%20La%20Cuadra" target="_blank" rel="noopener noreferrer" aria-label="Cantina por WhatsApp">Chat</a></div>
-        </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--c-pecora)"><span class="m-dot"></span>La Pécora</div>
-          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./la-pecora-at-casaducho-1d6d86b6-d9f8-4f64-b553-b1779b2143f6-menu" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en PedidosYa">PYA</a></div>
-          <div class="matrix-cell"><a class="ue" href="https://www.ubereats.com/do-en/store/la-pecora-casaducho/q33d1Ui3XYWQnQSIpHdkRQ" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en Uber Eats">Uber</a></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20La%20P%C3%A9cora" target="_blank" rel="noopener noreferrer" aria-label="La Pécora por WhatsApp">Chat</a></div>
-        </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--c-hokkaido)"><span class="m-dot"></span>Hokkaidō</div>
-          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./hokkaido-at-casaducho-a6dfb18d-076a-4053-8c79-65f873526923-menu" target="_blank" rel="noopener noreferrer" aria-label="Hokkaido en PedidosYa">PYA</a></div>
-          <div class="matrix-cell"><span class="off" title="No disponible por ahora">—</span></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Hokkaid%C5%8D" target="_blank" rel="noopener noreferrer" aria-label="Hokkaido por WhatsApp">Chat</a></div>
-        </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--c-bar)"><span class="m-dot"></span>EL BAR</div>
-          <div class="matrix-cell"><span class="off">—</span></div>
-          <div class="matrix-cell"><span class="off">—</span></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20EL%20BAR" target="_blank" rel="noopener noreferrer" aria-label="EL BAR por WhatsApp">Chat</a></div>
-        </div>
-        <div class="matrix-row">
-          <div class="matrix-concept" style="--mc:var(--green)"><span class="m-dot"></span>Todo el mercado</div>
-          <div class="matrix-cell"><a class="pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./casaducho-c7c4f644-3602-44e7-9b02-d2bd62ac2baa-menu" target="_blank" rel="noopener noreferrer" aria-label="Casaducho en PedidosYa">PYA</a></div>
-          <div class="matrix-cell"><span class="off" title="No disponible por ahora">—</span></div>
-          <div class="matrix-cell"><a class="wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" aria-label="Casaducho por WhatsApp">Chat</a></div>
+
+        <div class="dlv-divider"><span>o elige una cocina</span></div>
+
+        <div class="dlv-grid">
+          <div class="dlv-card" style="--mc:var(--c-wagmi)">
+            <div class="dlv-card-head"><span class="dlv-dot"></span><span class="dlv-name">WAGMI</span></div>
+            <div class="dlv-chips">
+              <a class="dlv-chip pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./wagmi-at-casaducho-b02e9275-40c3-4feb-9aa7-6066f498a7ff-menu" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en PedidosYa">PedidosYa</a>
+              <a class="dlv-chip ue" href="https://www.ubereats.com/do-en/store/wagmi-casaducho/i8o8tDwxU1yFWCE0XFPDAg" target="_blank" rel="noopener noreferrer" aria-label="WAGMI en Uber Eats">Uber Eats</a>
+              <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20WAGMI" target="_blank" rel="noopener noreferrer" aria-label="WAGMI por WhatsApp">WhatsApp</a>
+            </div>
+          </div>
+          <div class="dlv-card" style="--mc:var(--c-cantina)">
+            <div class="dlv-card-head"><span class="dlv-dot"></span><span class="dlv-name">Cantina La Cuadra</span></div>
+            <div class="dlv-chips">
+              <a class="dlv-chip pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./cantina-la-cuadra-casaducho-3dd88e53-98ed-4627-863a-2ffcc9d13871-menu" target="_blank" rel="noopener noreferrer" aria-label="Cantina La Cuadra en PedidosYa">PedidosYa</a>
+              <a class="dlv-chip ue" href="https://www.ubereats.com/do-en/store/cantina-la-cuadra-casaducho/CIiMb2qgV5q531FnMAge4w" target="_blank" rel="noopener noreferrer" aria-label="Cantina La Cuadra en Uber Eats">Uber Eats</a>
+              <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Cantina%20La%20Cuadra" target="_blank" rel="noopener noreferrer" aria-label="Cantina La Cuadra por WhatsApp">WhatsApp</a>
+            </div>
+          </div>
+          <div class="dlv-card" style="--mc:var(--c-pecora)">
+            <div class="dlv-card-head"><span class="dlv-dot"></span><span class="dlv-name">La Pécora</span></div>
+            <div class="dlv-chips">
+              <a class="dlv-chip pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./la-pecora-at-casaducho-1d6d86b6-d9f8-4f64-b553-b1779b2143f6-menu" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en PedidosYa">PedidosYa</a>
+              <a class="dlv-chip ue" href="https://www.ubereats.com/do-en/store/la-pecora-casaducho/q33d1Ui3XYWQnQSIpHdkRQ" target="_blank" rel="noopener noreferrer" aria-label="La Pécora en Uber Eats">Uber Eats</a>
+              <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20La%20P%C3%A9cora" target="_blank" rel="noopener noreferrer" aria-label="La Pécora por WhatsApp">WhatsApp</a>
+            </div>
+          </div>
+          <div class="dlv-card" style="--mc:var(--c-hokkaido)">
+            <div class="dlv-card-head"><span class="dlv-dot"></span><span class="dlv-name">Hokkaidō</span></div>
+            <div class="dlv-chips">
+              <a class="dlv-chip pya" href="https://www.pedidosya.com.do/restaurantes/santo-domingo-d.n./hokkaido-at-casaducho-a6dfb18d-076a-4053-8c79-65f873526923-menu" target="_blank" rel="noopener noreferrer" aria-label="Hokkaidō en PedidosYa">PedidosYa</a>
+              <a class="dlv-chip ue" href="https://www.ubereats.com/do/store/casaducho/a5eB4aKSXSC83cyvbmCbbg" target="_blank" rel="noopener noreferrer" aria-label="Hokkaidō en Uber Eats">Uber Eats</a>
+              <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20Hokkaid%C5%8D" target="_blank" rel="noopener noreferrer" aria-label="Hokkaidō por WhatsApp">WhatsApp</a>
+            </div>
+          </div>
+          <div class="dlv-card" style="--mc:var(--c-bar)">
+            <div class="dlv-card-head"><span class="dlv-dot"></span><span class="dlv-name">EL BAR</span></div>
+            <div class="dlv-chips">
+              <a class="dlv-chip wa" href="https://wa.me/18495915955?text=%C2%A1Hola!%20Quiero%20ordenar%20de%20EL%20BAR" target="_blank" rel="noopener noreferrer" aria-label="EL BAR por WhatsApp">WhatsApp</a>
+              <span class="dlv-chip soon" aria-hidden="true">Pronto en apps</span>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="delivery-note"><strong>PideBot</strong> es nuestro WhatsApp de pedidos directos: <a href="https://wa.me/18495915955" target="_blank" rel="noopener noreferrer">+1 (849) 591-5955</a></p>
+      <a class="pidebot-note" href="https://wa.me/18495915955" target="_blank" rel="noopener noreferrer">
+        <span class="pidebot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.633 5.448l-.999 3.648 3.855-.995zm5.49-13.811c-.183-.005-.39-.006-.598-.006a1.15 1.15 0 00-.834.39c-.287.313-1.095 1.07-1.095 2.609s1.121 3.025 1.277 3.234c.156.21 2.207 3.37 5.346 4.728.748.323 1.331.516 1.786.66.751.239 1.434.205 1.974.124.602-.09 1.854-.758 2.115-1.49.261-.731.261-1.358.183-1.49-.078-.13-.287-.21-.6-.365z"/></svg></span>
+        <span class="pidebot-txt"><strong>PideBot</strong><span>Pedidos directos por WhatsApp · +1 (849) 591-5955</span></span>
+        <span class="pidebot-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 
@@ -440,7 +519,7 @@
       <div>
         <span class="eyebrow">Empresas</span>
         <h2>Tu oficina queda arriba.<br>Tu almuerzo, aquí abajo.</h2>
-        <p>Casaducho está en el corazón de Acrópolis Business Mall. Catering corporativo, eventos privados, activaciones y beneficios para empresas de la torre y alrededores.</p>
+        <p>Estamos en el corazón de la ciudad — primer piso de Acrópolis Business Center. Catering corporativo, eventos privados, activaciones y beneficios para empresas de la torre y alrededores.</p>
         <ul>
           <li>10% de descuento corporativo con carnet</li>
           <li>Almuerzo express para equipos</li>
@@ -460,7 +539,7 @@
       <h2 class="section-title">Estamos en Acrópolis</h2>
       <div class="visit-grid">
         <div class="visit-info">
-          <p><strong>Acrópolis Business Mall, Primer Nivel</strong><br>Av. Winston Churchill, Santo Domingo</p>
+          <p><strong>Acrópolis Business Center, Primer piso</strong><br>Av. Winston Churchill, Santo Domingo</p>
           <div class="hours-box">
             <strong>Horario</strong>
             Dom–Jue · 11:30 AM – 11:00 PM<br>
@@ -472,7 +551,7 @@
           <a class="btn btn-outline-ink" href="https://maps.app.goo.gl/HaLPYvmtWjRR8S928" target="_blank" rel="noopener noreferrer" style="width:max-content">Cómo llegar</a>
         </div>
         <div class="visit-map reveal">
-          <iframe src="https://maps.google.com/maps?q=CASADUCHO%2C+Acr%C3%B3polis+Business+Mall%2C+Santo+Domingo&z=17&output=embed" title="Mapa de CASADUCHO en Acrópolis Business Mall" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=CASADUCHO%2C+Acr%C3%B3polis+Business+Center%2C+Santo+Domingo&z=17&output=embed" title="Mapa de CASADUCHO en Acrópolis Business Center" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -508,12 +587,55 @@
     </div>
   </section>
 
+  <!-- SÍGUENOS -->
+  <section class="section follow" id="siguenos">
+    <div class="wrap">
+      <span class="eyebrow">Síguenos</span>
+      <h2 class="section-title">Cada cocina tiene su propia historia</h2>
+      <p class="section-sub">El detrás de cámaras, los nuevos platos y lo que se cocina antes de que llegue al menú. Sigue al mercado completo o a la cocina que más te guste.</p>
+      <div class="follow-grid">
+        <a class="follow-lead reveal" href="https://instagram.com/casaducho" target="_blank" rel="noopener noreferrer" style="--fc:var(--verde); --fcd:var(--verde-hondo)" aria-label="Instagram de Casaducho: @casaducho">
+          <img class="follow-lead-logo" src="assets/img/logos/casaducho.webp" alt="CASADUCHO" loading="lazy">
+          <span class="follow-lead-text">
+            <span class="follow-kicker">El mercado completo</span>
+            <span class="follow-handle">@casaducho</span>
+          </span>
+          <span class="follow-ig" aria-hidden="true">Seguir en Instagram <em>→</em></span>
+        </a>
+        <a class="follow-card reveal" href="https://instagram.com/wagmi.sdq" target="_blank" rel="noopener noreferrer" style="--fc:var(--c-wagmi); --fcd:var(--c-wagmi-deep)" aria-label="Instagram de WAGMI: @wagmi.sdq">
+          <span class="follow-logo-wrap"><img src="assets/img/logos/wagmi.webp" alt="WAGMI" loading="lazy"></span>
+          <span class="follow-handle">@wagmi.sdq</span>
+        </a>
+        <a class="follow-card reveal" href="https://instagram.com/cantinalacuadra.sdq" target="_blank" rel="noopener noreferrer" style="--fc:var(--c-cantina); --fcd:var(--c-cantina-deep)" aria-label="Instagram de Cantina La Cuadra: @cantinalacuadra.sdq">
+          <span class="follow-logo-wrap"><img src="assets/img/logos/cantina-la-cuadra.webp" alt="Cantina La Cuadra" loading="lazy"></span>
+          <span class="follow-handle">@cantinalacuadra.sdq</span>
+        </a>
+        <a class="follow-card reveal" href="https://instagram.com/lapecora.sdq" target="_blank" rel="noopener noreferrer" style="--fc:var(--c-pecora); --fcd:var(--c-pecora-deep)" aria-label="Instagram de La Pécora: @lapecora.sdq">
+          <span class="follow-logo-wrap"><img src="assets/img/logos/la-pecora.webp" alt="La Pécora" loading="lazy"></span>
+          <span class="follow-handle">@lapecora.sdq</span>
+        </a>
+        <a class="follow-card reveal" href="https://instagram.com/hokkaido.sdq" target="_blank" rel="noopener noreferrer" style="--fc:var(--c-hokkaido); --fcd:var(--c-hokkaido-deep)" aria-label="Instagram de Hokkaidō: @hokkaido.sdq">
+          <span class="follow-logo-wrap"><img src="assets/img/logos/hokkaido.webp" alt="Hokkaidō" loading="lazy"></span>
+          <span class="follow-handle">@hokkaido.sdq</span>
+        </a>
+        <a class="follow-card reveal" href="https://instagram.com/hot.brots" target="_blank" rel="noopener noreferrer" style="--fc:var(--c-hotbrots); --fcd:var(--c-hotbrots-deep)" aria-label="Instagram de Hot Brots: @hot.brots">
+          <span class="follow-logo-wrap follow-logo-text">Hot Brots</span>
+          <span class="follow-handle">@hot.brots</span>
+        </a>
+        <span class="follow-card follow-soon" style="--fc:var(--c-bar); --fcd:var(--c-bar-deep)" aria-label="EL BAR: Instagram próximamente">
+          <span class="follow-logo-wrap follow-logo-text">El Bar</span>
+          <span class="follow-handle">Próximamente</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer-grid">
       <div>
         <img class="f-logo" src="assets/img/logos/casaducho.webp" alt="CASADUCHO">
-        <p style="font-size:.88rem;max-width:32ch">Mercado gastronómico · Acrópolis Business Mall, Primer Nivel, Santo Domingo</p>
+        <p style="font-size:.88rem;max-width:32ch">Mercado gastronómico · Acrópolis Business Center, Primer piso, Santo Domingo</p>
         <div class="footer-social">
           <a href="https://instagram.com/casaducho" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Casaducho">IG — @casaducho</a>
         </div>
@@ -594,6 +716,6 @@
   <script src="assets/js/delivery-links.js"></script>
   <script src="assets/js/carousel-data.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/space-scrub.js" defer></script>
+  <script src="assets/js/recorrido.js" defer></script>
 </body>
 </html>

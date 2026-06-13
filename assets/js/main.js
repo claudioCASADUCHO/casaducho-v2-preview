@@ -148,7 +148,7 @@
 
     var CONCEPT_NAMES = {
       wagmi: 'WAGMI', cantina: 'Cantina La Cuadra', pecora: 'La Pécora',
-      hokkaido: 'Hokkaido', bar: 'EL BAR', general: 'Casaducho (todo el mercado)'
+      hokkaido: 'Hokkaido', bar: 'EL BAR', general: 'Todo el mercado'
     };
 
     var stepMesa = sheet.querySelector('[data-step="mesa"]');
@@ -208,4 +208,88 @@
       if (new URLSearchParams(location.search).get('mesa')) openSheet(null, 'mesa');
     } catch (e) {}
   }
+
+  /* ===================== AUTO-GLIDE / SWIPE CUE — carruseles vivos ===================== */
+  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setupGlide(track, opts) {
+    if (!track) return;
+    opts = opts || {};
+    var section = track.closest('section');
+    var SPEED = opts.speed || 22;
+    var RESUME_MS = 2500;
+    function updateEdges() {
+      if (!section) return;
+      var max = track.scrollWidth - track.clientWidth;
+      section.classList.toggle('edge-l', track.scrollLeft > 4);
+      section.classList.toggle('edge-r', track.scrollLeft < max - 4);
+    }
+    track.addEventListener('scroll', updateEdges, { passive: true });
+    updateEdges();
+    function isScroller() {
+      return getComputedStyle(track).overflowX !== 'visible' && track.scrollWidth > track.clientWidth + 8;
+    }
+    if (prefersReduced || !isScroller()) return;
+    var originalWidth = 0;
+    (function buildLoop() {
+      if (track.dataset.looped === '1') return;
+      var kids = Array.prototype.slice.call(track.children);
+      originalWidth = 0;
+      kids.forEach(function (k) { originalWidth += k.getBoundingClientRect().width; });
+      var styles = getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+      originalWidth += gap * kids.length;
+      kids.forEach(function (k) { var c = k.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.tabIndex = -1; track.appendChild(c); });
+      track.dataset.looped = '1';
+    })();
+    var paused = false, resumeTimer = null, last = 0;
+    function pause() { paused = true; track.classList.remove('gliding'); }
+    function scheduleResume() { clearTimeout(resumeTimer); resumeTimer = setTimeout(function () { paused = false; track.classList.add('gliding'); }, RESUME_MS); }
+    function bump() { pause(); scheduleResume(); }
+    track.addEventListener('mouseenter', pause);
+    track.addEventListener('mouseleave', scheduleResume);
+    track.addEventListener('focusin', pause);
+    track.addEventListener('focusout', scheduleResume);
+    ['touchstart', 'pointerdown', 'wheel'].forEach(function (ev) { track.addEventListener(ev, bump, { passive: true }); });
+    ['touchend', 'pointerup'].forEach(function (ev) { track.addEventListener(ev, scheduleResume, { passive: true }); });
+    document.addEventListener('visibilitychange', function () { if (document.hidden) pause(); else scheduleResume(); });
+    var inView = true;
+    if ('IntersectionObserver' in window) { new IntersectionObserver(function (es) { inView = es[0].isIntersecting; }, { threshold: 0.01 }).observe(track); }
+    function step(t) {
+      if (!last) last = t;
+      var dt = (t - last) / 1000; last = t;
+      if (!paused && inView && originalWidth > 0) {
+        track.scrollLeft += SPEED * dt;
+        if (track.scrollLeft >= originalWidth) track.scrollLeft -= originalWidth;
+        updateEdges();
+      }
+      requestAnimationFrame(step);
+    }
+    track.classList.add('gliding');
+    requestAnimationFrame(step);
+  }
+
+  function setupCue(track) {
+    if (!track) return;
+    var section = track.closest('section');
+    if (!section) return;
+    var cue = section.querySelector('.strip-cue');
+    if (!cue) {
+      cue = document.createElement('div');
+      cue.className = 'strip-cue'; cue.setAttribute('aria-hidden', 'true');
+      cue.innerHTML = '<span>Desliza</span><span class="strip-cue-arrow">→</span>';
+      track.parentNode.insertBefore(cue, track.nextSibling);
+    }
+    var hide = function () { cue.classList.add('gone'); };
+    ['touchstart', 'pointerdown', 'wheel'].forEach(function (ev) { track.addEventListener(ev, hide, { passive: true, once: true }); });
+    track.addEventListener('scroll', function () { if (track.scrollLeft > 12) hide(); }, { passive: true });
+  }
+
+  (function initGlides() {
+    var dishes = document.getElementById('dishes-strip');
+    var concepts = document.querySelector('.concepts-grid');
+    setupCue(dishes);
+    setupGlide(dishes, { speed: 22 });
+    setupGlide(concepts, { speed: 18 });
+  })();
 })();
