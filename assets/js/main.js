@@ -292,4 +292,23 @@
     setupGlide(dishes, { speed: 22 });
     setupGlide(concepts, { speed: 18 });
   })();
+
+  /* ===== HERO ROTATOR — cicla varios videos de comida en la franja del hero (desktop) ===== */
+  (function heroRotator() {
+    var vids = [].slice.call(document.querySelectorAll('.hero-rot .hero-rot-v'));
+    if (vids.length < 2 || prefersReduced) return;
+    var i = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      var prev = vids[i];
+      i = (i + 1) % vids.length;
+      var next = vids[i];
+      if (next.preload === 'none') next.preload = 'auto';
+      try { next.currentTime = 0; } catch (e) {}
+      var p = next.play(); if (p && p.catch) p.catch(function () {});
+      next.classList.add('active');
+      prev.classList.remove('active');
+      setTimeout(function () { try { prev.pause(); } catch (e) {} }, 1100);
+    }, 6500);
+  })();
 })();

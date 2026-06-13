@@ -14,12 +14,12 @@
                photos: ['wagmi.webp', 'wagmi-v.webp', 'wagmi2.webp'] },
     pecora:  { label: 'La Pécora', title: 'Masa madre y horno de pizza',
                photos: ['pecora.webp'] },
-    cantina: { label: 'Pizzería', title: 'El horno, en plena acción',
-               photos: ['pecora.webp'] },
+    hokkaido:{ label: 'Hokkaidō', title: 'Sushi y rolls, en su barra',
+               photos: ['hokkaido.webp'] },
     bar:     { label: 'El Bar', title: 'Cocteles, vinos y la hora feliz',
                photos: ['bar.webp'] },
     comedor: { label: 'Comedor', title: 'La mesa para venir con quien quieras',
-               photos: ['comedor-1.webp', 'comedor-2.webp', 'comedor-3.webp', 'comedor-4.webp'] }
+               photos: ['comedor-2.webp', 'comedor-3.webp', 'comedor-5.webp'] }
   };
 
   var map   = document.getElementById('rl-map');

@@ -142,12 +142,21 @@
         <a href="menus/" class="btn btn-outline-cream">Ver los menús</a>
       </div>
     </div>
-    <div class="hero-band">
-      <video class="cinemagraph" autoplay muted loop playsinline preload="metadata"
+    <div class="hero-band hero-rot">
+      <video class="cinemagraph hero-rot-v active" autoplay muted loop playsinline preload="metadata"
              poster="assets/video/hero-poster.webp" aria-label="Alitas WAGMI glaseadas en BBQ">
         <source src="assets/video/hero.mp4" type="video/mp4">
       </video>
-      <img class="cinemagraph-fallback" src="assets/video/hero-poster.webp" alt="Alitas WAGMI glaseadas en BBQ — Casaducho">
+      <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" aria-label="Smash burger WAGMI">
+        <source src="assets/video/wagmi.mp4" type="video/mp4">
+      </video>
+      <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" aria-label="Pizza de La Pécora">
+        <source src="assets/video/pecora.mp4" type="video/mp4">
+      </video>
+      <video class="cinemagraph hero-rot-v" muted loop playsinline preload="none" aria-label="Coctel de EL BAR">
+        <source src="assets/video/elbar.mp4" type="video/mp4">
+      </video>
+      <img class="cinemagraph-fallback" src="assets/video/hero-poster.webp" alt="Comida de Casaducho">
     </div>
   </section>
 
@@ -182,7 +191,7 @@
     <div class="wrap food360" aria-label="Platos en 360">
       <figure class="f360-card" style="--fc:var(--c-wagmi)">
         <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-burger-poster.webp" aria-label="Classic Smash en 360"><source src="assets/video/f360-burger.webm" type="video/webm"><source src="assets/video/f360-burger.mp4" type="video/mp4"></video></div>
-        <figcaption><span class="f360-name">Classic Smash</span><span class="f360-tag">WAGMI</span></figcaption>
+        <figcaption><span class="f360-name">Cheesus Christ</span><span class="f360-tag">WAGMI</span></figcaption>
       </figure>
       <figure class="f360-card" style="--fc:var(--c-pecora)">
         <div class="f360-media"><video class="cinemagraph" muted loop playsinline autoplay preload="none" poster="assets/video/f360-pizza-poster.webp" aria-label="Pizza Pepperoni en 360"><source src="assets/video/f360-pizza.webm" type="video/webm"><source src="assets/video/f360-pizza.mp4" type="video/mp4"></video></div>
@@ -336,6 +345,7 @@
         <button class="rl-hotspot" data-zone="entrada"  style="left:33.7%;top:90%;--hc:var(--amarillo);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Entrada</button>
         <button class="rl-hotspot" data-zone="wagmi"    style="left:18%;top:30%;--hc:var(--c-wagmi)"><span class="rl-hs-dot"></span>WAGMI</button>
         <button class="rl-hotspot" data-zone="pecora"   style="left:18%;top:70%;--hc:var(--c-pecora)"><span class="rl-hs-dot"></span>La Pécora</button>
+        <button class="rl-hotspot" data-zone="hokkaido" style="left:52%;top:29%;--hc:var(--c-hokkaido)"><span class="rl-hs-dot"></span>Hokkaidō</button>
         <button class="rl-hotspot" data-zone="bar"      style="left:81.5%;top:50%;--hc:var(--c-bar)"><span class="rl-hs-dot"></span>El Bar</button>
         <button class="rl-hotspot" data-zone="comedor"  style="left:52%;top:70%;--hc:var(--crema);--ht:var(--tinta)"><span class="rl-hs-dot"></span>Comedor</button>
         <span class="rl-hint" aria-hidden="true">Toca una zona para entrar</span>

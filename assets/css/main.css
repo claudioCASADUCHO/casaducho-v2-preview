@@ -843,3 +843,7 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 .hub-concepts-sec .concept-card { flex: none; max-width: none; }
 .concept-photo-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--cfc, #7d3c98), color-mix(in srgb, var(--cfc, #7d3c98) 65%, #000)); }
 .concept-photo-fallback span { font-family: var(--druk); font-weight: 500; color: #fff; font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; opacity: .95; }
+
+/* ============ HERO ROTATOR — varios videos de comida (donde estaban las alitas) ============ */
+.hero-rot-v { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
+.hero-rot-v.active { opacity: 1; }
