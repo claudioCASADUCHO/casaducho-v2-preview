@@ -2,194 +2,58 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#fff3de">
-<title>Elige tu mesa · Casaducho</title>
+<title>Recorre el local en 360° · Casaducho</title>
 <link rel="icon" href="favicon-64.png">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/druk-medium.woff2" crossorigin>
 <style>
-  @font-face{font-family:'Bricolage';src:url('assets/fonts/bricolage.woff2') format('woff2');font-weight:400 800;font-display:swap}
-  @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-heavy.woff2') format('woff2');font-weight:900;font-display:swap}
   @font-face{font-family:'Druk Wide';src:url('assets/fonts/druk-medium.woff2') format('woff2');font-weight:500;font-display:swap}
-  :root{--crema:#fff3de;--papel:#fffaf0;--verde:#006838;--verde-noche:#06371f;--rosa:#ec008c;--tinta:#20140f;--suave:#6b5d50;
-    --display:'Bricolage',-apple-system,system-ui,sans-serif;--druk:'Druk Wide','Bricolage',sans-serif;--sans:-apple-system,'Helvetica Neue',system-ui,sans-serif}
+  @font-face{font-family:'Bricolage';src:url('assets/fonts/bricolage.woff2') format('woff2');font-weight:400 800;font-display:swap}
+  :root{--crema:#fff3de;--verde:#006838;--rosa:#ec008c;--tinta:#20140f;
+    --druk:'Druk Wide','Bricolage',sans-serif;--sans:-apple-system,'Helvetica Neue',system-ui,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
-  body{font-family:var(--sans);background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased;overflow:hidden}
+  body{font-family:var(--sans);background:var(--crema);color:var(--tinta);overflow:hidden;-webkit-font-smoothing:antialiased}
   a{text-decoration:none;color:inherit}
-  .vf-top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(255,243,222,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.07)}
-  .vf-top-in{max-width:1280px;margin:0 auto;padding:0 16px;height:52px;display:flex;align-items:center;justify-content:space-between}
+  .vf-top{position:fixed;top:0;left:0;right:0;z-index:20;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:rgba(255,243,222,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(32,20,15,.07)}
   .vf-back{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem}
   .vf-back img{height:19px}
-  .vf-rsv{color:var(--rosa);font-weight:700;font-size:.8rem}
-  /* intro */
-  .vf-intro{position:fixed;top:52px;left:0;right:0;z-index:20;text-align:center;padding:16px 16px 8px;pointer-events:none}
-  .vf-intro h1{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,4.4vw,1.7rem);color:var(--tinta);line-height:1.05}
-  .vf-intro p{font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.13em;text-transform:uppercase;color:var(--verde);margin-top:6px}
-  /* mapa */
-  .vp{position:fixed;inset:118px 0 0 0;overflow:hidden;background:var(--crema);touch-action:none;cursor:grab}
-  .vp:active{cursor:grabbing}
-  .vp-inner{position:absolute;left:0;top:0;width:1208px;height:1000px;transform-origin:0 0;will-change:transform}
-  .vp-inner svg{display:block;width:1208px;height:1000px}
-  /* pins minimalistas */
-  .vp-pin{position:absolute;transform:translate(-50%,-50%) scale(var(--inv,1));transform-origin:center;cursor:pointer;z-index:5;border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:9px;outline:none}
-  .vp-pin:focus-visible .vp-dot{outline:2px solid var(--verde);outline-offset:3px}
-  .vp-dot{position:relative;width:18px;height:18px;border-radius:50%;background:var(--papel);border:2.5px solid var(--verde);box-shadow:0 3px 8px rgba(6,55,31,.28);transition:transform .16s,background .16s}
-  .vp-dot::after{content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:var(--verde);transform:translate(-50%,-50%);transition:background .16s}
-  .vp-lbl{font-family:var(--druk);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--verde);white-space:nowrap;text-shadow:0 1px 0 rgba(255,243,222,.9)}
-  @media(hover:hover){.vp-pin:hover .vp-dot{transform:scale(1.14)}}
-  .vp-pin.on .vp-dot{background:var(--verde);box-shadow:0 0 0 4px rgba(255,250,240,.9),0 4px 12px rgba(6,55,31,.4);animation:vpPulse 1.6s ease-out infinite}
-  .vp-pin.on .vp-dot::after{background:var(--papel)}
-  @keyframes vpPulse{0%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 0 rgba(0,104,56,.35)}70%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 16px rgba(0,104,56,0)}100%{box-shadow:0 0 0 4px rgba(255,250,240,.9),0 0 0 0 rgba(0,104,56,0)}}
-  @media(prefers-reduced-motion:reduce){.vp-pin.on .vp-dot{animation:none}}
-  /* controles */
-  .vp-ctrl{position:fixed;right:14px;bottom:18px;z-index:25;display:flex;flex-direction:column;gap:8px}
-  .vp-ctrl button{width:44px;height:44px;border:0;border-radius:13px;background:var(--papel);box-shadow:0 4px 12px rgba(32,20,15,.16);font-size:1.3rem;font-weight:700;color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center}
-  .vp-ctrl button:active{transform:scale(.95)}
-  /* hint */
-  .vp-hint{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:24;background:rgba(6,55,31,.9);color:var(--crema);font-family:var(--druk);font-weight:500;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 15px;border-radius:999px;transition:opacity .4s;pointer-events:none}
-  .vp-hint.gone{opacity:0}
-  /* transporte */
-  .vp-warp{position:fixed;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,#fffaf0 0%,#fffaf0 45%,#006838 100%);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;z-index:40}
-  .vp-warp.go{transform:translate(-50%,-50%) scale(260);opacity:1;transition:transform .55s cubic-bezier(.7,0,.25,1),opacity .55s ease}
-  @media(prefers-reduced-motion:reduce){.vp-warp.go{transition:opacity .25s}}
+  .vf-ttl{font-family:var(--druk);font-weight:500;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde)}
+  .vf-stage{position:fixed;inset:52px 0 0 0;background:#0b0b0b}
+  .vf-360{display:block;width:100%;height:100%;border:0}
+  .vf-reserve{position:fixed;left:50%;transform:translateX(-50%);bottom:max(20px,calc(env(safe-area-inset-bottom) + 16px));z-index:25;
+    display:inline-flex;align-items:center;gap:9px;background:var(--rosa);color:#fff;border-radius:999px;
+    padding:15px 26px;font-family:var(--druk);font-weight:500;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+    box-shadow:0 10px 30px rgba(236,0,140,.42),0 2px 8px rgba(0,0,0,.25);transition:transform .16s}
+  .vf-reserve:hover{transform:translateX(-50%) translateY(-2px)}
+  .vf-reserve:active{transform:translateX(-50%) scale(.97)}
+  .vf-reserve svg{width:15px;height:15px}
 </style>
 </head>
 <body>
-  <header class="vf-top"><div class="vf-top-in">
+  <header class="vf-top">
     <a class="vf-back" href="index.html"><span style="opacity:.7">&#8592;</span><img src="assets/img/logos/casaducho.webp" alt="Casaducho"></a>
-    <a class="vf-rsv" href="index.html#reservar">Reservar</a>
-  </div></header>
+    <span class="vf-ttl">El local en 360&deg;</span>
+    <a class="vf-back" href="index.html#reservar" style="color:var(--rosa);font-weight:700">Reservar</a>
+  </header>
 
-  <div class="vf-intro">
-    <h1>Elige dónde vivir Casaducho</h1>
-    <p>Toca una zona para ver el POV</p>
+  <div class="vf-stage">
+    <iframe class="vf-360" src="https://travvir.com/embed/W7Ojce" allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen title="Recorrido 360 de Casaducho"></iframe>
   </div>
 
-  <div class="vp" id="vp">
-    <div class="vp-inner" id="vp-inner">
-<svg viewBox="0 0 1208 1000" preserveAspectRatio="xMidYMid meet">
-  <defs>
-    <pattern id="vf-terr" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="11" stroke="#006838" stroke-width="1" stroke-opacity="0.07"/>
-    </pattern>
-    <marker id="vf-ar" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#006838"/></marker>
-  </defs>
-  <rect x="0" y="0" width="1208" height="1000" fill="#fff3de"/>
-  <!-- terraza: extensión orgánica atada al borde derecho -->
-  <path d="M 869.8 400.0 L 1002.6 510.0 L 918.1 640.0 L 845.6 520.0 Z" fill="url(#vf-terr)" stroke="#006838" stroke-width="3" stroke-opacity="0.4" stroke-linejoin="round"/>
-  <!-- footprint suavizado -->
-  <path d="M 120.8 330.0 L 120.8 280.0 L 217.4 270.0 L 374.5 275.0 L 507.4 110.0 L 519.4 400.0 L 724.8 350.0 L 869.8 400.0 L 845.6 520.0 L 628.2 830.0 L 507.4 790.0 L 362.4 700.0 L 362.4 620.0 L 193.3 620.0 L 193.3 460.0 L 120.8 440.0 Z" fill="#fffaf0" stroke="#006838" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
-  <g><circle cx="423" cy="230" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="302" cy="430" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="411" cy="500" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="568" cy="450" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="701" cy="400" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="471" cy="570" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="556" cy="700" r="40" fill="#006838" fill-opacity="0.04"/><circle cx="773" cy="550" r="40" fill="#006838" fill-opacity="0.04"/></g>
-  <!-- entradas -->
-  <line x1="48" y1="380" x2="163" y2="380" stroke="#006838" stroke-width="2.4" marker-end="url(#vf-ar)"/>
-  <text x="103" y="352" font-family="Druk Wide,sans-serif" font-weight="500" font-size="9" letter-spacing="1.5" fill="#006838" fill-opacity="0.7" text-anchor="middle">PLAZA</text>
-  <line x1="1015" y1="460" x2="900" y2="460" stroke="#006838" stroke-width="2.4" marker-end="url(#vf-ar)"/>
-  <text x="966" y="432" font-family="Druk Wide,sans-serif" font-weight="500" font-size="9" letter-spacing="1.5" fill="#006838" fill-opacity="0.7" text-anchor="middle">CALLE</text>
-  <g transform="translate(1140,80)"><circle r="16" fill="none" stroke="#006838" stroke-width="1.4" stroke-opacity=".45"/><path d="M0 -12 L5 4 L0 0 L-5 4 Z" fill="#006838"/><text x="0" y="-19" font-family="Druk Wide,sans-serif" font-size="9" fill="#006838" text-anchor="middle">N</text></g>
-</svg>
-      <button class="vp-pin" data-zone="wagmi" style="left:423px;top:230px"><span class="vp-dot"></span><span class="vp-lbl">WAGMI</span></button>
-      <button class="vp-pin" data-zone="pecora" style="left:302px;top:430px"><span class="vp-dot"></span><span class="vp-lbl">La Pécora</span></button>
-      <button class="vp-pin" data-zone="wagmi2" style="left:411px;top:500px"><span class="vp-dot"></span><span class="vp-lbl">WAGMI2</span></button>
-      <button class="vp-pin" data-zone="cantina" style="left:568px;top:450px"><span class="vp-dot"></span><span class="vp-lbl">Cantina</span></button>
-      <button class="vp-pin" data-zone="panaderia" style="left:701px;top:400px"><span class="vp-dot"></span><span class="vp-lbl">Panadería</span></button>
-      <button class="vp-pin" data-zone="hokkaido" style="left:471px;top:570px"><span class="vp-dot"></span><span class="vp-lbl">Hokkaidō</span></button>
-      <button class="vp-pin" data-zone="bar" style="left:556px;top:700px"><span class="vp-dot"></span><span class="vp-lbl">El Bar</span></button>
-      <button class="vp-pin" data-zone="terraza" style="left:773px;top:550px"><span class="vp-dot"></span><span class="vp-lbl">Terraza</span></button>
-    </div>
-  </div>
-
-  <span class="vp-hint" id="vp-hint">Arrastra · zoom · toca una zona</span>
-  <div class="vp-ctrl">
-    <button id="vp-zin" aria-label="Acercar">+</button>
-    <button id="vp-zout" aria-label="Alejar">&#8722;</button>
-    <button id="vp-home" aria-label="Centrar" style="font-size:1rem">&#8962;</button>
-  </div>
-  <div class="vp-warp" id="vp-warp"></div>
+  <a class="vf-reserve" id="vf-reserve" href="index.html#reservar" target="_self">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <span>Reservar en TOI</span>
+  </a>
 
   <script src="assets/js/toi-config.js"></script>
-  <script src="assets/js/pano360.js" defer></script>
   <script>
-  (function(){
-    var IMG='assets/img/interior/', IMG360='assets/img/360/';
-    /* foto interior de respaldo por zona (mientras no haya 360 real). has360 auto-detecta {zona}.jpg */
-    var Z={
-      wagmi:{name:'WAGMI',photo:'wagmi.webp'},
-      pecora:{name:'La Pécora',photo:'pecora.webp'},
-      wagmi2:{name:'WAGMI2',photo:'wagmi2.webp'},
-      cantina:{name:'Cantina',photo:'comedor-3.webp'},
-      panaderia:{name:'Panadería',photo:'comedor-1.webp'},
-      hokkaido:{name:'Hokkaidō',photo:'hokkaido.webp'},
-      bar:{name:'El Bar',photo:'bar.webp'},
-      terraza:{name:'Terraza',photo:'comedor-5.webp'}
-    };
-    var TOI=(window.CASADUCHO_TOI||{});
-    function reserveUrl(zone){
-      if(TOI.reserveUrl) return TOI.reserveUrl;
-      var wa=TOI.whatsappWaiter||'18495915955';
-      return 'https://wa.me/'+wa+'?text='+encodeURIComponent('¡Hola! Quiero reservar en la zona '+(Z[zone]?Z[zone].name:''));
-    }
-    /* ---------- pan/zoom ---------- */
-    var vp=document.getElementById('vp'), inner=document.getElementById('vp-inner');
-    var IW=1208, IH=1000, st={x:0,y:0,s:1}, MIN=0.4, MAX=2.8;
-    function clampS(s){return Math.max(MIN,Math.min(MAX,s));}
-    function clamp(){var vw=vp.clientWidth,vh=vp.clientHeight,w=IW*st.s,h=IH*st.s,m=120;
-      st.x=Math.min(m,Math.max(vw-w-m,st.x)); if(w<vw)st.x=(vw-w)/2;
-      st.y=Math.min(m,Math.max(vh-h-m,st.y)); if(h<vh)st.y=(vh-h)/2;}
-    function apply(){inner.style.transform='translate('+st.x+'px,'+st.y+'px) scale('+st.s+')';
-      var inv=1/st.s; document.querySelectorAll('.vp-pin').forEach(function(p){p.style.setProperty('--inv',inv);});}
-    function fit(){var vw=vp.clientWidth,vh=vp.clientHeight; st.s=clampS(Math.min(vw/IW,vh/IH)*0.98); st.x=(vw-IW*st.s)/2; st.y=(vh-IH*st.s)/2; apply();}
-    function zoomAt(cx,cy,f){var ns=clampS(st.s*f),k=ns/st.s; st.x=cx-(cx-st.x)*k; st.y=cy-(cy-st.y)*k; st.s=ns; clamp(); apply();}
-    var drag=null,pinch=null,pts={};
-    vp.addEventListener('pointerdown',function(e){pts[e.pointerId]={x:e.clientX,y:e.clientY};
-      var k=Object.keys(pts); if(k.length===2){var a=pts[k[0]],b=pts[k[1]];pinch={d:Math.hypot(a.x-b.x,a.y-b.y),s:st.s};drag=null;return;}
-      drag={x:e.clientX,y:e.clientY,ox:st.x,oy:st.y,moved:false,t:Date.now(),tg:e.target}; try{vp.setPointerCapture(e.pointerId);}catch(_){}});
-    vp.addEventListener('pointermove',function(e){
-      if(pts[e.pointerId])pts[e.pointerId]={x:e.clientX,y:e.clientY};
-      if(pinch){var k=Object.keys(pts); if(k.length>=2){var a=pts[k[0]],b=pts[k[1]],d=Math.hypot(a.x-b.x,a.y-b.y);var r=vp.getBoundingClientRect();var cx=(a.x+b.x)/2-r.left,cy=(a.y+b.y)/2-r.top;var ns=clampS(pinch.s*(d/pinch.d)),kk=ns/st.s;st.x=cx-(cx-st.x)*kk;st.y=cy-(cy-st.y)*kk;st.s=ns;clamp();apply();}return;}
-      if(!drag)return; var dx=e.clientX-drag.x,dy=e.clientY-drag.y; if(Math.hypot(dx,dy)>8)drag.moved=true; st.x=drag.ox+dx; st.y=drag.oy+dy; clamp(); apply();});
-    function endPt(e){
-      if(drag&&!drag.moved&&(Date.now()-drag.t)<500){var pin=(e.target.closest&&e.target.closest('.vp-pin')); if(pin){lastFocused=pin; select(pin.getAttribute('data-zone'), e.clientX, e.clientY);}}
-      delete pts[e.pointerId]; if(Object.keys(pts).length<2)pinch=null; if(Object.keys(pts).length===0)drag=null;}
-    vp.addEventListener('pointerup',endPt); vp.addEventListener('pointercancel',function(e){delete pts[e.pointerId];if(Object.keys(pts).length<2)pinch=null;drag=null;});
-    vp.addEventListener('wheel',function(e){e.preventDefault();var r=vp.getBoundingClientRect();zoomAt(e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.12:0.89);hideHint();},{passive:false});
-    function ctrZoom(f){zoomAt(vp.clientWidth/2,vp.clientHeight/2,f);}
-    document.getElementById('vp-zin').onclick=function(){ctrZoom(1.25);hideHint();};
-    document.getElementById('vp-zout').onclick=function(){ctrZoom(0.8);hideHint();};
-    document.getElementById('vp-home').onclick=function(){fit();hideHint();};
-    var hint=document.getElementById('vp-hint'); function hideHint(){hint.classList.add('gone');}
-    try{if(localStorage.getItem('vp_seen'))hint.classList.add('gone');else localStorage.setItem('vp_seen','1');}catch(_){}
-    vp.addEventListener('pointerdown',function(){setTimeout(hideHint,500);});
-    /* ---------- transporte + 360 ---------- */
-    var warp=document.getElementById('vp-warp'), lastFocused=null;
-    function probe(zone){ var z=Z[zone]; if(!z||z._p) return; if(z.has360){z._p=1;return;}
-      var im=new Image(); im.onload=function(){z.has360=true;z._p=1;}; im.onerror=function(){z._p=1;}; im.src=IMG360+zone+'.jpg'; }
-    Object.keys(Z).forEach(probe);
-    function openPano(zone){
-      var z=Z[zone]; if(!z||!window.Pano360)return;
-      window.Pano360.open({
-        image: z.has360 ? (IMG360+zone+'.jpg') : null,
-        fallbackImage: IMG+z.photo,
-        label: z.name,
-        fallbackBadge: 'Referencia visual',
-        reserveUrl: reserveUrl(zone),
-        reserveLabel: 'Reservar en TOI',
-        onClose: function(){ if(lastFocused&&lastFocused.focus){try{lastFocused.focus();}catch(_){}} }
-      });
-    }
-    function select(zone, sx, sy){
-      document.querySelectorAll('.vp-pin').forEach(function(p){p.classList.toggle('on',p.getAttribute('data-zone')===zone);});
-      try{if(navigator.vibrate)navigator.vibrate(8);}catch(_){}
-      warp.style.left=(sx||window.innerWidth/2)+'px'; warp.style.top=(sy||window.innerHeight/2)+'px';
-      warp.classList.add('go');
-      setTimeout(function(){ openPano(zone); }, 430);
-      setTimeout(function(){ warp.classList.remove('go'); document.querySelectorAll('.vp-pin').forEach(function(p){p.classList.remove('on');}); }, 1150);
-    }
-    window.addEventListener('resize',fit);
-    window.addEventListener('orientationchange',function(){setTimeout(fit,250);});
-    fit();
-  })();
+    (function(){
+      var T=(window.CASADUCHO_TOI||{}), btn=document.getElementById('vf-reserve');
+      if(T.reserveUrl){ btn.href=T.reserveUrl; btn.target='_blank'; btn.rel='noopener noreferrer'; }
+      else { btn.href='https://wa.me/'+(T.whatsappWaiter||'18495915955')+'?text='+encodeURIComponent('¡Hola! Quiero reservar en Casaducho'); btn.target='_blank'; btn.rel='noopener noreferrer'; }
+    })();
   </script>
 </body>
 </html>
