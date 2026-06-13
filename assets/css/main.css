@@ -847,3 +847,22 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 /* ============ HERO ROTATOR — varios videos de comida (donde estaban las alitas) ============ */
 .hero-rot-v { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease; }
 .hero-rot-v.active { opacity: 1; }
+
+/* ============ FIX scroll mobile + fondo unificado del carrusel ============ */
+/* el scroll vertical pasa a la página; el carrusel solo capta horizontal */
+.dishes-strip, .concepts-grid { touch-action: pan-x; overscroll-behavior-x: contain; }
+/* fondo continuo: el carrusel de conceptos comparte el crema de la página (no un bloque distinto) */
+.concepts { background: var(--crema); }
+.concepts::before { background: linear-gradient(to right, var(--crema), transparent) !important; }
+.concepts::after  { background: linear-gradient(to left,  var(--crema), transparent) !important; }
+
+/* ===== DELIVERY · dropdowns compactos (reemplaza la grilla) ===== */
+.dlv-list { display: flex; flex-direction: column; gap: 10px; max-width: 640px; margin: 0 auto; }
+.dlv-drop { background: var(--papel); border-radius: var(--r-card); box-shadow: var(--sh-1); overflow: hidden; }
+.dlv-drop summary { display: flex; align-items: center; gap: 11px; padding: 16px 18px; cursor: pointer; list-style: none; font-family: var(--druk); font-weight: 500; font-size: .66rem; letter-spacing: .03em; text-transform: uppercase; color: var(--tinta); }
+.dlv-drop summary::-webkit-details-marker { display: none; }
+.dlv-drop summary::marker { content: ''; }
+.dlv-drop .dlv-chev { margin-left: auto; color: var(--mc); transition: transform .2s; font-size: .85rem; }
+.dlv-drop[open] .dlv-chev { transform: rotate(180deg); }
+.dlv-drop[open] summary { padding-bottom: 8px; }
+.dlv-drop .dlv-chips { padding: 0 18px 16px; }

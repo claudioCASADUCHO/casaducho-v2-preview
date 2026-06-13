@@ -229,7 +229,8 @@
     function isScroller() {
       return getComputedStyle(track).overflowX !== 'visible' && track.scrollWidth > track.clientWidth + 8;
     }
-    if (prefersReduced || !isScroller()) return;
+    var isTouch = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (prefersReduced || !isScroller() || isTouch) return;  // en touch: swipe manual + cue, sin auto-glide (no pelea el scroll vertical)
     var originalWidth = 0;
     (function buildLoop() {
       if (track.dataset.looped === '1') return;
