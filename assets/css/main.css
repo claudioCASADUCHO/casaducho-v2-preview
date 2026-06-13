@@ -222,7 +222,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.02; l
 @media (min-width: 600px) { .action-card { padding: 26px 16px 22px; } .action-card small { display: block; margin-top: 4px; } }
 
 /* ============ PLATOS — vitrina cálida ============ */
-.dishes-strip { display: flex; gap: 14px; overflow-x: auto; padding: 4px 16px 16px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.dishes-strip { display: flex; gap: 14px; overflow-x: auto; padding: 4px 16px 16px; scroll-snap-type: x proximity; scrollbar-width: none; }
 .dishes-strip::-webkit-scrollbar { display: none; }
 @media (min-width: 1100px) { .dishes-strip { padding-left: calc((100vw - var(--maxw)) / 2 + 24px); } }
 .dish-card { flex: 0 0 230px; scroll-snap-align: start; background: var(--papel); border-radius: var(--r-foto); overflow: hidden; box-shadow: var(--sh-1); text-decoration: none; color: var(--tinta); transition: transform .15s cubic-bezier(.34,1.56,.64,1), box-shadow .15s; }
@@ -236,7 +236,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.02; l
 /* ============ CONCEPTOS — puestos del mercado ============ */
 .concepts { background: var(--crema-2); }
 .concepts .section-title { color: var(--tinta); }
-.concepts-grid { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 8px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+.concepts-grid { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; padding-bottom: 8px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
 .concepts-grid::-webkit-scrollbar { display: none; }
 @media (min-width: 1100px) { .concepts-grid { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; margin: 0; padding: 0; } }
 .concept-card { flex: 0 0 290px; scroll-snap-align: start; background: var(--papel); border-radius: var(--r-card); overflow: hidden; color: var(--tinta); box-shadow: var(--sh-1); display: flex; flex-direction: column; transition: transform .18s cubic-bezier(.34,1.56,.64,1), box-shadow .18s; }
@@ -463,8 +463,8 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
   /* P2-23 — ticker/nav más compactos */
   .ticker { padding: 7px 0; } .ticker-item { font-size: .58rem; }
   /* P1-16 — carruseles obviamente swipeables (peek + edge-fade) */
-  .dish-card { flex: 0 0 74vw; max-width: 260px; }
-  .concept-card { flex: 0 0 80vw; max-width: 300px; }
+  .dish-card { flex: 0 0 62vw; max-width: 250px; }
+  .concept-card { flex: 0 0 70vw; max-width: 290px; }
   /* (edge-fade movido al bloque AUTO-GLIDE — cubre mobile y desktop) */
   .dishes-strip { scroll-padding-left: 16px; }
   /* P2-24 — más sazón de marca (sin tocar rosa=CTA) */
@@ -879,7 +879,7 @@ dialog.sheet[open] { animation: sheet-up .32s cubic-bezier(.32,.72,0,1); }
 
 /* ============ FIX scroll mobile + fondo unificado del carrusel ============ */
 /* el scroll vertical pasa a la página; el carrusel solo capta horizontal */
-.dishes-strip, .concepts-grid { touch-action: pan-x; overscroll-behavior-x: contain; }
+.dishes-strip, .concepts-grid { touch-action: pan-x; overscroll-behavior: contain; }
 /* fondo continuo: el carrusel de conceptos comparte el crema de la página (no un bloque distinto) */
 .concepts { background: var(--crema); }
 .concepts::before { background: linear-gradient(to right, var(--crema), transparent) !important; }
